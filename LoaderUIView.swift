@@ -19,28 +19,6 @@ struct LoaderUIView_Previews: PreviewProvider {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 struct FinalLoaderView: View {
     @State private var isAnimating = false
     var body: some View {
