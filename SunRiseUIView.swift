@@ -20,26 +20,6 @@ struct SunRiseUIView_Previews: PreviewProvider {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 struct FinalSunriseView: View {
     @State private var liquidLevel: CGFloat = 0.5
     @State private var sunOffset: CGFloat = 200
