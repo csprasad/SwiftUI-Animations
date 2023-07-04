@@ -11,7 +11,7 @@ Collection of SwiftUI Animations
 
 ## Layer Masking 
 <p align=center>
-<img src="https://github.com/csprasad/SwiftUI-Animations/assets/26570512/3ab38e2b-b840-4ac6-bc4d-bb1dacc89fb6" width="240" height="508"/>
+<img src="https://github.com/csprasad/SwiftUI-Animations/assets/26570512/3ab38e2b-b840-4ac6-bc4d-bb1dacc89fb6" width="280" height="508"/>
 </p>
 
 ## Random image animation 
