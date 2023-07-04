@@ -8,4 +8,4 @@ Collection of SwiftUI Animations
 
 ## Sunrise View
 - Created animation around emoji's
-  <img src="https://github.com/csprasad/SwiftUI-Animations/assets/26570512/4f4fab92-8dd4-439b-85ae-10042fc2003c" width="350" height="850"/>
+  <img src="https://github.com/csprasad/SwiftUI-Animations/assets/26570512/4f4fab92-8dd4-439b-85ae-10042fc2003c" width="240" height="508"/>
