@@ -19,26 +19,6 @@ struct LayerMaskUIView_Previews: PreviewProvider {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 struct LayerMaskFinalView: View  {
     let shapeHeight: CGFloat = 400
     let shapeWidth: CGFloat = 80
