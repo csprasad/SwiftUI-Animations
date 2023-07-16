@@ -18,10 +18,10 @@
 		C8D6D2DF2A6252D800840EEE /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D6D2DE2A6252D800840EEE /* GridView.swift */; };
 		C8F85B542A6307EC00ECC7D0 /* KakashiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F85B532A6307EC00ECC7D0 /* KakashiView.swift */; };
 		C8F85B562A63080D00ECC7D0 /* Kakashi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F85B552A63080D00ECC7D0 /* Kakashi.swift */; };
-		C8FB85562A64554C0009CF41 /* SunRiseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB85522A64554C0009CF41 /* SunRiseUIView.swift */; };
-		C8FB85572A64554C0009CF41 /* LoaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB85532A64554C0009CF41 /* LoaderUIView.swift */; };
-		C8FB85582A64554C0009CF41 /* RandomAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB85542A64554C0009CF41 /* RandomAnimationView.swift */; };
-		C8FB85592A64554C0009CF41 /* LayerMaskUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB85552A64554C0009CF41 /* LayerMaskUIView.swift */; };
+		C8FB855F2A64595C0009CF41 /* SunRiseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB855B2A64595C0009CF41 /* SunRiseUIView.swift */; };
+		C8FB85602A64595C0009CF41 /* RandomAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB855C2A64595C0009CF41 /* RandomAnimationView.swift */; };
+		C8FB85612A64595C0009CF41 /* LoaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB855D2A64595C0009CF41 /* LoaderUIView.swift */; };
+		C8FB85622A64595C0009CF41 /* LayerMaskUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB855E2A64595C0009CF41 /* LayerMaskUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,10 +37,10 @@
 		C8D6D2DE2A6252D800840EEE /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		C8F85B532A6307EC00ECC7D0 /* KakashiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakashiView.swift; sourceTree = "<group>"; };
 		C8F85B552A63080D00ECC7D0 /* Kakashi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kakashi.swift; sourceTree = "<group>"; };
-		C8FB85522A64554C0009CF41 /* SunRiseUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunRiseUIView.swift; sourceTree = SOURCE_ROOT; };
-		C8FB85532A64554C0009CF41 /* LoaderUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderUIView.swift; sourceTree = SOURCE_ROOT; };
-		C8FB85542A64554C0009CF41 /* RandomAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomAnimationView.swift; sourceTree = SOURCE_ROOT; };
-		C8FB85552A64554C0009CF41 /* LayerMaskUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskUIView.swift; sourceTree = SOURCE_ROOT; };
+		C8FB855B2A64595C0009CF41 /* SunRiseUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunRiseUIView.swift; sourceTree = "<group>"; };
+		C8FB855C2A64595C0009CF41 /* RandomAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomAnimationView.swift; sourceTree = "<group>"; };
+		C8FB855D2A64595C0009CF41 /* LoaderUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderUIView.swift; sourceTree = "<group>"; };
+		C8FB855E2A64595C0009CF41 /* LayerMaskUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +57,10 @@
 		C88FDCDF2A61721000A5B62B /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				C8FB85552A64554C0009CF41 /* LayerMaskUIView.swift */,
-				C8FB85532A64554C0009CF41 /* LoaderUIView.swift */,
-				C8FB85542A64554C0009CF41 /* RandomAnimationView.swift */,
-				C8FB85522A64554C0009CF41 /* SunRiseUIView.swift */,
+				C8FB855E2A64595C0009CF41 /* LayerMaskUIView.swift */,
+				C8FB855D2A64595C0009CF41 /* LoaderUIView.swift */,
+				C8FB855C2A64595C0009CF41 /* RandomAnimationView.swift */,
+				C8FB855B2A64595C0009CF41 /* SunRiseUIView.swift */,
 				C88FDCE02A61722A00A5B62B /* BatmanView.swift */,
 				C8D6D2DE2A6252D800840EEE /* GridView.swift */,
 				C8F85B532A6307EC00ECC7D0 /* KakashiView.swift */,
@@ -258,19 +258,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8FB85582A64554C0009CF41 /* RandomAnimationView.swift in Sources */,
-				C8FB85562A64554C0009CF41 /* SunRiseUIView.swift in Sources */,
+				C8FB855F2A64595C0009CF41 /* SunRiseUIView.swift in Sources */,
 				C8BE89AE2A611C28003E2C61 /* ContentView.swift in Sources */,
 				C8A563E12A63BBE700410C1F /* Color+Extension.swift in Sources */,
+				C8FB85602A64595C0009CF41 /* RandomAnimationView.swift in Sources */,
 				C8A563DF2A63A4D000410C1F /* SplashView.swift in Sources */,
-				C8FB85572A64554C0009CF41 /* LoaderUIView.swift in Sources */,
+				C8FB85612A64595C0009CF41 /* LoaderUIView.swift in Sources */,
 				C88FDCE12A61722A00A5B62B /* BatmanView.swift in Sources */,
 				C8BE89C32A616A37003E2C61 /* Lightening.swift in Sources */,
 				C8F85B562A63080D00ECC7D0 /* Kakashi.swift in Sources */,
 				C8D6D2DF2A6252D800840EEE /* GridView.swift in Sources */,
 				C8BE89AC2A611C28003E2C61 /* SwiftUI_Animations.swift in Sources */,
 				C8F85B542A6307EC00ECC7D0 /* KakashiView.swift in Sources */,
-				C8FB85592A64554C0009CF41 /* LayerMaskUIView.swift in Sources */,
+				C8FB85622A64595C0009CF41 /* LayerMaskUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
