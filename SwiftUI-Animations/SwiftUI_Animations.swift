@@ -12,7 +12,8 @@ struct SwiftUI_Animations: App {
     var body: some Scene {
         WindowGroup {
 //            BatmanFinalView()
-            FinalSplashView()
+//            FinalSplashView()
+            GlassyButtonView()
         }
     }
 }
