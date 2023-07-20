@@ -4,7 +4,6 @@ Animations created using SwiftUI.
 ![platform](https://img.shields.io/badge/platform-iOS-orange)
 ![Repository size](https://img.shields.io/github/repo-size/csprasad/SwiftUI-Animations)
 ![GitHub stars](https://img.shields.io/github/stars/csprasad/SwiftUI-Animations?style=social)
-[![License][license-image]][license-url]
 [![GitHub license](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 
 ## Sunrise View
