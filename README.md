@@ -1,6 +1,14 @@
 # SwiftUI-Animations
-Collection of SwiftUI Animations
+Animations created using SwiftUI.
 
+![platform](https://img.shields.io/badge/platform-iOS)
+[![GitHub license](https://img.shields.io/badge/License-Apache2.0-orange.svg)](LICENSE)
+![Repository size](https://img.shields.io/github/repo-size/csprasad195/SwiftUI-Animations)
+![GitHub stars](https://img.shields.io/github/stars/csprasad195/SwiftUI-Animations?style=social)
+![GitHub forks](https://img.shields.io/github/forks/csprasad195/SwiftUI-Animations?style=social)
+![GitHub follow](https://img.shields.io/github/followers/csprasad195?style=social)
+
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=csprasad195)
 
 ## Sunrise View
 - Created animation around emoji's
