@@ -19,6 +19,7 @@
 		C8D6D2DF2A6252D800840EEE /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D6D2DE2A6252D800840EEE /* GridView.swift */; };
 		C8F85B542A6307EC00ECC7D0 /* KakashiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F85B532A6307EC00ECC7D0 /* KakashiView.swift */; };
 		C8F85B562A63080D00ECC7D0 /* Kakashi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F85B552A63080D00ECC7D0 /* Kakashi.swift */; };
+		C8F8F9152A695F9C00C6E8E5 /* RocketLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8F9142A695F9C00C6E8E5 /* RocketLaunchView.swift */; };
 		C8FB855F2A64595C0009CF41 /* SunRiseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB855B2A64595C0009CF41 /* SunRiseUIView.swift */; };
 		C8FB85602A64595C0009CF41 /* RandomAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB855C2A64595C0009CF41 /* RandomAnimationView.swift */; };
 		C8FB85612A64595C0009CF41 /* LoaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB855D2A64595C0009CF41 /* LoaderUIView.swift */; };
@@ -39,6 +40,7 @@
 		C8D6D2DE2A6252D800840EEE /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		C8F85B532A6307EC00ECC7D0 /* KakashiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakashiView.swift; sourceTree = "<group>"; };
 		C8F85B552A63080D00ECC7D0 /* Kakashi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kakashi.swift; sourceTree = "<group>"; };
+		C8F8F9142A695F9C00C6E8E5 /* RocketLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchView.swift; sourceTree = "<group>"; };
 		C8FB855B2A64595C0009CF41 /* SunRiseUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunRiseUIView.swift; sourceTree = "<group>"; };
 		C8FB855C2A64595C0009CF41 /* RandomAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomAnimationView.swift; sourceTree = "<group>"; };
 		C8FB855D2A64595C0009CF41 /* LoaderUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderUIView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				C8F85B532A6307EC00ECC7D0 /* KakashiView.swift */,
 				C8A563DE2A63A4D000410C1F /* SplashView.swift */,
 				C86613962A66E117000D58E4 /* GlassyButtonView.swift */,
+				C8F8F9142A695F9C00C6E8E5 /* RocketLaunchView.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				C8FB85602A64595C0009CF41 /* RandomAnimationView.swift in Sources */,
 				C8A563DF2A63A4D000410C1F /* SplashView.swift in Sources */,
 				C8FB85612A64595C0009CF41 /* LoaderUIView.swift in Sources */,
+				C8F8F9152A695F9C00C6E8E5 /* RocketLaunchView.swift in Sources */,
 				C88FDCE12A61722A00A5B62B /* BatmanView.swift in Sources */,
 				C86613972A66E117000D58E4 /* GlassyButtonView.swift in Sources */,
 				C8BE89C32A616A37003E2C61 /* Lightening.swift in Sources */,
