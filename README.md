@@ -26,8 +26,6 @@ To use these animations in your SwiftUI project, follow these steps:
 3. Copy the relevant animation code from the "Animations" folder into your project.
 
 ## Sunrise View
-- Created animation around emoji's
-
 <p align=center>
 <img src="https://github.com/csprasad/SwiftUI-Animations/assets/26570512/4f4fab92-8dd4-439b-85ae-10042fc2003c" width="240" height="508"/>
 </p>
