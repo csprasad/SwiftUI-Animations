@@ -25,9 +25,14 @@ struct GlassyButtonView: View {
     @State private var isLightOn = false
     @State private var gestureOffset: CGFloat = 0
     
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient:isEnabled ? Gradient(colors: [Color(hex: "#C3CBDC"), Color(hex: "#9FA4C4")]) : Gradient(colors: [Color(hex: "#000").opacity(0.6), Color(hex: "#000").opacity(0.8)]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
+            
+            
+            
+            
             VStack(alignment: .leading, spacing: 60) {
                 HStack(spacing: 30) {
                     Toggle(isOn: $isEnabled) {
@@ -35,13 +40,13 @@ struct GlassyButtonView: View {
                             .foregroundColor(isEnabled ? .white : .black)
                     }
                     .toggleStyle(FinalGlassyButton())
-                    
+
                     VStack(alignment: .center) {
                        Image(systemName: isLightOn ? "lightbulb.fill" : "lightbulb")
                            .resizable()
                            .frame(width: 60, height: 80)
                            .foregroundColor(isLightOn ? .yellow : .gray)
-        
+
                        Rectangle()
                            .frame(width: 10, height: 50)
                            .offset(y: self.gestureOffset)
@@ -63,21 +68,19 @@ struct GlassyButtonView: View {
                                        }
                                    }
                            )
-        
-        
+
+
                        Text(isLightOn ? "Light is ON" : "Pull down")
                            .font(.headline)
                            .foregroundColor(.black)
                    }.padding()
                 }
-                
+
 //                .background(.blue)
                 .frame(width: 400, height: 400)
 //                .background(.red)
-                
-                
-                
-                
+
+
                 HStack(alignment: .bottom, spacing: 10) {
                     Circle()
                         .foregroundColor(.clear)
@@ -121,7 +124,7 @@ struct GlassyButtonView: View {
                             )
                         )
                     .cornerRadius(20)
-                    
+
                 }
         }
             }
@@ -171,3 +174,5 @@ struct FinalGlassyButton: ToggleStyle {
     }
     
 }
+
+

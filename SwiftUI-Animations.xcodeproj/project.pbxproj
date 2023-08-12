@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C86427C52A78052800CC4FF2 /* Playground-TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86427C42A78052800CC4FF2 /* Playground-TestFile.swift */; };
 		C86613972A66E117000D58E4 /* GlassyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86613962A66E117000D58E4 /* GlassyButtonView.swift */; };
 		C88FDCE12A61722A00A5B62B /* BatmanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88FDCE02A61722A00A5B62B /* BatmanView.swift */; };
 		C8A563DF2A63A4D000410C1F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A563DE2A63A4D000410C1F /* SplashView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C86427C42A78052800CC4FF2 /* Playground-TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playground-TestFile.swift"; sourceTree = "<group>"; };
 		C86613962A66E117000D58E4 /* GlassyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassyButtonView.swift; sourceTree = "<group>"; };
 		C88FDCE02A61722A00A5B62B /* BatmanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatmanView.swift; sourceTree = "<group>"; };
 		C8A563DE2A63A4D000410C1F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		C88FDCDF2A61721000A5B62B /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				C86427C42A78052800CC4FF2 /* Playground-TestFile.swift */,
 				C8FB855E2A64595C0009CF41 /* LayerMaskUIView.swift */,
 				C8FB855D2A64595C0009CF41 /* LoaderUIView.swift */,
 				C8FB855C2A64595C0009CF41 /* RandomAnimationView.swift */,
@@ -270,6 +273,7 @@
 				C8FB85602A64595C0009CF41 /* RandomAnimationView.swift in Sources */,
 				C8A563DF2A63A4D000410C1F /* SplashView.swift in Sources */,
 				C8FB85612A64595C0009CF41 /* LoaderUIView.swift in Sources */,
+				C86427C52A78052800CC4FF2 /* Playground-TestFile.swift in Sources */,
 				C8F8F9152A695F9C00C6E8E5 /* RocketLaunchView.swift in Sources */,
 				C88FDCE12A61722A00A5B62B /* BatmanView.swift in Sources */,
 				C86613972A66E117000D58E4 /* GlassyButtonView.swift in Sources */,
