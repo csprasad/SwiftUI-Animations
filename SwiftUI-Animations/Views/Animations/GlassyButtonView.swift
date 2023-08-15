@@ -9,7 +9,10 @@ import SwiftUI
 
 struct GlassyButtonView: View {
     
-    @State private var isEnabled = false
+    @State private var isLightOn = false
+    @State private var isFanOn = false
+    @State private var isRotating = 0.0
+
     
     @State var gradientOnOne = Gradient.Stop(color: Color(red: 0.94, green: 0.94, blue: 0.96), location: 0.00)
     @State var gradientOnTwo = Gradient.Stop(color: Color(red: 0.87, green: 0.88, blue: 0.91), location: 1.00)
@@ -22,65 +25,47 @@ struct GlassyButtonView: View {
     @State var startPTOffTwo = UnitPoint(x: 0.05, y: -0.05)
     
     // Light
-    @State private var isLightOn = false
     @State private var gestureOffset: CGFloat = 0
     
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient:isEnabled ? Gradient(colors: [Color(hex: "#C3CBDC"), Color(hex: "#9FA4C4")]) : Gradient(colors: [Color(hex: "#000").opacity(0.6), Color(hex: "#000").opacity(0.8)]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
-            
-            
+            LinearGradient(gradient:isLightOn ? Gradient(colors: [Color(hex: "#C3CBDC"), Color(hex: "#9FA4C4")]) : Gradient(colors: [Color(hex: "#000").opacity(0.6), Color(hex: "#000").opacity(0.8)]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
             
             
             VStack(alignment: .leading, spacing: 60) {
-                HStack(spacing: 30) {
-                    Toggle(isOn: $isEnabled) {
-                        Text("Light/Dark mode")
-                            .foregroundColor(isEnabled ? .white : .black)
+                //MARK: - Toggle View
+                HStack(alignment: .center, spacing: 80) {
+                    //Light Switch
+                    Toggle(isOn: $isLightOn) {
+                        Text("Light Switch")
+                            .foregroundColor(isLightOn ? .white : .black)
                     }
-                    .toggleStyle(FinalGlassyButton())
-
-                    VStack(alignment: .center) {
-                       Image(systemName: isLightOn ? "lightbulb.fill" : "lightbulb")
-                           .resizable()
-                           .frame(width: 60, height: 80)
-                           .foregroundColor(isLightOn ? .yellow : .gray)
-
-                       Rectangle()
-                           .frame(width: 10, height: 50)
-                           .offset(y: self.gestureOffset)
-                           .foregroundColor(isLightOn ? .yellow : .gray)
-                           .gesture(
-                               DragGesture()
-                                   .onChanged { value in
-                                       // Update the gesture offset during the drag gesture
-                                       self.gestureOffset = value.translation.height
-                                   }
-                                   .onEnded { value in
-                                       // When the gesture ends, toggle the light bulb on/off
-                                       withAnimation(.easeOut) {
-                                           if self.gestureOffset > 50 {
-                                               self.isLightOn.toggle()
-                                           }
-                                           // Reset the gesture offset
-                                           self.gestureOffset = 0
-                                       }
-                                   }
-                           )
-
-
-                       Text(isLightOn ? "Light is ON" : "Pull down")
-                           .font(.headline)
-                           .foregroundColor(.black)
-                   }.padding()
+                    .toggleStyle(customToggle())
+                    
+                    //Fan Switch
+                    VStack(alignment: .center, spacing: 0) {
+                        Image("fan")
+                            .font(.system(size: 28))
+                            .rotationEffect(.degrees(isRotating))
+                            .onAppear {
+                                withAnimation(.linear(duration: 1)
+                                        .speed(0.1).repeatForever(autoreverses: false)) {
+                                    isRotating = 360.0
+                                }
+                            }
+                        
+                        Toggle(isOn: $isFanOn) {
+                            Text("")
+                                .foregroundColor(isLightOn ? .white : .black)
+                        }
+                        .toggleStyle(customToggle.init(height: 40))
+                    }
                 }
-
-//                .background(.blue)
                 .frame(width: 400, height: 400)
-//                .background(.red)
 
 
+                //MARK: - Card View - Building
                 HStack(alignment: .bottom, spacing: 10) {
                     Circle()
                         .foregroundColor(.clear)
@@ -138,25 +123,35 @@ struct GlassyButtonView_Previews: PreviewProvider {
 }
 
 
-struct FinalGlassyButton: ToggleStyle {
+struct customToggle: ToggleStyle {
+    //Toggle switch background attributes
+    var height: CGFloat = 200
+    var width: CGFloat = 60
+    var bgViewCornerRadius: CGFloat = 20
     
-    var onImage = "Bat"
-    var offImage = "Bats"
- 
+    //Toggle switch roller Attribute
+    var rollerFrame: CGFloat = 30
+    var rollerCornerRadius: CGFloat = 30
+    
+    //Toggle color attributes
+    var bgViewcolorString: String = "#9FA4C4"
+    var rollerColorString: String = "#B3CDD1"
+    
+    //Toggle builder function
     func makeBody(configuration: Configuration) -> some View {
  
         VStack(spacing: 40){
             configuration.label
             Rectangle()
-                .fill(configuration.isOn ? Color(hex: "#9FA4C4") : Color(hex: "#000").opacity(0.2))
-                .border(configuration.isOn ? Color(hex: "#9FA4C4").opacity(0.5) : Color(hex: "#000").opacity(0), width: 5)
-                .cornerRadius(20)
+                .fill(configuration.isOn ? Color(hex: bgViewcolorString) : Color(hex: "#000").opacity(0.2))
+                .border(configuration.isOn ? Color(hex: bgViewcolorString).opacity(0.5) : Color(hex: "#000").opacity(0), width: 5)
+                .cornerRadius(bgViewCornerRadius)
                 .overlay {
                     
                     Rectangle()
-                        .fill(configuration.isOn ? Color(hex: "#B3CDD1") : Color(hex: "#B3CDD1").opacity(0.4))
-                        .cornerRadius(30)
-                        .frame(width: 30)
+                        .fill(configuration.isOn ? Color(hex: rollerColorString) : Color(hex: rollerColorString).opacity(0.4))
+                        .cornerRadius(rollerCornerRadius)
+                        .frame(width: rollerFrame)
                         .padding(5)
                         .offset(x: configuration.isOn ? 10 : -10)
                         .shadow(color: Color(hue: 0.667, saturation: 0.0, brightness: 0.993).opacity(0.5), radius: 2, x: 0, y: 0)
@@ -164,7 +159,7 @@ struct FinalGlassyButton: ToggleStyle {
                         
                 }
                 .shadow(color: Color(hue: 0.667, saturation: 0.0, brightness: 0.0).opacity(0.5), radius: 3, x: 0, y: 0)
-                .frame(width: 60, height: 200)
+                .frame(width: width, height: height)
                 .onTapGesture {
                     withAnimation(.spring()) {
                         configuration.isOn.toggle()
