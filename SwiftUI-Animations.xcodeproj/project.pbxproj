@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		C86613972A66E117000D58E4 /* GlassyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86613962A66E117000D58E4 /* GlassyButtonView.swift */; };
 		C88FDCE12A61722A00A5B62B /* BatmanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88FDCE02A61722A00A5B62B /* BatmanView.swift */; };
-		C8915A4D2C5E2B600074DFAC /* causticLightEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8915A4C2C5E2B600074DFAC /* causticLightEffect.swift */; };
+		C8915A4D2C5E2B600074DFAC /* octopusMoveEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8915A4C2C5E2B600074DFAC /* octopusMoveEffect.swift */; };
 		C8A563DF2A63A4D000410C1F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A563DE2A63A4D000410C1F /* SplashView.swift */; };
 		C8A563E12A63BBE700410C1F /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A563E02A63BBE700410C1F /* Color+Extension.swift */; };
+		C8AB69FA2C64DD7200CDE6B1 /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AB69F92C64DD7200CDE6B1 /* TestingView.swift */; };
 		C8BE89AC2A611C28003E2C61 /* SwiftUI_Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BE89AB2A611C28003E2C61 /* SwiftUI_Animations.swift */; };
 		C8BE89AE2A611C28003E2C61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BE89AD2A611C28003E2C61 /* ContentView.swift */; };
 		C8BE89B02A611C2A003E2C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8BE89AF2A611C2A003E2C61 /* Assets.xcassets */; };
@@ -30,9 +31,10 @@
 /* Begin PBXFileReference section */
 		C86613962A66E117000D58E4 /* GlassyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassyButtonView.swift; sourceTree = "<group>"; };
 		C88FDCE02A61722A00A5B62B /* BatmanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatmanView.swift; sourceTree = "<group>"; };
-		C8915A4C2C5E2B600074DFAC /* causticLightEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = causticLightEffect.swift; sourceTree = "<group>"; };
+		C8915A4C2C5E2B600074DFAC /* octopusMoveEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = octopusMoveEffect.swift; sourceTree = "<group>"; };
 		C8A563DE2A63A4D000410C1F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		C8A563E02A63BBE700410C1F /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		C8AB69F92C64DD7200CDE6B1 /* TestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingView.swift; sourceTree = "<group>"; };
 		C8BE89A82A611C28003E2C61 /* SwiftUI-Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Animations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8BE89AB2A611C28003E2C61 /* SwiftUI_Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Animations.swift; sourceTree = "<group>"; };
 		C8BE89AD2A611C28003E2C61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		C88FDCDF2A61721000A5B62B /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				C8AB69F92C64DD7200CDE6B1 /* TestingView.swift */,
 				C8FB855E2A64595C0009CF41 /* LayerMaskUIView.swift */,
 				C8FB855D2A64595C0009CF41 /* LoaderUIView.swift */,
 				C8FB855C2A64595C0009CF41 /* RandomAnimationView.swift */,
@@ -73,7 +76,7 @@
 				C8A563DE2A63A4D000410C1F /* SplashView.swift */,
 				C86613962A66E117000D58E4 /* GlassyButtonView.swift */,
 				C8F8F9142A695F9C00C6E8E5 /* RocketLaunchView.swift */,
-				C8915A4C2C5E2B600074DFAC /* causticLightEffect.swift */,
+				C8915A4C2C5E2B600074DFAC /* octopusMoveEffect.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -271,7 +274,7 @@
 				C8BE89AE2A611C28003E2C61 /* ContentView.swift in Sources */,
 				C8A563E12A63BBE700410C1F /* Color+Extension.swift in Sources */,
 				C8FB85602A64595C0009CF41 /* RandomAnimationView.swift in Sources */,
-				C8915A4D2C5E2B600074DFAC /* causticLightEffect.swift in Sources */,
+				C8915A4D2C5E2B600074DFAC /* octopusMoveEffect.swift in Sources */,
 				C8A563DF2A63A4D000410C1F /* SplashView.swift in Sources */,
 				C8FB85612A64595C0009CF41 /* LoaderUIView.swift in Sources */,
 				C8F8F9152A695F9C00C6E8E5 /* RocketLaunchView.swift in Sources */,
@@ -282,6 +285,7 @@
 				C8D6D2DF2A6252D800840EEE /* GridView.swift in Sources */,
 				C8BE89AC2A611C28003E2C61 /* SwiftUI_Animations.swift in Sources */,
 				C8F85B542A6307EC00ECC7D0 /* KakashiView.swift in Sources */,
+				C8AB69FA2C64DD7200CDE6B1 /* TestingView.swift in Sources */,
 				C8FB85622A64595C0009CF41 /* LayerMaskUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
