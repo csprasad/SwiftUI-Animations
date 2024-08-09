@@ -27,11 +27,13 @@ struct GlassyButtonView: View {
             VStack(spacing: 60) {
                 
                 Toggle(isOn: $isEnabled) {
-                    Text("Light/Dark mode")
+                    Text("Light / Dark mode")
                         .foregroundColor(isEnabled ? .white : .black)
+                        .font(.system(size: 24, weight: .bold, design: .monospaced))
+                        .padding(.bottom)
                 }
                 .toggleStyle(FinalGlassyButton())
-            
+                
                 HStack(alignment: .bottom, spacing: 10) {
                     Circle()
                         .foregroundColor(.clear)
@@ -73,6 +75,7 @@ struct GlassyButtonView: View {
                                 startPoint: startPTOffOne,
                                 endPoint: startPTOffTwo
                             )
+                            .blendMode(isEnabled ? .plusLighter : .plusDarker)
                         )
                     .cornerRadius(20)
                     
