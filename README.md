@@ -5,7 +5,7 @@
 
 ## Overview
 
-This repository contains a collection of SwiftUI animations designed to enhance the user experience in iOS apps. The animations add a touch of elegance and interactivity to your app's user interface, making it more engaging for users.
+This repository contains a collection of SwiftUI animations designed to enhance the user experience in iOS apps.
 
 ## Animations
 
