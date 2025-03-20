@@ -39,5 +39,11 @@ struct FinalLoaderView: View {
         .onAppear {
             isAnimating = true
         }
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("Loader UI")
+                    .foregroundColor(.white) // Set title color
+            }
+        }
     }
 }

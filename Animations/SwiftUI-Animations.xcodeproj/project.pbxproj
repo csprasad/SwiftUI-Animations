@@ -19,6 +19,7 @@
 		C8BE89B32A611C2A003E2C61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8BE89B22A611C2A003E2C61 /* Preview Assets.xcassets */; };
 		C8BE89C32A616A37003E2C61 /* Lightening.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BE89C22A616A37003E2C61 /* Lightening.swift */; };
 		C8D6D2DF2A6252D800840EEE /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D6D2DE2A6252D800840EEE /* GridView.swift */; };
+		C8D818262D8C6C0D007054C1 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D818252D8C6C0D007054C1 /* GroupView.swift */; };
 		C8F85B542A6307EC00ECC7D0 /* KakashiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F85B532A6307EC00ECC7D0 /* KakashiView.swift */; };
 		C8F85B562A63080D00ECC7D0 /* Kakashi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F85B552A63080D00ECC7D0 /* Kakashi.swift */; };
 		C8F8F9152A695F9C00C6E8E5 /* RocketLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8F9142A695F9C00C6E8E5 /* RocketLaunchView.swift */; };
@@ -42,6 +43,7 @@
 		C8BE89B22A611C2A003E2C61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C8BE89C22A616A37003E2C61 /* Lightening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lightening.swift; sourceTree = "<group>"; };
 		C8D6D2DE2A6252D800840EEE /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		C8D818252D8C6C0D007054C1 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		C8F85B532A6307EC00ECC7D0 /* KakashiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakashiView.swift; sourceTree = "<group>"; };
 		C8F85B552A63080D00ECC7D0 /* Kakashi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kakashi.swift; sourceTree = "<group>"; };
 		C8F8F9142A695F9C00C6E8E5 /* RocketLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchView.swift; sourceTree = "<group>"; };
@@ -102,7 +104,6 @@
 			children = (
 				C8BE89AB2A611C28003E2C61 /* SwiftUI_Animations.swift */,
 				C8BE89B92A611C4F003E2C61 /* Views */,
-				C8BE89BA2A611C61003E2C61 /* Models */,
 				C8BE89BB2A611C97003E2C61 /* Utils */,
 				C8BE89C02A611D3C003E2C61 /* Resources */,
 				C8BE89B12A611C2A003E2C61 /* Preview Content */,
@@ -121,26 +122,18 @@
 		C8BE89B92A611C4F003E2C61 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C8BE89AD2A611C28003E2C61 /* ContentView.swift */,
+				C8D818252D8C6C0D007054C1 /* GroupView.swift */,
 				C88FDCDF2A61721000A5B62B /* Animations */,
-				C8BE89BE2A611CE3003E2C61 /* Main */,
-				C8BE89BF2A611CEF003E2C61 /* Components */,
 				C8BE89C12A616A13003E2C61 /* Shapes */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		C8BE89BA2A611C61003E2C61 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		C8BE89BB2A611C97003E2C61 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				C8BE89BC2A611CC1003E2C61 /* Extensions */,
-				C8BE89BD2A611CDB003E2C61 /* Shapes */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -153,32 +146,9 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C8BE89BD2A611CDB003E2C61 /* Shapes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Shapes;
-			sourceTree = "<group>";
-		};
-		C8BE89BE2A611CE3003E2C61 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				C8BE89AD2A611C28003E2C61 /* ContentView.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		C8BE89BF2A611CEF003E2C61 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		C8BE89C02A611D3C003E2C61 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C8FB855A2A6455CB0009CF41 /* Gifs */,
 				C8BE89AF2A611C2A003E2C61 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -191,13 +161,6 @@
 				C8F85B552A63080D00ECC7D0 /* Kakashi.swift */,
 			);
 			path = Shapes;
-			sourceTree = "<group>";
-		};
-		C8FB855A2A6455CB0009CF41 /* Gifs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Gifs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +235,7 @@
 			files = (
 				C8FB855F2A64595C0009CF41 /* SunRiseUIView.swift in Sources */,
 				C8BE89AE2A611C28003E2C61 /* ContentView.swift in Sources */,
+				C8D818262D8C6C0D007054C1 /* GroupView.swift in Sources */,
 				C8A563E12A63BBE700410C1F /* Color+Extension.swift in Sources */,
 				C8FB85602A64595C0009CF41 /* RandomAnimationView.swift in Sources */,
 				C8915A4D2C5E2B600074DFAC /* octopusMoveEffect.swift in Sources */,
@@ -420,8 +384,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -429,9 +393,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Learning.SwiftUI-Animations";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -448,8 +415,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,9 +424,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Learning.SwiftUI-Animations";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
