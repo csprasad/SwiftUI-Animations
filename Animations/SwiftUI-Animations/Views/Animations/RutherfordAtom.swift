@@ -15,7 +15,9 @@ struct RutherfordAtom: View {
     let orbitRadius: CGFloat = 100
     
     var body: some View {
+        
         ZStack {
+            Color.black.edgesIgnoringSafeArea(.all)
             // Nucleus (protons and neutrons)
             NucleusView()
                 .frame(width: nucleusSize, height: nucleusSize)
@@ -35,6 +37,12 @@ struct RutherfordAtom: View {
         .onAppear {
             withAnimation(.linear(duration: 8).repeatForever(autoreverses: false)) {
                 electronAngle = 360
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("Rutherford's Atom")
+                    .foregroundColor(.white) // Set title color
             }
         }
     }

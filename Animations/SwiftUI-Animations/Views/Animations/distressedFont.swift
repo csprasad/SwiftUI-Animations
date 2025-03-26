@@ -17,7 +17,6 @@ struct distressedFont: View {
     let maxFontSize: CGFloat = 100
     let maxHeightFactor: CGFloat = 0.6 // Allow 60% of screen height for text
 
-    //Color(hex: "#FFD700"), Color(hex: "#000000")
     var body: some View {
         ZStack(alignment: .topTrailing) {
             LinearGradient(gradient: Gradient(colors:
@@ -34,7 +33,6 @@ struct distressedFont: View {
             .ignoresSafeArea()
            
             
-
             VStack {
                 // Dynamic Text Display
                 Text(userInput)
@@ -50,20 +48,22 @@ struct distressedFont: View {
 
                 VStack(spacing: 8) {
                     // Status Message
-                    Text(maxReached ? "Maximum words reached!" : "Type below - The text resizes dynamically")
+                    Text(maxReached ? "Maximum words reached!" : "Type below - The text changes dynamically")
                         .font(.system(size: 16, weight: .medium))
-                        .foregroundColor(maxReached ? .red : .black)
+                        .foregroundColor(maxReached ? .red : .white)
                         .multilineTextAlignment(.center)
 
                     //Text Input Field
                     TextField("iOS Design", text: $userInput)
                         .font(.system(size: 20, weight: .medium))
                         .padding()
-                        .background(Color.white.opacity(0.2))
+                        .background(Color.white)
                         .cornerRadius(10)
-                        .multilineTextAlignment(.center)
+                        .multilineTextAlignment(.leading)
                         .foregroundColor(.black)
                         .keyboardType(.default)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
                         .disabled(maxReached)
                         .onChange(of: userInput) { newValue in
                             handleTextChange(newValue)

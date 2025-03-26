@@ -8,19 +8,6 @@
 import SwiftUI
 
 struct SunRiseUIView: View {
-    var body: some View {
-        FinalSunriseView()
-    }
-        
-}
-
-struct SunRiseUIView_Previews: PreviewProvider {
-    static var previews: some View {
-        SunRiseUIView()
-    }
-}
-
-struct FinalSunriseView: View {
     @State private var liquidLevel: CGFloat = 0.5
     @State private var sunOffset: CGFloat = 200
     @State private var isAnimated = false
@@ -81,8 +68,8 @@ struct TreeView: View {
                     .font(.system(size: 20))
                     .offset(x: 100, y: -130)
                 GeometryReader { geometry in
-                    ForEach(0..<texts.count) { index in
-                        Text(texts[index])
+                    ForEach(texts, id: \.self) { cloud in
+                        Text(cloud)
                             .position(randomPosition(in: geometry))
                     }
                 }

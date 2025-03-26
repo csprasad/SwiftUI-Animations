@@ -11,9 +11,7 @@ import SwiftUI
 struct SwiftUI_Animations: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-//            TestingView()
-            distressedFont()
+            ContentView()
         }
     }
 }

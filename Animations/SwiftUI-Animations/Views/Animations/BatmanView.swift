@@ -8,43 +8,6 @@
 import SwiftUI
 
 struct BatmanView: View {
-    var body: some View {
-        BatmanFinalView()
-    }
-}
-
-struct BatmanView_Previews: PreviewProvider {
-    static var previews: some View {
-        BatmanView()
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-struct BatmanFinalView: View {
     @State var CloudOffset: CGFloat = 300
     @State var CloudOffset1: CGFloat = 300
     @State var CityOffset: CGFloat = 980
@@ -144,7 +107,7 @@ struct BatmanFinalView: View {
                     .padding(.top, 50)
             
         }
-        .frame(width: .infinity, height: 100)
+        .frame(maxWidth: .infinity, maxHeight: 100)
         .offset(x: 0, y: -300)
         .offset(x: 0, y: 0)
         .opacity(isFlashing ? 0 : 1)
@@ -169,7 +132,7 @@ struct BatmanFinalView: View {
                 .resizable()
                 .padding(.top, 30)
         }
-        .frame(width: .infinity, height: 160)
+        .frame(maxWidth: .infinity, maxHeight: 100)
         .offset(x: 0, y: -300)
         .offset(x: 0, y: 0)
         .opacity(isFlashing1 ? 0 : 1)

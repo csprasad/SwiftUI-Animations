@@ -10,7 +10,6 @@
 		C803FBF82D8CAC9200AB306C /* RutherfordAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C803FBF72D8CAC9200AB306C /* RutherfordAtom.swift */; };
 		C86613972A66E117000D58E4 /* GlassyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86613962A66E117000D58E4 /* GlassyButtonView.swift */; };
 		C88FDCE12A61722A00A5B62B /* BatmanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88FDCE02A61722A00A5B62B /* BatmanView.swift */; };
-		C8915A4D2C5E2B600074DFAC /* octopusMoveEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8915A4C2C5E2B600074DFAC /* octopusMoveEffect.swift */; };
 		C8A563DF2A63A4D000410C1F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A563DE2A63A4D000410C1F /* SplashView.swift */; };
 		C8A563E12A63BBE700410C1F /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A563E02A63BBE700410C1F /* Color+Extension.swift */; };
 		C8AB69FA2C64DD7200CDE6B1 /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AB69F92C64DD7200CDE6B1 /* TestingView.swift */; };
@@ -24,7 +23,6 @@
 		C8D818262D8C6C0D007054C1 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D818252D8C6C0D007054C1 /* GroupView.swift */; };
 		C8F85B542A6307EC00ECC7D0 /* KakashiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F85B532A6307EC00ECC7D0 /* KakashiView.swift */; };
 		C8F85B562A63080D00ECC7D0 /* Kakashi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F85B552A63080D00ECC7D0 /* Kakashi.swift */; };
-		C8F8F9152A695F9C00C6E8E5 /* RocketLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8F9142A695F9C00C6E8E5 /* RocketLaunchView.swift */; };
 		C8FB855F2A64595C0009CF41 /* SunRiseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB855B2A64595C0009CF41 /* SunRiseUIView.swift */; };
 		C8FB85602A64595C0009CF41 /* RandomAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB855C2A64595C0009CF41 /* RandomAnimationView.swift */; };
 		C8FB85612A64595C0009CF41 /* LoaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB855D2A64595C0009CF41 /* LoaderUIView.swift */; };
@@ -35,7 +33,6 @@
 		C803FBF72D8CAC9200AB306C /* RutherfordAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutherfordAtom.swift; sourceTree = "<group>"; };
 		C86613962A66E117000D58E4 /* GlassyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassyButtonView.swift; sourceTree = "<group>"; };
 		C88FDCE02A61722A00A5B62B /* BatmanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatmanView.swift; sourceTree = "<group>"; };
-		C8915A4C2C5E2B600074DFAC /* octopusMoveEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = octopusMoveEffect.swift; sourceTree = "<group>"; };
 		C8A563DE2A63A4D000410C1F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		C8A563E02A63BBE700410C1F /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		C8AB69F92C64DD7200CDE6B1 /* TestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingView.swift; sourceTree = "<group>"; };
@@ -50,7 +47,6 @@
 		C8D818252D8C6C0D007054C1 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		C8F85B532A6307EC00ECC7D0 /* KakashiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakashiView.swift; sourceTree = "<group>"; };
 		C8F85B552A63080D00ECC7D0 /* Kakashi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kakashi.swift; sourceTree = "<group>"; };
-		C8F8F9142A695F9C00C6E8E5 /* RocketLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchView.swift; sourceTree = "<group>"; };
 		C8FB855B2A64595C0009CF41 /* SunRiseUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunRiseUIView.swift; sourceTree = "<group>"; };
 		C8FB855C2A64595C0009CF41 /* RandomAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomAnimationView.swift; sourceTree = "<group>"; };
 		C8FB855D2A64595C0009CF41 /* LoaderUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderUIView.swift; sourceTree = "<group>"; };
@@ -71,18 +67,16 @@
 		C88FDCDF2A61721000A5B62B /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				C803FBF72D8CAC9200AB306C /* RutherfordAtom.swift */,
+				C8D06B712D9405F300BD96AE /* distressedFont.swift */,
 				C8FB855E2A64595C0009CF41 /* LayerMaskUIView.swift */,
 				C8FB855D2A64595C0009CF41 /* LoaderUIView.swift */,
 				C8FB855C2A64595C0009CF41 /* RandomAnimationView.swift */,
 				C8FB855B2A64595C0009CF41 /* SunRiseUIView.swift */,
 				C88FDCE02A61722A00A5B62B /* BatmanView.swift */,
-				C8D6D2DE2A6252D800840EEE /* GridView.swift */,
 				C8F85B532A6307EC00ECC7D0 /* KakashiView.swift */,
 				C8A563DE2A63A4D000410C1F /* SplashView.swift */,
 				C86613962A66E117000D58E4 /* GlassyButtonView.swift */,
-				C8F8F9142A695F9C00C6E8E5 /* RocketLaunchView.swift */,
-				C8915A4C2C5E2B600074DFAC /* octopusMoveEffect.swift */,
-				C803FBF72D8CAC9200AB306C /* RutherfordAtom.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -126,10 +120,10 @@
 		C8BE89B92A611C4F003E2C61 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C8D06B712D9405F300BD96AE /* distressedFont.swift */,
 				C8AB69F92C64DD7200CDE6B1 /* TestingView.swift */,
 				C8BE89AD2A611C28003E2C61 /* ContentView.swift */,
 				C8D818252D8C6C0D007054C1 /* GroupView.swift */,
+				C8D6D2DE2A6252D800840EEE /* GridView.swift */,
 				C88FDCDF2A61721000A5B62B /* Animations */,
 				C8BE89C12A616A13003E2C61 /* Shapes */,
 			);
@@ -245,10 +239,8 @@
 				C8A563E12A63BBE700410C1F /* Color+Extension.swift in Sources */,
 				C8FB85602A64595C0009CF41 /* RandomAnimationView.swift in Sources */,
 				C803FBF82D8CAC9200AB306C /* RutherfordAtom.swift in Sources */,
-				C8915A4D2C5E2B600074DFAC /* octopusMoveEffect.swift in Sources */,
 				C8A563DF2A63A4D000410C1F /* SplashView.swift in Sources */,
 				C8FB85612A64595C0009CF41 /* LoaderUIView.swift in Sources */,
-				C8F8F9152A695F9C00C6E8E5 /* RocketLaunchView.swift in Sources */,
 				C88FDCE12A61722A00A5B62B /* BatmanView.swift in Sources */,
 				C86613972A66E117000D58E4 /* GlassyButtonView.swift in Sources */,
 				C8BE89C32A616A37003E2C61 /* Lightening.swift in Sources */,

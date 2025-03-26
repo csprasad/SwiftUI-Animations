@@ -12,6 +12,7 @@ struct ContentView: View {
     var list: some View {
         List {
             Grouping(title: "Rutherford's Atom", content: { RutherfordAtom() })
+            Grouping(title: "Distressed Font", content: { distressedFont() })
             Grouping(title: "Layer Masking", content: { LayerMaskUIView() })
             Grouping(title: "Loader", content: { LoaderUIView() })
             Grouping(title: "Random Animation", content: { RandomAnimationView() })
@@ -19,11 +20,13 @@ struct ContentView: View {
                 Grouping(title: "Sunrise", content: { SunRiseUIView() })
                 Grouping(title: "Batman", content: { BatmanView() })
             }
-            Grouping(title: "Grid", content: { GridView() })
-            Grouping(title: "kakashi", content: { KakashiView() })
-            Grouping(title: "Splash", content: { SplashView() })
-            Grouping(title: "Glassy Button", content: { GlassyButtonView() })
-            Grouping(title: "Rocket Launch", content: { RocketLaunchView() })
+            Group {
+                Grouping(title: "Grid", content: { GridView() })
+                Grouping(title: "kakashi", content: { KakashiView() })
+                Grouping(title: "Splash", content: { SplashView() })
+                Grouping(title: "Glassy Button", content: { GlassyButtonView() })
+            }
+            
         }
     }
     
