@@ -8,119 +8,61 @@
 import SwiftUI
 
 struct SplashView: View {
+    @State private var isActive = false
+    @State private var lightScale: CGFloat = 0.45
+    @State private var CircleBG: Color = .white // Currently unused
+
     var body: some View {
-        FinalSplashView()
-    }
-}
-
-struct SplashView_Previews: PreviewProvider {
-    static var previews: some View {
-        SplashView()
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-struct FinalSplashView: View {
-    @State var isActive = false
-    @State var lightScale: CGFloat = 0.45
-    @State var CircleBG: Color = .white
-    var body: some View {
-        
         ZStack {
-            Spacer()
-            if self.isActive {
- //                BatmanView()
-             } else {
-                 Circle()
-                     .foregroundColor(.white)
-                     .overlay {
-                             Circle()
-                             .frame(width: 350, height: 350)
-                             .foregroundColor(.init(hex: "#D2CED2"))
-                             .shadow(color: .white, radius: 8)
-                             .scaleEffect(lightScale)
-                             .overlay {
-                                 Circle()
-                                 .frame(width: 300, height: 300)
-                                 .foregroundColor(.init(hex: "#A4A0A4"))
-                                 .shadow(color: .white, radius: 8)
-                                 .scaleEffect(lightScale)
-                                 .overlay {
-                                     Circle()
-                                     .frame(width: 250, height: 250)
-                                     .foregroundColor(.init(hex: "#797579"))
-                                     .shadow(color: .white, radius: 8)
-                                     .scaleEffect(lightScale)
-                                     .overlay {
-                                         Circle()
-                                         .frame(width: 200, height: 200)
-                                         .foregroundColor(.init(hex: "#504C50"))
-                                         .shadow(color: .white, radius: 8)
-                                         .scaleEffect(lightScale)
-                                         .overlay {
-                                             Circle()
-                                             .frame(width: 150, height: 150)
-                                             .shadow(color: .white, radius: 8)
-                                             .foregroundColor(.black)
-                                             .scaleEffect(lightScale)
-                                         }
-                                     }
-                                 }
-                             }
-                             .onAppear {
-                                 withAnimation(.spring(response: 0.9, dampingFraction: 1, blendDuration: 5).repeatForever()) {
-                                     lightScale = 1
-                                 }
-                             }
-                     }
-                 
-                 Circle()
-                     .frame(width: 150, height: 150)
-                     .foregroundColor(.black.opacity(0.4))
-                     .shadow(color: .white, radius: 5)
-                     .overlay {
-                         Image("Profile")
-                             .resizable()
-                             .cornerRadius(150/2)
-                     }
-             }
+            // Background Circles with Animation
+            AnimatedCircles(lightScale: $lightScale)
 
-                    Text("@CSPrasad_iOS")
-                        .padding(EdgeInsets(top: 10, leading: 50, bottom: 10, trailing: 40))
-                        .background(Color.black.opacity(0.2))
-                        .offset(x: 0, y: 250)
-                        .foregroundColor(.black)
-                        .font(.system(size: 25, weight: .bold, design: .monospaced))
-                        .multilineTextAlignment(.center)
-                        .opacity(0.5)
-            
+            // Profile Image in the Center
+            Circle()
+                .frame(width: 150, height: 150)
+                .foregroundColor(.black.opacity(0.4))
+                .shadow(color: .white, radius: 5)
+                .overlay {
+                    Image("Profile")
+                        .resizable()
+                        .scaledToFill()
+                        .clipShape(Circle())
+                }
+
+            // Username Text
+            Text("@CSPrasad_iOS")
+                .padding(.horizontal, 20)
+                .padding(.vertical, 10)
+                .background(Color.black.opacity(0.2))
+                .cornerRadius(10)
+                .offset(y: 250)
+                .foregroundColor(.black)
+                .font(.system(size: 25, weight: .bold, design: .monospaced))
+                .opacity(0.5)
         }
-//        .onAppear {
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-//                withAnimation {
-//                    self.isActive = true
-//                }
-//            }
-//        }
+    }
+}
+
+// MARK: - Extracted Animated Circles Component
+struct AnimatedCircles: View {
+    @Binding var lightScale: CGFloat
+
+    let colors: [String] = ["#D2CED2", "#A4A0A4", "#797579", "#504C50"]
+    
+    var body: some View {
+        ZStack {
+            ForEach(0..<colors.count, id: \.self) { index in
+                Circle()
+                    .frame(width: CGFloat(350 - (index * 50)), height: CGFloat(350 - (index * 50)))
+                    .foregroundColor(Color(hex: colors[index]))
+                    .shadow(color: .white, radius: 8)
+                    .scaleEffect(lightScale)
+            }
+        }
+        .onAppear {
+            withAnimation(.spring(response: 0.9, dampingFraction: 1, blendDuration: 1).repeatForever(autoreverses: true)) {
+                lightScale = 1
+            }
+        }
     }
 }

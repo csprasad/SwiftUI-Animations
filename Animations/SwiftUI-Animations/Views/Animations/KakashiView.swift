@@ -12,10 +12,7 @@ struct KakashiView: View {
     @State var resetStrokes: Bool = true
     @State var strokeStart: CGFloat = 0
     @State var strokeEnd: CGFloat = 0
-    
-    let gradient = Gradient(colors: [.black, .pink])
-
-    
+        
     var body: some View {
         ZStack {
             Color.black
@@ -28,7 +25,6 @@ struct KakashiView: View {
                 .trim(from: strokeStart, to: strokeEnd)
                 .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round, miterLimit: 10))
                 .foregroundColor(.white)
-//                .background(LinearGradient(gradient: gradient, startPoint: .leading, endPoint: .topTrailing))
                 .onAppear() {
                     Timer.scheduledTimer(withTimeInterval: 0.35, repeats: true) { timer in
                         if (self.strokeEnd >= 1) {
@@ -50,10 +46,3 @@ struct KakashiView: View {
         }
     }
 }
-
-struct KakashiView_Previews: PreviewProvider {
-    static var previews: some View {
-        KakashiView()
-    }
-}
-
