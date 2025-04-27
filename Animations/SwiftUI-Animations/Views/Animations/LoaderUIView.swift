@@ -32,7 +32,7 @@ struct FinalLoaderView: View {
                         .foregroundColor(.white)
                         .offset(y: isAnimating ? -30 : 0)
                         .rotationEffect(isAnimating ? .degrees(Double(index) * 90) : .degrees(0))
-                        .animation(Animation.easeInOut(duration: 1.0).repeatForever().delay(Double(index) * 0.3))
+                        .animation(.easeInOut(duration: 1.0).repeatForever().delay(Double(index) * 0.3), value: isAnimating)
                 }
             }
         }

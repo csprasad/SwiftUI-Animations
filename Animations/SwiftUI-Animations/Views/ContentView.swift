@@ -11,6 +11,7 @@ struct ContentView: View {
     
     var list: some View {
         List {
+            Grouping(title: "Masking", content: { MaskingView() })
             Grouping(title: "Rutherford's Atom", content: { RutherfordAtom() })
             Grouping(title: "Distressed Font", content: { distressedFont() })
             Grouping(title: "Layer Masking", content: { LayerMaskUIView() })
