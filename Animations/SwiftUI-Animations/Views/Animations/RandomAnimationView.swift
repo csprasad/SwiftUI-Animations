@@ -10,9 +10,7 @@ import SwiftUI
 struct RandomAnimationView: View {
     @State private var bubbleFloating = false
     @State private var stoveMoving = false
-    @State private var leftVaporizes = false
     @State private var middleVaporizes = false
-    @State private var rightVaporizes = false
     
     var body: some View {
         ZStack {
@@ -23,10 +21,19 @@ struct RandomAnimationView: View {
                 .ignoresSafeArea()
             
             // Vapor Animations
+            VaporView(imageName: "vapor_left", delay: 0.2, isAnimating: $middleVaporizes)
+                .offset(x: 0, y: 25)
+                .blendMode(.plusDarker)
+            
             VaporView(imageName: "vapor_middle", delay: 0.2, isAnimating: $middleVaporizes)
-                .offset(x: 60, y: -65)
-            VaporView(imageName: "vapor_right", delay: 0.0, isAnimating: $rightVaporizes)
-                .offset(x: 60, y: -65)
+                .offset(x: 30, y: 0)
+                .blendMode(.plusDarker)
+
+            
+            VaporView(imageName: "vapor_right", delay: 0.2, isAnimating: $middleVaporizes)
+                .offset(x: 70, y: -25)
+                .blendMode(.plusDarker)
+
             
             // Pot & Stove
             VStack {
@@ -59,13 +66,20 @@ struct VaporView: View {
 
     var body: some View {
         Image(imageName)
-            .blur(radius: 20)
-            .blendMode(.plusDarker)
-            .mask(Rectangle().offset(y: isAnimating ? 0 : 40)) // Alternative to clipShape
+            .blur(radius: 9)
+            .mask(
+                LinearGradient(
+                            colors: [.clear, .black, .clear],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                        .offset(y: isAnimating ? 0 : 80)
+                        .frame(width: 200, height: 300)
+            )
             .onAppear {
                 withAnimation(Animation.timingCurve(0.68, -0.6, 0.32, 1.6)
                     .delay(delay)
-                    .speed(0.8)
+                    .speed(0.1)
                     .repeatForever(autoreverses: false)) {
                     isAnimating = true
                 }
