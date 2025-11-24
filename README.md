@@ -27,9 +27,20 @@ To use these animations in your SwiftUI project, follow these steps:
 
 ## Examples
 
-| Sunrise View | Layer Masking | Random image animation |
-|:---:|:---:|:---:|
-| <img src="../../assets/26570512/4f4fab92-8dd4-439b-85ae-10042fc2003c" alt="GIF 1" width="200" /> | <img src="../../assets/26570512/3ab38e2b-b840-4ac6-bc4d-bb1dacc89fb6" alt="GIF 2" width="200" /> | <img src="../../assets/26570512/ac90a376-b79e-4ba2-8bdd-2aa2b68037e9" alt="GIF 3" width="200" /> | 
+<table>
+  <tr>
+    <td><img src="Screenshots/grid.png"/></td>
+    <td><img src="Screenshots/glassyView.png"/></td>
+    <td><img src="Screenshots/sunrise.png"/></td>
+    <td><img src="Screenshots/batman.png"/></td>
+  </tr>
+  <tr>
+    <td><img src="Screenshots/masking.png"/></td>
+    <td><img src="Screenshots/splash.png"/></td>
+    <td><img src="Screenshots/atom.png"/></td>
+    <td><img src="Screenshots/kakashi.png"/></td>
+  </tr>
+</table>
 
 
 ## License
