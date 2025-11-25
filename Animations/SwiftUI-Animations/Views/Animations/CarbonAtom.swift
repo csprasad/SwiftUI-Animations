@@ -1,5 +1,5 @@
 //
-//  ElectronShell.swift
+//  CarbonAtom.swift
 //  SwiftUI-Animations
 //
 //  Created by codeAlligator on 25/11/25.
@@ -10,17 +10,18 @@ import SwiftUI
 
 struct CarbonAtom: View {
     @State private var rotationAngle: Double = 0
-    let electronCount = 8
-    let orbitRadius: CGFloat = 100
-    let nucleusSize: CGFloat = 50
+    private let electronCount = 8
+    private let orbitRadius: CGFloat = 100
+    private let nucleusSize: CGFloat = 50
     
     var body: some View {
         ZStack {
             // Central nucleus
             Nucleus()
                 .frame(width: nucleusSize, height: nucleusSize)
-                .rotationEffect(.degrees(-rotationAngle))
+                .shadow(color: .gray.opacity(0.5), radius: 27, x: 5, y: 5)
 
+            
             //K Shell dotted orbit ring
             Circle()
                 .stroke(
@@ -32,6 +33,7 @@ struct CarbonAtom: View {
                 )
                 .foregroundColor(.cyan)
                 .frame(width: orbitRadius * 2, height: orbitRadius * 2)
+                .rotationEffect(.degrees(rotationAngle))
 
             // K Shell electrons
             ForEach(0..<electronCount, id: \.self) { index in
@@ -40,7 +42,9 @@ struct CarbonAtom: View {
                         x: orbitRadius * cos(angleForElectron(index)),
                         y: orbitRadius * sin(angleForElectron(index))
                     )
+                    .rotationEffect(.degrees(rotationAngle))
             }
+            
 
             // L Shell dotted orbit ring
             Circle()
@@ -52,74 +56,89 @@ struct CarbonAtom: View {
                     )
                 )
                 .foregroundColor(.cyan)
-                .frame(width: 400, height: 400)   // 2 * 200 radius
+                .frame(width: orbitRadius * 4, height: orbitRadius * 4)
+                .rotationEffect(.degrees(-rotationAngle))
+
 
             // L Shell electrons
             ForEach(0..<electronCount, id: \.self) { index in
-                Electron(rotationAngle: rotationAngle)
+                Electron(rotationAngle: -rotationAngle)
                     .offset(
                         x: 200 * cos(angleForElectron(index)),
                         y: 200 * sin(angleForElectron(index))
                     )
+                    .rotationEffect(.degrees(-rotationAngle))
             }
         }
-        .rotationEffect(.degrees(rotationAngle))
         .onAppear {
-            withAnimation(.linear(duration: 15).repeatForever(autoreverses: false)) {
+            withAnimation(.linear(duration: 10).repeatForever(autoreverses: false)) {
                 rotationAngle = 360
             }
         }
     }
     
     private func angleForElectron(_ index: Int) -> CGFloat {
-        let baseAngle = CGFloat(rotationAngle) * .pi / 180
-        let spacing = 2 * .pi / CGFloat(electronCount)
-        return baseAngle + (spacing * CGFloat(index))
+        2 * .pi / CGFloat(electronCount) * CGFloat(index)
     }
 }
 
-//MARK: - Necleus view
 
+
+//MARK: - Necleus view
 struct Nucleus: View {
+    private let nucleonCount = 12
+    @State private var baseOffsets: [CGPoint] = []
+
     var body: some View {
         ZStack {
-            ForEach(0..<10, id: \.self) { _ in
-                Circle()
-                    .fill(LinearGradient(
-                        gradient: Gradient(colors: [.white, .red]),
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    ))
-                    .frame(width: 20, height: 20)
-                    .offset(x: CGFloat.random(in: -25...25),
-                            y: CGFloat.random(in: -25...25))
-                    .padding()
-            }
-            
-            
-            ForEach(0..<10, id: \.self) { _ in
+            ForEach(0..<nucleonCount, id: \.self) { index in
+                let isProton = index % 2 == 0
+                let base = baseOffsets.indices.contains(index)
+                    ? baseOffsets[index]
+                    : .zero
+
                 ZStack {
                     Circle()
                         .fill(
                             LinearGradient(
-                                gradient: Gradient(colors: [.white, .green]),
+                                gradient: Gradient(
+                                    colors: isProton
+                                    ? [.white, .green] // proton
+                                    : [.white, .red]   // neutron
+                                ),
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing
                             )
                         )
-                        .frame(width: 20, height: 20)
+                        .frame(width: 25, height: 25)
 
-                    Text("+")
-                        .font(.system(size: 20, weight: .bold))
-                        .foregroundColor(.black)
+                    if isProton {
+                        Text("+")
+                            .font(.system(size: 14, weight: .bold))
+                            .foregroundColor(.black)
+                    }
                 }
-                .offset(x: CGFloat.random(in: -20...20),
-                        y: CGFloat.random(in: -20...20))
-                .padding()
+                .offset(
+                    x: base.x + 0.1,
+                    y: base.y + 0.1
+                )
+            }
+        }
+        .onAppear {
+            // random base positions ONCE
+            if baseOffsets.isEmpty {
+                baseOffsets = (0..<nucleonCount).map { _ in
+                    CGPoint(
+                        x: CGFloat.random(in: -20...20),
+                        y: CGFloat.random(in: -20...20)
+                    )
+                }
             }
         }
     }
 }
+
+
 
 //MARK: - Electron view
 
@@ -134,11 +153,12 @@ struct Electron: View {
                     startPoint: .topLeading,
                     endPoint: .bottomTrailing
                 ))
-                .frame(width: 20, height: 20)
-                .shadow(color: .cyan, radius: 15, x: 10, y: 10)
+                .frame(width: 25, height: 25)
+                .shadow(color: .cyan, radius: 27, x: 10, y: 10)
+            
                 
             Text("-")
-                .font(.system(size: 20, weight: .bold))
+                .font(.system(size: 14, weight: .bold))
                 .foregroundColor(.black)
                 .rotationEffect(.degrees(-rotationAngle))
         }
