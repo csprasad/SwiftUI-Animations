@@ -37,7 +37,7 @@ To use these animations in your SwiftUI project, follow these steps:
   <tr>
     <td><img src="Screenshots/masking.png"/></td>
     <td><img src="Screenshots/splash.png"/></td>
-    <td><img src="Screenshots/atom.png"/></td>
+    <td><img src="Screenshots/carbonAtom.png"/></td>
     <td><img src="Screenshots/kakashi.png"/></td>
   </tr>
 </table>
