@@ -14,7 +14,7 @@ struct ContentView: View {
             Group{
                 Grouping(title: "Sunrise", content: { SunRiseUIView() })
                 Grouping(title: "Batman", content: { BatmanView() })
-                Grouping(title: "Rutherford's Atom", content: { RutherfordAtom() })
+                Grouping(title: "Planetary Atom", content: { PlanetaryAtom() })
                 Grouping(title: "Carbon Atom", content: { CarbonAtom() })
             }
             Group {

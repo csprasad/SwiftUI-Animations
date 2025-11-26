@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RutherfordAtom: View {
+struct PlanetaryAtom: View {
     @State private var electronAngle: Double = 0
     let electronCount = 8
     let nucleusSize: CGFloat = 50
@@ -19,6 +19,18 @@ struct RutherfordAtom: View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
             // Nucleus (protons and neutrons)
+            
+            Circle()
+                .stroke(
+                    style: StrokeStyle(
+                        lineWidth: 1,
+                        lineCap: .round,
+                        dash: [2, 5]
+                    )
+                )
+                .foregroundColor(.cyan)
+                .frame(width: nucleusSize, height: nucleusSize)
+            
             NucleusView()
                 .frame(width: nucleusSize, height: nucleusSize)
             
