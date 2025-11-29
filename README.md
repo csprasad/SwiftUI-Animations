@@ -3,6 +3,8 @@
 ![Repository size](https://img.shields.io/github/repo-size/csprasad/SwiftUI-Animations)
 [![GitHub license](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 
+<img src="Screenshots/header_logo.png"/>
+
 ## Overview
 
 This repository contains a collection of SwiftUI animations designed to enhance the user experience in iOS apps.
