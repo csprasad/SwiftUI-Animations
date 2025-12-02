@@ -3,7 +3,7 @@
 ![Repository size](https://img.shields.io/github/repo-size/csprasad/SwiftUI-Animations)
 [![GitHub license](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 
-<img src="Screenshots/header_logo.png"/>
+<img src="images/header_logo.png"/>
 
 ## Overview
 
@@ -24,7 +24,7 @@ The current version of the project includes the following SwiftUI animations:
 
 <table>
   <tr>
-    <td><img src="Screenshots/grid.png"/></td>
+    <td><img src="images/grid.png"/></td>
     <td><img src="gifs/sunrise.gif"/></td>
     <td><img src="gifs/batman.gif"/></td>
     <td><img src="gifs/layerMasking.gif"/></td>
