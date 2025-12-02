@@ -3,11 +3,11 @@
 ![Repository size](https://img.shields.io/github/repo-size/csprasad/SwiftUI-Animations)
 [![GitHub license](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 
-<img src="Screenshots/header_logo.png"/>
+<img src="images/header_logo.png"/>
 
 ## Overview
 
-This repository contains a collection of SwiftUI animations designed to enhance the user experience in iOS apps.
+This repository contains a collection of experimental SwiftUI animations created to explore and enhance user experience in iOS apps.
 
 ## Animations
 
@@ -19,28 +19,27 @@ The current version of the project includes the following SwiftUI animations:
 4. Pulse Animation: Create a pulsating effect for a dynamic UI element.
 5. Scale Animation: Scale views in and out to create emphasis.
 
-## Getting Started
 
-To use these animations in your SwiftUI project, follow these steps:
-
-1. Clone this repository to your local machine.
-2. Open the Xcode project.
-3. Copy the relevant animation code from the "Animations" folder into your project.
-
-## Examples
+## Animations
 
 <table>
   <tr>
-    <td><img src="Screenshots/grid.png"/></td>
-    <td><img src="Screenshots/glassyView.png"/></td>
-    <td><img src="Screenshots/sunrise.png"/></td>
-    <td><img src="Screenshots/batman.png"/></td>
+    <td><img src="gifs/collections.gif"/></td>
+    <td><img src="gifs/sunrise.gif"/></td>
+    <td><img src="gifs/batman.gif"/></td>
+    <td><img src="gifs/layerMasking.gif"/></td>
   </tr>
   <tr>
-    <td><img src="Screenshots/masking.png"/></td>
-    <td><img src="Screenshots/splash.png"/></td>
-    <td><img src="Screenshots/carbonAtom.png"/></td>
-    <td><img src="Screenshots/kakashi.png"/></td>
+    <td><img src="gifs/glassyButton.gif"/></td>
+    <td><img src="gifs/carbonAtom.gif"/></td>
+    <td><img src="gifs/splash.gif"/></td>
+    <td><img src="gifs/masking.gif"/></td>
+  </tr>
+  <tr>
+    <td><img src="gifs/dotLoader.gif"/></td>
+    <td><img src="gifs/kakashi.gif"/></td>
+    <td><img src="gifs/planetary.gif"/></td>
+    <td><img src="gifs/distressedFont.gif"/></td>
   </tr>
 </table>
 
