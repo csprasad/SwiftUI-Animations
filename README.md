@@ -24,7 +24,7 @@ The current version of the project includes the following SwiftUI animations:
 
 <table>
   <tr>
-    <td><img src="images/grid.png"/></td>
+    <td><img src="gifs/collections.gif"/></td>
     <td><img src="gifs/sunrise.gif"/></td>
     <td><img src="gifs/batman.gif"/></td>
     <td><img src="gifs/layerMasking.gif"/></td>
