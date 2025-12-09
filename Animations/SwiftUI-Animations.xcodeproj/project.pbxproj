@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		059466262ED61D7200E2D30D /* CarbonAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059466252ED61D5800E2D30D /* CarbonAtom.swift */; };
+		05BF80B62EE879650082703A /* Stickman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF80B52EE879610082703A /* Stickman.swift */; };
 		C803FBF82D8CAC9200AB306C /* PlanetaryAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C803FBF72D8CAC9200AB306C /* PlanetaryAtom.swift */; };
 		C86613972A66E117000D58E4 /* GlassyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86613962A66E117000D58E4 /* GlassyButtonView.swift */; };
 		C88FDCE12A61722A00A5B62B /* BatmanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88FDCE02A61722A00A5B62B /* BatmanView.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		059466252ED61D5800E2D30D /* CarbonAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonAtom.swift; sourceTree = "<group>"; };
+		05BF80B52EE879610082703A /* Stickman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stickman.swift; sourceTree = "<group>"; };
 		C803FBF72D8CAC9200AB306C /* PlanetaryAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetaryAtom.swift; sourceTree = "<group>"; };
 		C86613962A66E117000D58E4 /* GlassyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassyButtonView.swift; sourceTree = "<group>"; };
 		C88FDCE02A61722A00A5B62B /* BatmanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatmanView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				059466252ED61D5800E2D30D /* CarbonAtom.swift */,
+				05BF80B52EE879610082703A /* Stickman.swift */,
 				C8F9274A2DBE2DF500740A75 /* MaskingView.swift */,
 				C803FBF72D8CAC9200AB306C /* PlanetaryAtom.swift */,
 				C8D06B712D9405F300BD96AE /* distressedFont.swift */,
@@ -241,6 +244,7 @@
 			files = (
 				C8FB855F2A64595C0009CF41 /* SunRiseUIView.swift in Sources */,
 				C8BE89AE2A611C28003E2C61 /* ContentView.swift in Sources */,
+				05BF80B62EE879650082703A /* Stickman.swift in Sources */,
 				C8D818262D8C6C0D007054C1 /* GroupView.swift in Sources */,
 				C8A563E12A63BBE700410C1F /* Color+Extension.swift in Sources */,
 				C8FB85602A64595C0009CF41 /* RandomAnimationView.swift in Sources */,
