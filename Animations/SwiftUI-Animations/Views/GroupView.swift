@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GroupView<Content: View>: View {
     var title: String
+    var note: String?
     let content: () -> Content
     
     var body: some View {
@@ -19,7 +20,7 @@ struct GroupView<Content: View>: View {
 
 struct GroupView_Previews: PreviewProvider {
     static var previews: some View {
-        GroupView(title: "Group", content: { Text("Content") })
+        GroupView(title: "Group", note: "", content: { Text("Content") })
             .previewLayout(.sizeThatFits)
     }
 }

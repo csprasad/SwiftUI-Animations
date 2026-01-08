@@ -12,12 +12,14 @@ struct ContentView: View {
     var list: some View {
         List {
             Group{
+                Grouping(title: "Crowd Walking", note: "(Bug:try to fix it consuming 140% of CPU)", content: { CrowdContainerView() })
+                Grouping(title: "Crowd Walking",note: "Fixed CPU Issue", content: { CrowdContainerViewFixed() })
                 Grouping(title: "Sunrise", content: { SunRiseUIView() })
                 Grouping(title: "Batman", content: { BatmanView() })
                 Grouping(title: "Planetary Atom", content: { PlanetaryAtom() })
-                Grouping(title: "Carbon Atom", content: { CarbonAtom() })
             }
             Group {
+                Grouping(title: "Carbon Atom", content: { CarbonAtom() })
                 Grouping(title: "Layer Masking", content: { LayerMaskUIView() })
                 Grouping(title: "Masking", content: { MaskingView() })
                 Grouping(title: "kakashi", content: { KakashiView() })
@@ -48,11 +50,15 @@ struct ContentView: View {
 
 struct Grouping<Content: View>: View {
     var title: String
+    var note: String?
     var content: () -> Content
     
     var body: some View {
-        NavigationLink(destination: GroupView(title: title, content: content)) {
-            Text(title).font(.headline).padding(.vertical, 8)
+        NavigationLink(destination: GroupView(title: title, note: note, content: content)) {
+            VStack(alignment: .leading, spacing: 4) {
+                Text(title).font(.headline)
+                Text(note ?? "").font(.subheadline).foregroundColor(.secondary)
+            }.padding(.vertical, 4)
         }
     }
 }
