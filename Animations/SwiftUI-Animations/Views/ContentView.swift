@@ -16,6 +16,9 @@ struct ContentView: View {
                 Grouping(title: "Crowd Walking",note: "Fixed CPU Issue", content: { CrowdContainerViewFixed() })
                 Grouping(title: "Sunrise", content: { SunRiseUIView() })
                 Grouping(title: "Batman", content: { BatmanView() })
+            }
+            Group {
+                Grouping(title: "Morph Blob", content: { MorphBlob() })
                 Grouping(title: "Planetary Atom", content: { PlanetaryAtom() })
             }
             Group {
