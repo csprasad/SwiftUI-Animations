@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		055E18CB2F1CE43B001125B1 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055E18CA2F1CE438001125B1 /* LikeButton.swift */; };
 		059466262ED61D7200E2D30D /* CarbonAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059466252ED61D5800E2D30D /* CarbonAtom.swift */; };
-		05A969AA2F0E23E7005869AE /* CrowdContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969A92F0E23E6005869AE /* CrowdContainerView.swift */; };
-		05A969AC2F0E2403005869AE /* CrowdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969AB2F0E2401005869AE /* CrowdView.swift */; };
-		05A969AE2F0E241E005869AE /* Peep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969AD2F0E241D005869AE /* Peep.swift */; };
 		05A969B02F0E2E26005869AE /* PeepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969AF2F0E2E22005869AE /* PeepModel.swift */; };
 		05A969B22F0E2E57005869AE /* CrowdContainerViewFixed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969B12F0E2E4E005869AE /* CrowdContainerViewFixed.swift */; };
 		05A969B42F0E2EAE005869AE /* CrowdViewFixed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969B32F0E2EA9005869AE /* CrowdViewFixed.swift */; };
@@ -40,10 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		055E18CA2F1CE438001125B1 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		059466252ED61D5800E2D30D /* CarbonAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonAtom.swift; sourceTree = "<group>"; };
-		05A969A92F0E23E6005869AE /* CrowdContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowdContainerView.swift; sourceTree = "<group>"; };
-		05A969AB2F0E2401005869AE /* CrowdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowdView.swift; sourceTree = "<group>"; };
-		05A969AD2F0E241D005869AE /* Peep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peep.swift; sourceTree = "<group>"; };
 		05A969AF2F0E2E22005869AE /* PeepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeepModel.swift; sourceTree = "<group>"; };
 		05A969B12F0E2E4E005869AE /* CrowdContainerViewFixed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowdContainerViewFixed.swift; sourceTree = "<group>"; };
 		05A969B32F0E2EA9005869AE /* CrowdViewFixed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowdViewFixed.swift; sourceTree = "<group>"; };
@@ -87,36 +83,18 @@
 		05A969A82F0E23DB005869AE /* CrowdWalk */ = {
 			isa = PBXGroup;
 			children = (
-				05A969E32F0E8F98005869AE /* Fixed */,
-				05A969E22F0E8D54005869AE /* with Bug */,
 				05A969B52F0E7EAE005869AE /* AnimationCredit.swift */,
-			);
-			path = CrowdWalk;
-			sourceTree = "<group>";
-		};
-		05A969E22F0E8D54005869AE /* with Bug */ = {
-			isa = PBXGroup;
-			children = (
-				05A969AD2F0E241D005869AE /* Peep.swift */,
-				05A969AB2F0E2401005869AE /* CrowdView.swift */,
-				05A969A92F0E23E6005869AE /* CrowdContainerView.swift */,
-			);
-			path = "with Bug";
-			sourceTree = "<group>";
-		};
-		05A969E32F0E8F98005869AE /* Fixed */ = {
-			isa = PBXGroup;
-			children = (
 				05A969B32F0E2EA9005869AE /* CrowdViewFixed.swift */,
 				05A969B12F0E2E4E005869AE /* CrowdContainerViewFixed.swift */,
 				05A969AF2F0E2E22005869AE /* PeepModel.swift */,
 			);
-			path = Fixed;
+			path = CrowdWalk;
 			sourceTree = "<group>";
 		};
 		C88FDCDF2A61721000A5B62B /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				055E18CA2F1CE438001125B1 /* LikeButton.swift */,
 				05F2E3262F165517001BF483 /* MorphBlob.swift */,
 				05A969A82F0E23DB005869AE /* CrowdWalk */,
 				059466252ED61D5800E2D30D /* CarbonAtom.swift */,
@@ -289,14 +267,13 @@
 			files = (
 				C8FB855F2A64595C0009CF41 /* SunRiseUIView.swift in Sources */,
 				C8BE89AE2A611C28003E2C61 /* ContentView.swift in Sources */,
-				05A969AA2F0E23E7005869AE /* CrowdContainerView.swift in Sources */,
 				C8D818262D8C6C0D007054C1 /* GroupView.swift in Sources */,
 				C8A563E12A63BBE700410C1F /* Color+Extension.swift in Sources */,
 				05F2E3272F165518001BF483 /* MorphBlob.swift in Sources */,
 				C8FB85602A64595C0009CF41 /* RandomAnimationView.swift in Sources */,
 				C803FBF82D8CAC9200AB306C /* PlanetaryAtom.swift in Sources */,
 				C8A563DF2A63A4D000410C1F /* SplashView.swift in Sources */,
-				05A969AC2F0E2403005869AE /* CrowdView.swift in Sources */,
+				055E18CB2F1CE43B001125B1 /* LikeButton.swift in Sources */,
 				C8FB85612A64595C0009CF41 /* LoaderUIView.swift in Sources */,
 				C88FDCE12A61722A00A5B62B /* BatmanView.swift in Sources */,
 				C86613972A66E117000D58E4 /* GlassyButtonView.swift in Sources */,
@@ -304,7 +281,6 @@
 				C8BE89C32A616A37003E2C61 /* Lightening.swift in Sources */,
 				C8F85B562A63080D00ECC7D0 /* Kakashi.swift in Sources */,
 				05A969B62F0E7EB7005869AE /* AnimationCredit.swift in Sources */,
-				05A969AE2F0E241E005869AE /* Peep.swift in Sources */,
 				C8F9274B2DBE2DF500740A75 /* MaskingView.swift in Sources */,
 				C8D6D2DF2A6252D800840EEE /* GridView.swift in Sources */,
 				C8BE89AC2A611C28003E2C61 /* SwiftUI_Animations.swift in Sources */,
