@@ -36,8 +36,6 @@ struct Bat: Shape {
     }
 }
 
-
-
 struct Lightening_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {

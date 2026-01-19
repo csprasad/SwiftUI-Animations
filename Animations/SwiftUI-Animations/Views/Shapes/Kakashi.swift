@@ -147,7 +147,6 @@ struct KakashiShape: Shape {
     }
 }
 
-
 struct KakashiShape_Previews: PreviewProvider {
     static var previews: some View {
         KakashiShape()
