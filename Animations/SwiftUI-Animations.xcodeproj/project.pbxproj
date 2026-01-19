@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		055E18CB2F1CE43B001125B1 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055E18CA2F1CE438001125B1 /* LikeButton.swift */; };
+		05736D102F1E9BCB009FF8CA /* GravityGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05736D0F2F1E9B6E009FF8CA /* GravityGrid.swift */; };
 		059466262ED61D7200E2D30D /* CarbonAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059466252ED61D5800E2D30D /* CarbonAtom.swift */; };
 		05A969B02F0E2E26005869AE /* PeepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969AF2F0E2E22005869AE /* PeepModel.swift */; };
 		05A969B22F0E2E57005869AE /* CrowdContainerViewFixed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969B12F0E2E4E005869AE /* CrowdContainerViewFixed.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		055E18CA2F1CE438001125B1 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		05736D0F2F1E9B6E009FF8CA /* GravityGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityGrid.swift; sourceTree = "<group>"; };
 		059466252ED61D5800E2D30D /* CarbonAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonAtom.swift; sourceTree = "<group>"; };
 		05A969AF2F0E2E22005869AE /* PeepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeepModel.swift; sourceTree = "<group>"; };
 		05A969B12F0E2E4E005869AE /* CrowdContainerViewFixed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowdContainerViewFixed.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		C88FDCDF2A61721000A5B62B /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				05736D0F2F1E9B6E009FF8CA /* GravityGrid.swift */,
 				055E18CA2F1CE438001125B1 /* LikeButton.swift */,
 				05F2E3262F165517001BF483 /* MorphBlob.swift */,
 				05A969A82F0E23DB005869AE /* CrowdWalk */,
@@ -271,6 +274,7 @@
 				C8A563E12A63BBE700410C1F /* Color+Extension.swift in Sources */,
 				05F2E3272F165518001BF483 /* MorphBlob.swift in Sources */,
 				C8FB85602A64595C0009CF41 /* RandomAnimationView.swift in Sources */,
+				05736D102F1E9BCB009FF8CA /* GravityGrid.swift in Sources */,
 				C803FBF82D8CAC9200AB306C /* PlanetaryAtom.swift in Sources */,
 				C8A563DF2A63A4D000410C1F /* SplashView.swift in Sources */,
 				055E18CB2F1CE43B001125B1 /* LikeButton.swift in Sources */,

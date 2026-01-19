@@ -17,6 +17,7 @@ struct ContentView: View {
                 Grouping(title: "Batman", content: { BatmanView() })
             }
             Group {
+                Grouping(title: "Gravity Grid", note: "General Relativity Concept") { GravityGrid() }
                 Grouping(title: "Morph Blob", content: { MorphBlob() })
                 Grouping(title: "Planetary Atom", content: { PlanetaryAtom() })
             }
