@@ -11,13 +11,14 @@ struct ContentView: View {
     
     var list: some View {
         List {
-            Group{
-                Grouping(title: "Crowd Walking",note: "", content: { CrowdContainerViewFixed() })
+            Group {
+                Grouping(title: "Spacetime Grid", note: "Interactive spacetime deformation with gravity, rotation, and waves.") { GravityGridView() }
+                Grouping(title: "Crowd Walking", content: { CrowdContainerViewFixed() })
                 Grouping(title: "Sunrise", content: { SunRiseUIView() })
                 Grouping(title: "Batman", content: { BatmanView() })
             }
             Group {
-                Grouping(title: "Gravity Grid", note: "General Relativity Concept") { GravityGrid() }
+                
                 Grouping(title: "Morph Blob", content: { MorphBlob() })
                 Grouping(title: "Planetary Atom", content: { PlanetaryAtom() })
             }
@@ -26,7 +27,6 @@ struct ContentView: View {
                 Grouping(title: "Layer Masking", content: { LayerMaskUIView() })
                 Grouping(title: "Masking", content: { MaskingView() })
                 Grouping(title: "kakashi", content: { KakashiView() })
-
             }
             Group {
                 Grouping(title: "Like Button", content: { LikeButton() })
@@ -44,7 +44,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            list.navigationBarTitle("SwiftUI-Animations")
+            list.navigationBarTitle("Animations")
             Text("Select a group")
         }
         .accentColor(.accentColor)
@@ -60,7 +60,9 @@ struct Grouping<Content: View>: View {
         NavigationLink(destination: GroupView(title: title, note: note, content: content)) {
             VStack(alignment: .leading, spacing: 4) {
                 Text(title).font(.headline)
-                Text(note ?? "").font(.subheadline).foregroundColor(.secondary)
+                if let note, !note.isEmpty {
+                    Text(note).font(.subheadline).foregroundColor(.secondary)
+                }
             }.padding(.vertical, 4)
         }
     }
