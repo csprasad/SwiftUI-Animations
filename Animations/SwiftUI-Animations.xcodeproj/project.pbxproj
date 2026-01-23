@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		051C8CD42F21FC0300B0DA6A /* CrowdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051C8CD32F21FC0300B0DA6A /* CrowdView.swift */; };
 		055320A22F1EAD3800E34301 /* GravityGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055320A12F1EAD3800E34301 /* GravityGridView.swift */; };
 		055E18CB2F1CE43B001125B1 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055E18CA2F1CE438001125B1 /* LikeButton.swift */; };
+		056C64A82F23ED2400FBF4C1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056C64A72F23ED2400FBF4C1 /* Colors.xcassets */; };
 		059466262ED61D7200E2D30D /* CarbonAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059466252ED61D5800E2D30D /* CarbonAtom.swift */; };
 		05A969B02F0E2E26005869AE /* PeepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969AF2F0E2E22005869AE /* PeepModel.swift */; };
-		05A969B22F0E2E57005869AE /* CrowdContainerViewFixed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969B12F0E2E4E005869AE /* CrowdContainerViewFixed.swift */; };
-		05A969B42F0E2EAE005869AE /* CrowdViewFixed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969B32F0E2EA9005869AE /* CrowdViewFixed.swift */; };
+		05A969B22F0E2E57005869AE /* CrowdContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969B12F0E2E4E005869AE /* CrowdContainerView.swift */; };
 		05A969B62F0E7EB7005869AE /* AnimationCredit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969B52F0E7EAE005869AE /* AnimationCredit.swift */; };
 		05F2E3272F165518001BF483 /* MorphBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F2E3262F165517001BF483 /* MorphBlob.swift */; };
 		C803FBF82D8CAC9200AB306C /* PlanetaryAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C803FBF72D8CAC9200AB306C /* PlanetaryAtom.swift */; };
@@ -38,12 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		051C8CD32F21FC0300B0DA6A /* CrowdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowdView.swift; sourceTree = "<group>"; };
 		055320A12F1EAD3800E34301 /* GravityGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityGridView.swift; sourceTree = "<group>"; };
 		055E18CA2F1CE438001125B1 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		056C64A72F23ED2400FBF4C1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		059466252ED61D5800E2D30D /* CarbonAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonAtom.swift; sourceTree = "<group>"; };
 		05A969AF2F0E2E22005869AE /* PeepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeepModel.swift; sourceTree = "<group>"; };
-		05A969B12F0E2E4E005869AE /* CrowdContainerViewFixed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowdContainerViewFixed.swift; sourceTree = "<group>"; };
-		05A969B32F0E2EA9005869AE /* CrowdViewFixed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowdViewFixed.swift; sourceTree = "<group>"; };
+		05A969B12F0E2E4E005869AE /* CrowdContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowdContainerView.swift; sourceTree = "<group>"; };
 		05A969B52F0E7EAE005869AE /* AnimationCredit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCredit.swift; sourceTree = "<group>"; };
 		05F2E3262F165517001BF483 /* MorphBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorphBlob.swift; sourceTree = "<group>"; };
 		C803FBF72D8CAC9200AB306C /* PlanetaryAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetaryAtom.swift; sourceTree = "<group>"; };
@@ -84,9 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				05A969B52F0E7EAE005869AE /* AnimationCredit.swift */,
-				05A969B32F0E2EA9005869AE /* CrowdViewFixed.swift */,
-				05A969B12F0E2E4E005869AE /* CrowdContainerViewFixed.swift */,
+				05A969B12F0E2E4E005869AE /* CrowdContainerView.swift */,
 				05A969AF2F0E2E22005869AE /* PeepModel.swift */,
+				051C8CD32F21FC0300B0DA6A /* CrowdView.swift */,
 			);
 			path = CrowdWalk;
 			sourceTree = "<group>";
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				C8BE89AF2A611C2A003E2C61 /* Assets.xcassets */,
+				056C64A72F23ED2400FBF4C1 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				056C64A82F23ED2400FBF4C1 /* Colors.xcassets in Resources */,
 				C8BE89B32A611C2A003E2C61 /* Preview Assets.xcassets in Resources */,
 				C8BE89B02A611C2A003E2C61 /* Assets.xcassets in Resources */,
 			);
@@ -281,12 +285,12 @@
 				C8BE89C32A616A37003E2C61 /* Lightening.swift in Sources */,
 				C8F85B562A63080D00ECC7D0 /* Kakashi.swift in Sources */,
 				05A969B62F0E7EB7005869AE /* AnimationCredit.swift in Sources */,
+				051C8CD42F21FC0300B0DA6A /* CrowdView.swift in Sources */,
 				C8F9274B2DBE2DF500740A75 /* MaskingView.swift in Sources */,
 				C8D6D2DF2A6252D800840EEE /* GridView.swift in Sources */,
 				C8BE89AC2A611C28003E2C61 /* SwiftUI_Animations.swift in Sources */,
 				C8F85B542A6307EC00ECC7D0 /* KakashiView.swift in Sources */,
-				05A969B42F0E2EAE005869AE /* CrowdViewFixed.swift in Sources */,
-				05A969B22F0E2E57005869AE /* CrowdContainerViewFixed.swift in Sources */,
+				05A969B22F0E2E57005869AE /* CrowdContainerView.swift in Sources */,
 				055320A22F1EAD3800E34301 /* GravityGridView.swift in Sources */,
 				05A969B02F0E2E26005869AE /* PeepModel.swift in Sources */,
 				C8D06B722D9405F300BD96AE /* distressedFont.swift in Sources */,
@@ -422,6 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Animations/Preview Content\"";
@@ -455,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Animations/Preview Content\"";

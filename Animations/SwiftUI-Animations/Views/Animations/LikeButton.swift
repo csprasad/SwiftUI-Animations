@@ -1,5 +1,5 @@
 //
-//  XLike.swift
+//  LikeButton.swift
 //  SwiftUI-Animations
 //
 //  Created by codeAlligator on 18/01/26.

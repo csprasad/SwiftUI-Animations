@@ -1,5 +1,5 @@
 //
-//  AnimationCredit.swift
+//  AnimationCreditView.swift
 //  SwiftUI-Animations
 //
 //  Created by codeAlligator on 07/01/26.
