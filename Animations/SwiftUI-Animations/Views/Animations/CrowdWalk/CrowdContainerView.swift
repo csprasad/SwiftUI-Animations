@@ -1,5 +1,5 @@
 //
-//  PeepCanvasView.swift
+//  CrowdContainerView.swift
 //  SwiftUI-Animations
 //
 //  Created by codeAlligator on 07/01/26.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CrowdContainerViewFixed: View {
+struct CrowdContainerView: View {
     var body: some View {
         ZStack {
             VStack {
@@ -25,7 +25,7 @@ struct CrowdContainerViewFixed: View {
                     cols: 4
                 )
 
-                CrowdViewFixed(slicedImages: images)
+                CrowdView(slicedImages: images)
                     .ignoresSafeArea()
             } else {
                 Text("Image not found")

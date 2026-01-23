@@ -7,39 +7,46 @@
 
 import SwiftUI
 
+// MARK: - Main Scene
 struct SunRiseUIView: View {
-    @State private var liquidLevel: CGFloat = 0.5
     @State private var sunOffset: CGFloat = 200
-    @State private var isAnimated = false
     @State private var backgroundColor = Color.black
 
-    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
+                // Sky + Sun
                 SunView()
                     .foregroundColor(.yellow)
                     .offset(y: sunOffset)
-                    .animation(Animation.easeInOut(duration: 5), value: isAnimated)
-                    .onAppear {
-                        sunOffset = -250
-                        isAnimated = true
-                        withAnimation(.easeInOut(duration: 6)) {
-                            backgroundColor = Color.black.opacity(0)
-                        }
-                    }
-                    .rotation3DEffect(Angle(degrees: 0), axis: (x: 45, y: 360, z: 0))
+
+                // Landscape
                 TreeView()
-                    .padding()
             }
+
+            // Fade-out overlay
             Rectangle()
                 .foregroundColor(backgroundColor)
-                .frame(width: geometry.size.width, height: geometry.size.height + 200)
+                .frame(
+                    width: geometry.size.width,
+                    height: geometry.size.height + 200
+                )
                 .ignoresSafeArea()
-    }
+        }
+        .onAppear {
+            withAnimation(.easeInOut(duration: 5)) {
+                sunOffset = -250
+            }
+
+            withAnimation(.easeInOut(duration: 6)) {
+                backgroundColor = .black.opacity(0.01)
+            }
+        }
+        .background(.skyblue)
     }
 }
 
+// MARK: - Sun
 struct SunView: View {
     var body: some View {
         Image(systemName: "sun.max.fill")
@@ -48,73 +55,84 @@ struct SunView: View {
     }
 }
 
-
+// MARK: - Landscape
 struct TreeView: View {
-    @State private var textPosition: CGPoint = .zero
-    let texts = ["☁","☁","☁","☁","☁","☁","☁","☁",]
+    private let clouds = Array(repeating: "☁", count: 8)
+    @State private var cloudPositions: [CGPoint] = []
+
     var body: some View {
-        ZStack{
-            ZStack {
-                Text("☁")
-                    .font(.system(size: 100))
-                    .offset(x: 100, y: -290)
-                Text("☁")
-                    .font(.system(size: 80))
-                    .offset(x: -100, y: -170)
-                Text("☁")
-                    .font(.system(size: 30))
-                    .offset(x: -80, y: -270)
-                Text("☁")
-                    .font(.system(size: 20))
-                    .offset(x: 100, y: -130)
-                GeometryReader { geometry in
-                    ForEach(texts, id: \.self) { cloud in
-                        Text(cloud)
-                            .position(randomPosition(in: geometry))
+        ZStack {
+            // Clouds
+            GeometryReader { geometry in
+                ZStack {
+                    if cloudPositions.count == clouds.count {
+                        ForEach(clouds.indices, id: \.self) { index in
+                            Text(clouds[index])
+                                .font(.system(size: 60))
+                                .position(cloudPositions[index])
+                        }
+                    }
+                }
+                .onAppear {
+                    guard cloudPositions.isEmpty else { return }
+
+                    cloudPositions = clouds.map { _ in
+                        CGPoint(
+                            x: .random(in: 0...geometry.size.width),
+                            y: .random(in: 0...geometry.size.height * 0.35)
+                        )
                     }
                 }
             }
-            VStack {
-                Image("sand")
-                    .resizable()
-                    .frame(width: 800, height: 800)
-                    .offset(x:0,y:250)
-            }.padding(-290)
-            HStack {
-                Image("river")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 380, height: 420)
-                    .offset(x:-190,y:210)
-                    .rotationEffect(Angle(degrees: -55))
+
+
+
+            // Static clouds (foreground depth)
+            Group {
+                Text("☁").font(.system(size: 100)).offset(x: 100, y: -290)
+                Text("☁").font(.system(size: 80)).offset(x: -100, y: -170)
+                Text("☁").font(.system(size: 30)).offset(x: -80, y: -270)
+                Text("☁").font(.system(size: 20)).offset(x: 100, y: -130)
             }
-            
-            HStack {
-                Text("🌋")
-                    .font(.system(size: 180))
-                    .offset(x: 0, y: 10)
-            }
-            
+
+            // Sand
+            Image("sand")
+                .resizable()
+                .frame(width: 800, height: 800)
+                .offset(y: 250)
+                .padding(-290)
+
+            // River
+            Image("river")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 380, height: 420)
+                .offset(x: -190, y: 210)
+                .rotationEffect(.degrees(-55))
+
+            // Volcano
+            Text("🌋")
+                .font(.system(size: 180))
+                .offset(y: 10)
+
+            // Mountains
             HStack(spacing: 20) {
-                Text("🏔")
-                    .font(.system(size: 280))
-                Text("🏔")
-                    .font(.system(size: 300))
-            }.padding(-120)
-            
-            HStack(spacing: 0){
-                Text("⛺").font(.system(size: 150))
-                    .offset(x:-100, y: 250)
-                Text("🏌️‍♀️").font(.system(size: 50))
-                    .offset(x:-100, y: 300)
+                Text("🏔").font(.system(size: 280))
+                Text("🏔").font(.system(size: 300))
+            }
+            .padding(-120)
+
+            // Camp
+            HStack(spacing: 0) {
+                Text("⛺")
+                    .font(.system(size: 150))
+                    .offset(x: -100, y: 250)
+
+                Text("🏌️‍♀️")
+                    .font(.system(size: 50))
+                    .offset(x: -100, y: 300)
             }
         }
     }
-    
-    func randomPosition(in geometry: GeometryProxy) -> CGPoint {
-            let screenWidth = geometry.size.width
-            let randomX = CGFloat.random(in: 0...screenWidth)
-        let randomY = CGFloat.random(in: 0...(geometry.safeAreaInsets.leading))
-            return CGPoint(x: randomX, y: randomY)
-        }
 }
+

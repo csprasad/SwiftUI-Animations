@@ -1,5 +1,5 @@
 //
-//  PeepView.swift
+//  CrowdView.swift
 //  SwiftUI-Animations
 //
 //  Created by codeAlligator on 07/01/26.
@@ -21,7 +21,7 @@ import SwiftUI
 // Do NOT move sorting or image creation back into the draw loop.
 
 
-struct CrowdViewFixed: View {
+struct CrowdView: View {
     let slicedImages: [CGImage]
 
     @State private var peepModel: [PeepModel] = []
