@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Main View
+
 struct FlowerBloom: View {
     @State private var startDate = Date()
 
@@ -20,24 +22,23 @@ struct FlowerBloom: View {
             )
         }
         .frame(width: 360, height: 360)
-        .background(Color.black)
+//        .background(Color.black)
         .onAppear {
             startDate = Date()
         }
     }
 }
 
-
 // MARK: - Canvas View
+
 struct FlowerCanvas: View {
     let date: Date
     let startDate: Date
 
-    let petalCount: Int = 10
+    let petalCount: Int = 5     // try 3,4,5,8,16
+    let bloomDuration: Double = 6.0
 
-    let bloomDuration: Double = 5.0
-
-    // colors (HSB)
+    // HSB colors
     let darkHSB: (CGFloat, CGFloat, CGFloat) = (0.07, 0.95, 0.55)
     let lightOrangeHSB: (CGFloat, CGFloat, CGFloat) = (0.10, 0.85, 0.90)
     let yellowHSB: (CGFloat, CGFloat, CGFloat) = (0.13, 0.90, 0.97)
@@ -51,24 +52,20 @@ struct FlowerCanvas: View {
             let center = CGPoint(x: size.width / 2, y: size.height / 2)
             let radius = min(size.width, size.height) * 0.45
 
-            // rotation after bloom
             let rotation = t >= 1
                 ? (elapsed - bloomDuration) * 0.05
                 : 0
 
-            // symmetry rules
             let effectivePetals = max(petalCount, 3)
             let angleStep = (2 * .pi) / CGFloat(effectivePetals)
 
-            // density based sizing
-            let densityFactor = min(CGFloat(effectivePetals) / 8, 1)
+            let density = min(CGFloat(effectivePetals) / 8, 1)
             let arcLength = radius * angleStep
 
             let length = radius * (0.75 + 0.25 * growth)
-            let width  = arcLength * lerp(0.35, 0.65, densityFactor)
+            let width  = arcLength * lerp(0.35, 0.65, density)
             let curl   = 0.35 + 0.4 * growth
 
-            // color interpolation
             let color: Color = {
                 if growth < 0.5 {
                     return interpolateHSB(
@@ -93,14 +90,14 @@ struct FlowerCanvas: View {
                     layer.rotate(by: .radians(Double(rotation)))
                     layer.rotate(by: .radians(Double(angle)))
 
-                    let path = petalPath(
+                    let petal = petalPath(
                         length: length,
                         width: width,
                         curl: curl
                     )
 
-                    layer.fill(
-                        path,
+                    // FILL
+                    layer.fill(petal,
                         with: .linearGradient(
                             Gradient(colors: [
                                 Color.white.opacity(0.9),
@@ -110,9 +107,51 @@ struct FlowerCanvas: View {
                             endPoint: CGPoint(x: 0, y: -length)
                         )
                     )
+
+                    // PETAL OUTLINE (like your reference)
+                    layer.stroke(petal,
+                        with: .color(Color.black.opacity(0.35)),
+                        lineWidth: max(1.2, width * 0.02)
+                    )
+
+                    // INNER VEIN (hand drawn feel)
+                    let vein = petalVeinPath(length: length)
+                    layer.stroke(vein,
+                        with: .color(Color.black.opacity(0.25)),
+                        lineWidth: 1
+                    )
                 }
             }
         }
+    }
+}
+
+// MARK: - Petal Shape
+func petalPath(length: CGFloat, width: CGFloat, curl: CGFloat) -> Path {
+    Path { path in
+        path.move(to: .zero)
+
+        let tip = CGPoint(x: 0, y: -length)
+
+        path.addQuadCurve(to: tip,
+            control: CGPoint(x: -width, y: -length * curl)
+        )
+
+        path.addQuadCurve(to: .zero,
+            control: CGPoint(x: width, y: -length * curl)
+        )
+    }
+}
+
+
+// MARK: - Vein Path (center line)
+func petalVeinPath(length: CGFloat) -> Path {
+    Path { path in
+        path.move(to: CGPoint(x: 0, y: -length * 0.15))
+        path.addQuadCurve(
+            to: CGPoint(x: 0, y: -length * 0.85),
+            control: CGPoint(x: 3, y: -length * 0.45)
+        )
     }
 }
 
@@ -126,32 +165,5 @@ func lerp(_ a: CGFloat, _ b: CGFloat, _ t: CGFloat) -> CGFloat {
 }
 
 func interpolateHSB(from: (CGFloat, CGFloat, CGFloat), to: (CGFloat, CGFloat, CGFloat), t: CGFloat) -> Color {
-    Color(hue: lerp(from.0, to.0, t),
-          saturation: lerp(from.1, to.1, t),
-          brightness: lerp(from.2, to.2, t))
-}
-
-// MARK: - Petal Shape
-func petalPath(length: CGFloat, width: CGFloat, curl: CGFloat) -> Path {
-    Path { p in
-        p.move(to: .zero)
-
-        let tip = CGPoint(x: 0, y: -length)
-
-        p.addQuadCurve(
-            to: tip,
-            control: CGPoint(
-                x: -width,
-                y: -length * curl
-            )
-        )
-
-        p.addQuadCurve(
-            to: .zero,
-            control: CGPoint(
-                x: width,
-                y: -length * curl
-            )
-        )
-    }
+    Color(hue: lerp(from.0, to.0, t), saturation: lerp(from.1, to.1, t), brightness: lerp(from.2, to.2, t))
 }
