@@ -19,9 +19,10 @@ struct ContentView: View {
                 Grouping(title: "Sunrise", content: { SunRiseUIView() })
                 Grouping(title: "Batman", content: { BatmanView() })
                 Grouping(title: "Morph Blob", content: { MorphBlob() })
-                Grouping(title: "Planetary Atom", content: { PlanetaryAtom() })
+                Grouping(title: "Flower Bloom", content: { FlowerBloom() })
             }
             Group {
+                Grouping(title: "Planetary Atom", content: { PlanetaryAtom() })
                 Grouping(title: "Carbon Atom", content: { CarbonAtom() })
                 Grouping(title: "Layer Masking", content: { LayerMaskUIView() })
                 Grouping(title: "Masking", content: { MaskingView() })
