@@ -15,9 +15,7 @@
 		05A969B02F0E2E26005869AE /* PeepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969AF2F0E2E22005869AE /* PeepModel.swift */; };
 		05A969B22F0E2E57005869AE /* CrowdContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969B12F0E2E4E005869AE /* CrowdContainerView.swift */; };
 		05A969B62F0E7EB7005869AE /* AnimationCredit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969B52F0E7EAE005869AE /* AnimationCredit.swift */; };
-		05B94F0B2F27798E002AFED1 /* Petal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B94F0A2F27798D002AFED1 /* Petal.swift */; };
-		05B94F0D2F2779A7002AFED1 /* AnimatedColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B94F0C2F2779A6002AFED1 /* AnimatedColor.swift */; };
-		05B94F0F2F2779C2002AFED1 /* FlowerBloom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B94F0E2F2779C1002AFED1 /* FlowerBloom.swift */; };
+		05B94F112F27EB84002AFED1 /* FlowerBloom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B94F102F27EB84002AFED1 /* FlowerBloom.swift */; };
 		05F2E3272F165518001BF483 /* MorphBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F2E3262F165517001BF483 /* MorphBlob.swift */; };
 		C803FBF82D8CAC9200AB306C /* PlanetaryAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C803FBF72D8CAC9200AB306C /* PlanetaryAtom.swift */; };
 		C86613972A66E117000D58E4 /* GlassyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86613962A66E117000D58E4 /* GlassyButtonView.swift */; };
@@ -50,9 +48,7 @@
 		05A969AF2F0E2E22005869AE /* PeepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeepModel.swift; sourceTree = "<group>"; };
 		05A969B12F0E2E4E005869AE /* CrowdContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowdContainerView.swift; sourceTree = "<group>"; };
 		05A969B52F0E7EAE005869AE /* AnimationCredit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCredit.swift; sourceTree = "<group>"; };
-		05B94F0A2F27798D002AFED1 /* Petal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petal.swift; sourceTree = "<group>"; };
-		05B94F0C2F2779A6002AFED1 /* AnimatedColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedColor.swift; sourceTree = "<group>"; };
-		05B94F0E2F2779C1002AFED1 /* FlowerBloom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerBloom.swift; sourceTree = "<group>"; };
+		05B94F102F27EB84002AFED1 /* FlowerBloom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerBloom.swift; sourceTree = "<group>"; };
 		05F2E3262F165517001BF483 /* MorphBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorphBlob.swift; sourceTree = "<group>"; };
 		C803FBF72D8CAC9200AB306C /* PlanetaryAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetaryAtom.swift; sourceTree = "<group>"; };
 		C86613962A66E117000D58E4 /* GlassyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassyButtonView.swift; sourceTree = "<group>"; };
@@ -102,9 +98,7 @@
 		05B94F092F27797F002AFED1 /* Flower */ = {
 			isa = PBXGroup;
 			children = (
-				05B94F0E2F2779C1002AFED1 /* FlowerBloom.swift */,
-				05B94F0C2F2779A6002AFED1 /* AnimatedColor.swift */,
-				05B94F0A2F27798D002AFED1 /* Petal.swift */,
+				05B94F102F27EB84002AFED1 /* FlowerBloom.swift */,
 			);
 			path = Flower;
 			sourceTree = "<group>";
@@ -289,13 +283,12 @@
 				C8FB855F2A64595C0009CF41 /* SunRiseUIView.swift in Sources */,
 				C8BE89AE2A611C28003E2C61 /* ContentView.swift in Sources */,
 				C8D818262D8C6C0D007054C1 /* GroupView.swift in Sources */,
-				05B94F0F2F2779C2002AFED1 /* FlowerBloom.swift in Sources */,
+				05B94F112F27EB84002AFED1 /* FlowerBloom.swift in Sources */,
 				C8A563E12A63BBE700410C1F /* Color+Extension.swift in Sources */,
 				05F2E3272F165518001BF483 /* MorphBlob.swift in Sources */,
 				C8FB85602A64595C0009CF41 /* RandomAnimationView.swift in Sources */,
 				C803FBF82D8CAC9200AB306C /* PlanetaryAtom.swift in Sources */,
 				C8A563DF2A63A4D000410C1F /* SplashView.swift in Sources */,
-				05B94F0B2F27798E002AFED1 /* Petal.swift in Sources */,
 				055E18CB2F1CE43B001125B1 /* LikeButton.swift in Sources */,
 				C8FB85612A64595C0009CF41 /* LoaderUIView.swift in Sources */,
 				C88FDCE12A61722A00A5B62B /* BatmanView.swift in Sources */,
@@ -311,7 +304,6 @@
 				C8F85B542A6307EC00ECC7D0 /* KakashiView.swift in Sources */,
 				05A969B22F0E2E57005869AE /* CrowdContainerView.swift in Sources */,
 				055320A22F1EAD3800E34301 /* GravityGridView.swift in Sources */,
-				05B94F0D2F2779A7002AFED1 /* AnimatedColor.swift in Sources */,
 				05A969B02F0E2E26005869AE /* PeepModel.swift in Sources */,
 				C8D06B722D9405F300BD96AE /* distressedFont.swift in Sources */,
 				C8FB85622A64595C0009CF41 /* LayerMaskUIView.swift in Sources */,
