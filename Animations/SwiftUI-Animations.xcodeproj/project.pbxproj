@@ -95,18 +95,10 @@
 			path = CrowdWalk;
 			sourceTree = "<group>";
 		};
-		05B94F092F27797F002AFED1 /* Flower */ = {
-			isa = PBXGroup;
-			children = (
-				05B94F102F27EB84002AFED1 /* FlowerBloom.swift */,
-			);
-			path = Flower;
-			sourceTree = "<group>";
-		};
 		C88FDCDF2A61721000A5B62B /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				05B94F092F27797F002AFED1 /* Flower */,
+				05B94F102F27EB84002AFED1 /* FlowerBloom.swift */,
 				055320A12F1EAD3800E34301 /* GravityGridView.swift */,
 				055E18CA2F1CE438001125B1 /* LikeButton.swift */,
 				05F2E3262F165517001BF483 /* MorphBlob.swift */,
