@@ -25,7 +25,6 @@ struct ContentView: View {
                 Grouping(title: "Planetary Atom", content: { PlanetaryAtom() })
                 Grouping(title: "Carbon Atom", content: { CarbonAtom() })
                 Grouping(title: "Layer Masking", content: { LayerMaskUIView() })
-                Grouping(title: "Masking", content: { MaskingView() })
                 Grouping(title: "kakashi", content: { KakashiView() })
             }
             Group {

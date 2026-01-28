@@ -32,7 +32,6 @@
 		C8D818262D8C6C0D007054C1 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D818252D8C6C0D007054C1 /* GroupView.swift */; };
 		C8F85B542A6307EC00ECC7D0 /* KakashiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F85B532A6307EC00ECC7D0 /* KakashiView.swift */; };
 		C8F85B562A63080D00ECC7D0 /* Kakashi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F85B552A63080D00ECC7D0 /* Kakashi.swift */; };
-		C8F9274B2DBE2DF500740A75 /* MaskingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F9274A2DBE2DF500740A75 /* MaskingView.swift */; };
 		C8FB855F2A64595C0009CF41 /* SunRiseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB855B2A64595C0009CF41 /* SunRiseUIView.swift */; };
 		C8FB85602A64595C0009CF41 /* RandomAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB855C2A64595C0009CF41 /* RandomAnimationView.swift */; };
 		C8FB85612A64595C0009CF41 /* LoaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB855D2A64595C0009CF41 /* LoaderUIView.swift */; };
@@ -66,7 +65,6 @@
 		C8D818252D8C6C0D007054C1 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		C8F85B532A6307EC00ECC7D0 /* KakashiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakashiView.swift; sourceTree = "<group>"; };
 		C8F85B552A63080D00ECC7D0 /* Kakashi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kakashi.swift; sourceTree = "<group>"; };
-		C8F9274A2DBE2DF500740A75 /* MaskingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskingView.swift; sourceTree = "<group>"; };
 		C8FB855B2A64595C0009CF41 /* SunRiseUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunRiseUIView.swift; sourceTree = "<group>"; };
 		C8FB855C2A64595C0009CF41 /* RandomAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomAnimationView.swift; sourceTree = "<group>"; };
 		C8FB855D2A64595C0009CF41 /* LoaderUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderUIView.swift; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 				05F2E3262F165517001BF483 /* MorphBlob.swift */,
 				05A969A82F0E23DB005869AE /* CrowdWalk */,
 				059466252ED61D5800E2D30D /* CarbonAtom.swift */,
-				C8F9274A2DBE2DF500740A75 /* MaskingView.swift */,
 				C803FBF72D8CAC9200AB306C /* PlanetaryAtom.swift */,
 				C8D06B712D9405F300BD96AE /* distressedFont.swift */,
 				C8FB855E2A64595C0009CF41 /* LayerMaskUIView.swift */,
@@ -290,7 +287,6 @@
 				C8F85B562A63080D00ECC7D0 /* Kakashi.swift in Sources */,
 				05A969B62F0E7EB7005869AE /* AnimationCredit.swift in Sources */,
 				051C8CD42F21FC0300B0DA6A /* CrowdView.swift in Sources */,
-				C8F9274B2DBE2DF500740A75 /* MaskingView.swift in Sources */,
 				C8D6D2DF2A6252D800840EEE /* GridView.swift in Sources */,
 				C8BE89AC2A611C28003E2C61 /* SwiftUI_Animations.swift in Sources */,
 				C8F85B542A6307EC00ECC7D0 /* KakashiView.swift in Sources */,
