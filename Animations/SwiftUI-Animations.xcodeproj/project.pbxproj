@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		051C8CD42F21FC0300B0DA6A /* CrowdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051C8CD32F21FC0300B0DA6A /* CrowdView.swift */; };
+		05428B3A2F2A8074006F7A90 /* StarryNightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05428B392F2A8068006F7A90 /* StarryNightView.swift */; };
 		055320A22F1EAD3800E34301 /* GravityGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055320A12F1EAD3800E34301 /* GravityGridView.swift */; };
 		055E18CB2F1CE43B001125B1 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055E18CA2F1CE438001125B1 /* LikeButton.swift */; };
 		056C64A82F23ED2400FBF4C1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056C64A72F23ED2400FBF4C1 /* Colors.xcassets */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		051C8CD32F21FC0300B0DA6A /* CrowdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowdView.swift; sourceTree = "<group>"; };
+		05428B392F2A8068006F7A90 /* StarryNightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarryNightView.swift; sourceTree = "<group>"; };
 		055320A12F1EAD3800E34301 /* GravityGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityGridView.swift; sourceTree = "<group>"; };
 		055E18CA2F1CE438001125B1 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		056C64A72F23ED2400FBF4C1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		C88FDCDF2A61721000A5B62B /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				05428B392F2A8068006F7A90 /* StarryNightView.swift */,
 				05B94F102F27EB84002AFED1 /* FlowerBloom.swift */,
 				055320A12F1EAD3800E34301 /* GravityGridView.swift */,
 				055E18CA2F1CE438001125B1 /* LikeButton.swift */,
@@ -286,6 +289,7 @@
 				C8BE89C32A616A37003E2C61 /* Lightening.swift in Sources */,
 				C8F85B562A63080D00ECC7D0 /* Kakashi.swift in Sources */,
 				05A969B62F0E7EB7005869AE /* AnimationCredit.swift in Sources */,
+				05428B3A2F2A8074006F7A90 /* StarryNightView.swift in Sources */,
 				051C8CD42F21FC0300B0DA6A /* CrowdView.swift in Sources */,
 				C8D6D2DF2A6252D800840EEE /* GridView.swift in Sources */,
 				C8BE89AC2A611C28003E2C61 /* SwiftUI_Animations.swift in Sources */,

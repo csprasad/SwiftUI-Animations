@@ -14,6 +14,7 @@ struct ContentView: View {
             Group {
                 Grouping(title: "Spacetime Grid", note: "Interactive spacetime deformation with gravity, rotation, and waves.") { GravityGridView() }
                 Grouping(title: "Crowd Walking", content: { CrowdContainerView() })
+                Grouping(title: "Starry Night", content: { StarryNightView() })
             }
             Group {
                 Grouping(title: "Sunrise", content: { SunRiseUIView() })
