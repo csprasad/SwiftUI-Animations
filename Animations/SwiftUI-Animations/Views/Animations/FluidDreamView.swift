@@ -21,6 +21,7 @@ struct Blob {
 struct FluidDreamView: View {
     @State private var blobs: [Blob] = []
     @State private var time: Double = 0
+    @State private var isActive: Bool = true
     
     var body: some View {
         GeometryReader { geo in
@@ -31,10 +32,7 @@ struct FluidDreamView: View {
                         Color(hue: 0.6, saturation: 0.3, brightness: 0.1),
                         Color(hue: 0.8, saturation: 0.4, brightness: 0.05)
                     ])
-                    context.fill(
-                        Path(CGRect(origin: .zero, size: size)),
-                        with: .linearGradient(bg, startPoint: .zero, endPoint: CGPoint(x: size.width, y: size.height))
-                    )
+                    context.fill(Path(CGRect(origin: .zero, size: size)), with: .linearGradient(bg, startPoint: .zero, endPoint: CGPoint(x: size.width, y: size.height)))
                     
                     // Draw blobs with soft glow
                     context.blendMode = .plusLighter
@@ -62,7 +60,7 @@ struct FluidDreamView: View {
                 }
                 .drawingGroup()
                 .task {
-                    while true {
+                    while isActive {
                         time += 1/30.0
                         updateBlobs(size: geo.size)
                         try? await Task.sleep(nanoseconds: 33_333_333) // 30fps for CPU efficiency
@@ -89,7 +87,11 @@ struct FluidDreamView: View {
                 )
             }
             .onAppear {
+                isActive = true
                 blobs = createBlobs(size: geo.size)
+            }
+            .onDisappear {
+                isActive = false
             }
         }
         .ignoresSafeArea()
