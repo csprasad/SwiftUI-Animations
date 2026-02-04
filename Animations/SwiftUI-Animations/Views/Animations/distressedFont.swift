@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct distressedFont: View {
-    @State private var userInput: String = "iOS Design" // Default text
+    @State private var userInput: String = "Tiger" // Default text
     @State private var fontSize: CGFloat = 100 // Dynamic font size
     @State private var maxReached: Bool = false // Track if max words are reached
     @State private var refreshID = UUID() // Used to refresh GrungeEffect
@@ -54,7 +54,7 @@ struct distressedFont: View {
                         .multilineTextAlignment(.center)
 
                     //Text Input Field
-                    TextField("iOS Design", text: $userInput)
+                    TextField("Tiger", text: $userInput)
                         .font(.system(size: 20, weight: .medium))
                         .padding()
                         .background(Color.white)
