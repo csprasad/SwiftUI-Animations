@@ -12,15 +12,16 @@ struct ContentView: View {
     var list: some View {
         List {
             Group {
-                Grouping(title: "Spacetime Grid", note: "Interactive spacetime deformation with gravity, rotation, and waves.") { GravityGridView() }
-                Grouping(title: "Crowd Walking", content: { CrowdContainerView() })
+                Grouping(title: "Spacetime Grid", note: "spacetime deformation with gravity, rotation, and waves.") { GravityGridView() }
+                Grouping(title: "Kaleidoscope") { KaleidoscopeView() }
                 Grouping(title: "Fluid Dream", content: { FluidDreamView() })
+                Grouping(title: "Flower Petals", content: { FlowerBloom() })
             }
             Group {
                 Grouping(title: "Sunrise", content: { SunRiseUIView() })
                 Grouping(title: "Batman", content: { BatmanView() })
+                Grouping(title: "Crowd Walking", content: { CrowdContainerView() })
                 Grouping(title: "Morph Blob", content: { MorphBlob() })
-                Grouping(title: "Flower Petals", content: { FlowerBloom() })
             }
             Group {
                 Grouping(title: "Planetary Atom", content: { PlanetaryAtom() })
@@ -29,7 +30,6 @@ struct ContentView: View {
                 Grouping(title: "kakashi", content: { KakashiView() })
             }
             Group {
-                Grouping(title: "Like Button", content: { LikeButton() })
                 Grouping(title: "Splash", content: { SplashView() })
                 Grouping(title: "Loader", content: { LoaderUIView() })
                 Grouping(title: "Glassy Button", content: { GlassyButtonView() })
@@ -38,7 +38,6 @@ struct ContentView: View {
                 Grouping(title: "Distressed Font", content: { distressedFont() })
                 Grouping(title: "Random Animation", content: { RandomAnimationView() })
             }
-            
         }
     }
     
