@@ -13,6 +13,7 @@ struct ContentView: View {
         List {
             Group {
                 Grouping(title: "Spacetime Grid", note: "Interactive spacetime deformation with gravity, rotation, and waves.") { GravityGridView() }
+                Grouping(title: "Matrix Rain") { MatrixRain() }
                 Grouping(title: "Crowd Walking", content: { CrowdContainerView() })
                 Grouping(title: "Fluid Dream", content: { FluidDreamView() })
             }
