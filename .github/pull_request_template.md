@@ -7,7 +7,7 @@ What inspired this experiment?
 ## Tech
 SwiftUI Canvas / Physics / GeometryEffect / etc.
 
-## Preview
+## Preview (Optional)
 (add gif or image)
 
 ## Checklist
