@@ -2,8 +2,11 @@
 //  GlassyButtonView.swift
 //  SwiftUI-Animations
 //
-//  Created by CS Prasad on 18/07/23.
-//
+/// Created by `C S Prasad` on `18/07/23`
+///
+/// ### Social
+/// `Instagram` : ``@csprasad.ios`` • `X` : ``@csprasad_ios`` • `Github` : ``@csprasad``
+///
 
 import SwiftUI
 

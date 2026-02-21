@@ -2,8 +2,11 @@
 //  GravityGridView.swift
 //  SwiftUI-Animations
 //
-//  Created by codeAlligator on 19/01/26.
-//
+/// Created by `C S Prasad` on `19/01/26`
+///
+/// ### Social
+/// `Instagram` : ``@csprasad.ios`` • `X` : ``@csprasad_ios`` • `Github` : ``@csprasad``
+///
 
 import SwiftUI
 

@@ -1,9 +1,12 @@
 //
 //  SunRiseUIView.swift
-//  Gradient
+//  SwiftUI-Animations
 //
-//  Created by CS Prasad on 30/06/23.
-//
+/// Created by `C S Prasad` on `30/06/23`
+///
+/// ### Social
+/// `Instagram` : ``@csprasad.ios`` • `X` : ``@csprasad_ios`` • `Github` : ``@csprasad``
+///
 
 import SwiftUI
 

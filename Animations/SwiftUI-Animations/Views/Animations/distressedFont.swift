@@ -1,9 +1,12 @@
 //
-//  TestOne.swift
+//  distressedFont.swift
 //  SwiftUI-Animations
 //
-//  Created by CS Prasad on 26/03/25.
-//
+/// Created by `C S Prasad` on `26/03/25`
+///
+/// ### Social
+/// `Instagram` : ``@csprasad.ios`` • `X` : ``@csprasad_ios`` • `Github` : ``@csprasad``
+///
 
 import SwiftUI
 
