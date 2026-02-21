@@ -2,8 +2,15 @@
 //  ContentView.swift
 //  SwiftUI-Animations
 //
-//  Created by CS Prasad on 14/07/23.
-//
+/// Created by `C S Prasad` on `14/07/23`
+///
+///`iOS • SwiftUI • Creative Coding`
+///
+/// ### Social
+/// `Instagram` : ``@csprasad.ios``
+/// `X`                   : ``@csprasad_ios``
+/// `Github`        : ``@csprasad``
+///
 
 import SwiftUI
 

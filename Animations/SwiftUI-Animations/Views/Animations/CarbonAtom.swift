@@ -2,8 +2,11 @@
 //  CarbonAtom.swift
 //  SwiftUI-Animations
 //
-//  Created by codeAlligator on 25/11/25.
-//
+/// Created by `C S Prasad` on `25/11/25`
+///
+/// ### Social
+/// `Instagram` : ``@csprasad.ios`` • `X` : ``@csprasad_ios`` • `Github` : ``@csprasad``
+///
 
 
 import SwiftUI

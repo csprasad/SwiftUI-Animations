@@ -1,9 +1,12 @@
 //
 //  RandomAnimationView.swift
-//  Gradient
+//  SwiftUI-Animations
 //
-//  Created by CSPrasad on 25/06/23.
-//
+/// Created by `C S Prasad` on `25/06/23`
+///
+/// ### Social
+/// `Instagram` : ``@csprasad.ios`` • `X` : ``@csprasad_ios`` • `Github` : ``@csprasad``
+///
 
 import SwiftUI
 

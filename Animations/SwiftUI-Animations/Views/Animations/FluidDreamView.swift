@@ -1,9 +1,12 @@
 //
-//  StarryNightView.swift
+//  FluidDreamView.swift
 //  SwiftUI-Animations
 //
-//  Created by codeAlligator on 28/01/26.
-//
+/// Created by `C S Prasad` on `28/01/26`
+///
+/// ### Social
+/// `Instagram` : ``@csprasad.ios`` • `X` : ``@csprasad_ios`` • `Github` : ``@csprasad``
+///
 
 import SwiftUI
 

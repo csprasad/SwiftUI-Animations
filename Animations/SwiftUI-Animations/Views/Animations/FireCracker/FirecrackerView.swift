@@ -2,8 +2,11 @@
 //  FirecrackerView.swift
 //  SwiftUI-Animations
 //
-//  Created by codeAlligator on 30/01/26.
-//
+/// Created by `C S Prasad` on `30/01/26`
+///
+/// ### Social
+/// `Instagram` : ``@csprasad.ios`` • `X` : ``@csprasad_ios`` • `Github` : ``@csprasad``
+///
 
 import SwiftUI
 

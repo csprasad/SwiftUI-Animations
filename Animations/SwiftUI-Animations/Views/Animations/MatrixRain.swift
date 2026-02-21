@@ -2,8 +2,11 @@
 //  MatrixRain.swift
 //  SwiftUI-Animations
 //
-//  Created by codeAlligator on 07/02/26.
-//
+/// Created by `C S Prasad` on `07/02/26`
+///
+/// ### Social
+/// `Instagram` : ``@csprasad.ios`` • `X` : ``@csprasad_ios`` • `Github` : ``@csprasad``
+///
 
 import SwiftUI
 import Combine
