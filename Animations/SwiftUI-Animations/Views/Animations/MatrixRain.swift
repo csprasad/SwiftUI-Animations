@@ -29,8 +29,6 @@ struct MatrixRain: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                Color.black.ignoresSafeArea()
-                
                 // Background "MATRIX" text
                 VStack(alignment: .center,spacing: 0) {
                     Text("M A T R I X")
@@ -40,7 +38,7 @@ struct MatrixRain: View {
                         .font(.system(size: 20, weight: .black, design: .monospaced))
                         .lineSpacing(40)
                 }
-                .foregroundColor(.green.opacity(0.4))
+                .foregroundColor(.green.opacity(0.2))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
                 // Matrix rain effect

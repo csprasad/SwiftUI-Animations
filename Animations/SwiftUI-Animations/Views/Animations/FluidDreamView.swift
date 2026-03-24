@@ -30,13 +30,6 @@ struct FluidDreamView: View {
         GeometryReader { geo in
             TimelineView(.animation(minimumInterval: 1/30)) { _ in
                 Canvas { context, size in
-                    // Gradient background
-                    let bg = Gradient(colors: [
-                        Color(hue: 0.6, saturation: 0.3, brightness: 0.1),
-                        Color(hue: 0.8, saturation: 0.4, brightness: 0.05)
-                    ])
-                    context.fill(Path(CGRect(origin: .zero, size: size)), with: .linearGradient(bg, startPoint: .zero, endPoint: CGPoint(x: size.width, y: size.height)))
-                    
                     // Draw blobs with soft glow
                     context.blendMode = .plusLighter
                     

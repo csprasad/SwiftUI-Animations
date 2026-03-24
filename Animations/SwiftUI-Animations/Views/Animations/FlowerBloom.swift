@@ -10,18 +10,18 @@
 
 import SwiftUI
 
-struct FlowerBloom: View {
+#Preview {
+    FlowerBloom()
+}
 
-    // The moment the bloom begins
+struct FlowerBloom: View {
     @State private var startDate = Date()
 
     var body: some View {
-        // TimelineView drives the animation by providing the current time
         TimelineView(.animation) { timeline in
             FlowerCanvas(date: timeline.date, startDate: startDate)
         }
-        .frame(width: 360, height: 360)
-        // Reset animation timing when view appears
+        .frame(width: 360, height: 360, alignment: .center)
         .onAppear {
             startDate = Date()
         }

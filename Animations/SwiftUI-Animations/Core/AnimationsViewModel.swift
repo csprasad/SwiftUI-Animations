@@ -45,7 +45,7 @@ class AnimationsViewModel: ObservableObject {
             
             // Group 2
             .init(title: "Sunrise", note: "Atmospheric transition", icon: "sun.max.fill", color: .orange, category: .nature, destination: AnyView(SunRiseUIView())),
-            .init(title: "Batman", note: "Shape morphing", icon: "theatermasks.fill", color: .gray, category: .nature, destination: AnyView(BatmanView())),
+            .init(title: "Batman", note: "Shape morphing", icon: "theatermasks.fill", color: .black, category: .nature, destination: AnyView(BatmanView())),
             .init(title: "Morph Blob", note: "Liquid geometry", icon: "triangle.fill", color: .pink, category: .effects, destination: AnyView(MorphBlob())),
             .init(title: "Flower Petals", note: "Generative bloom", icon: "leaf.fill", color: .green, category: .nature, destination: AnyView(FlowerBloom())),
             
@@ -59,10 +59,10 @@ class AnimationsViewModel: ObservableObject {
             .init(title: "Like Button", note: "Micro-interaction", icon: "heart.fill", color: .red, category: .components, destination: AnyView(LikeButton())),
             .init(title: "Splash", note: "Liquid entry", icon: "drop.triangle.fill", color: .blue, category: .components, destination: AnyView(SplashView())),
             .init(title: "Loader", note: "Custom progress", icon: "arrow.triangle.2.circlepath", color: .orange, category: .components, destination: AnyView(LoaderUIView())),
-            .init(title: "Glassy Button", note: "Modern glass UI", icon: "square.stack.3d.up.fill", color: .white, category: .components, destination: AnyView(GlassyButtonView())),
+            .init(title: "Glassy Button", note: "Modern glass UI", icon: "square.stack.3d.up.fill", color: .mint, category: .components, destination: AnyView(GlassyButtonView())),
             
             // Group 5
-            .init(title: "Distressed Font", note: "Typography effects", icon: "textformat", color: .yellow, category: .effects, destination: AnyView(distressedFont())),
+            .init(title: "Distressed Font", note: "Typography effects", icon: "textformat", color: .yellow, category: .effects, destination: AnyView(DistressedFontView())),
             .init(title: "Random Animation", note: "Generative chaos", icon: "shuffle", color: .purple, category: .physics, destination: AnyView(RandomAnimationView()))
         ]
     

@@ -10,6 +10,10 @@
 
 import SwiftUI
 
+#Preview {
+    RandomAnimationView()
+}
+
 struct RandomAnimationView: View {
     @State private var bubbleFloating = false
     @State private var stoveMoving = false
@@ -18,9 +22,7 @@ struct RandomAnimationView: View {
     var body: some View {
         ZStack {
             // Background
-            LinearGradient(gradient: Gradient(colors: [Color.white, Color.gray.opacity(0.2), Color.gray.opacity(0.5)]),
-                           startPoint: .top,
-                           endPoint: .bottom)
+            Color.white
                 .ignoresSafeArea()
             
             // Vapor Animations
