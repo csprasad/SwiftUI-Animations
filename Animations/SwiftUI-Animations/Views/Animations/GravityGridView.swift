@@ -67,7 +67,7 @@ struct GravityGridView: View {
                         height: pointSize
                     )
 
-                    context.fill(Path(ellipseIn: rect), with: .color(.white.opacity(0.9)))
+                    context.fill(Path(ellipseIn: rect), with: .color(.primary.opacity(0.9)))
                 }
             }
             
@@ -119,7 +119,7 @@ struct GravityGridView: View {
                 }
             }
         }
-        .background(Color.black)
+//        .background(Color.black)
         .gesture(gravityGesture)
         .onReceive(timer) { _ in
             spin += 0.02 

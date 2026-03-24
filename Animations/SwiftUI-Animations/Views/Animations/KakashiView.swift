@@ -17,30 +17,28 @@ struct KakashiView: View {
     
     var body: some View {
         ZStack {
-            MeshGradientBackground()
-                .ignoresSafeArea()
-            
             KakashiShape()
-                .stroke(style: StrokeStyle(lineWidth: 1, lineCap: .round, lineJoin: .round))
-                .foregroundColor(.primary)
-                .opacity(0.3)
+                .stroke(style: StrokeStyle(lineWidth: 1.5, lineCap: .round, lineJoin: .round))
+                .foregroundColor(.primary.opacity(0.3))
             
-            // Animated Drawing Path
+            // Animated Drawing Shape
             KakashiShape()
                 .trim(from: strokeStart, to: strokeEnd)
                 .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
                 .foregroundColor(.primary)
                 .animation(
-                    .easeInOut(duration: 2.5)
-                    .repeatForever(autoreverses: true),
+                    .linear(duration: 3.0).repeatForever(autoreverses: false),
                     value: isAnimating
                 )
         }
-        .onAppear {
-            isAnimating = true
-            strokeEnd = 1.0
-        }
         .padding(.top, 80)
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                isAnimating = true
+                strokeEnd = 1.0
+                strokeStart = 0.7
+            }
+        }
     }
 }
 
