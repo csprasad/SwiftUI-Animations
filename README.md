@@ -13,7 +13,7 @@ This repository contains a collection of experimental SwiftUI animations created
 
 <table>
   <tr>
-    <td><img src="gifs/collections.gif"/></td>
+    <td width="25%"><img src="images/collection.png"/></td>
     <td><img src="gifs/gravity.gif"/></td>
     <td><img src="gifs/matrix.gif"/></td>
     <td><img src="gifs/sunrise.gif"/></td>
