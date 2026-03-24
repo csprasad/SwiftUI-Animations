@@ -42,12 +42,29 @@ struct HomeView: View {
                         LazyVGrid(columns: columns, spacing: 16) {
                             
                             ForEach(enumeratedItems, id: \.element.id) { index, item in
+//                                NavigationLink(destination:
+//                                    ZStack(alignment: .top) {
+//                                        MeshGradientBackground().ignoresSafeArea()
+//                                        item.destination
+//                                            .navigationBarHidden(true)
+//                                        NavHeader(title: item.title)
+//                                    }
+//                                    .navigationBarHidden(true)
+//                                ) {
+//                                    ModernCardView(item: item)
+//                                }
                                 NavigationLink(destination:
-                                    ZStack(alignment: .top) {
-                                        MeshGradientBackground().ignoresSafeArea()
+                                    ZStack {
+                                        MeshGradientBackground()
+                                            .ignoresSafeArea()
+                                        
                                         item.destination
                                             .navigationBarHidden(true)
-                                        ModernNavHeader(title: item.title)
+                                        
+                                        VStack {
+                                            NavHeader(title: item.title)
+                                            Spacer()
+                                        }
                                     }
                                     .navigationBarHidden(true)
                                 ) {

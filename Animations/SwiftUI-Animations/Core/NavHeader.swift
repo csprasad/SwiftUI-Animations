@@ -1,6 +1,6 @@
 //
 //
-//  CustomBackButton.swift
+//  NavHeader.swift
 //  SwiftUI-Animations
 //
 /// Created by `C S Prasad` on `24/03/26`
@@ -11,7 +11,7 @@
 
 import SwiftUI
 
-struct ModernNavHeader: View {
+struct NavHeader: View {
     let title: String
     @Environment(\.dismiss) var dismiss
     

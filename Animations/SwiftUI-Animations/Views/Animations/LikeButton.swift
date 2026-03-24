@@ -19,49 +19,49 @@ struct LikeButton: View {
     
     var body: some View {
         HStack(alignment: .center, spacing: 30) {
-            // MARK: - Simple
-            Image(systemName: SimpleLiked ? "heart.fill" : "heart")
-                .font(.system(size: 50))
-                .foregroundColor(SimpleLiked ? .pink : .gray)
-                .scaleEffect(SimpleLiked ? 1.25 : 1.0)
-                .animation(.spring(response: 0.25, dampingFraction: 0.5), value: SimpleLiked)
-                .onTapGesture {
-                    SimpleLiked.toggle()
+                // MARK: - Simple
+                Image(systemName: SimpleLiked ? "heart.fill" : "heart")
+                    .font(.system(size: 50))
+                    .foregroundColor(SimpleLiked ? .pink : .gray)
+                    .scaleEffect(SimpleLiked ? 1.25 : 1.0)
+                    .animation(.spring(response: 0.25, dampingFraction: 0.5), value: SimpleLiked)
+                    .onTapGesture {
+                        SimpleLiked.toggle()
+                    }
+                
+                // MARK: - Bounce
+                Image(systemName: BounceLike ? "heart.fill" : "heart")
+                    .font(.system(size: 50))
+                    .foregroundColor(BounceLike ? .pink : .gray)
+                    .scaleEffect(scale)
+                    .onTapGesture {
+                        BounceLike.toggle()
+                        
+                        scale = 1.4
+                        withAnimation(.spring(response: 0.3, dampingFraction: 0.45)) {
+                            scale = 1
+                        }
+                    }
+                
+                // MARK: - Burst
+                ZStack {
+                    if showBurst {
+                        LikeBurst(color: .pink)
+                    }
+                    
+                    Image(systemName: BurstLike ? "heart.fill" : "heart")
+                        .font(.system(size: 50))
+                        .foregroundColor(BurstLike ? .pink : .gray)
                 }
-            
-            // MARK: - Bounce
-            Image(systemName: BounceLike ? "heart.fill" : "heart")
-                .font(.system(size: 50))
-                .foregroundColor(BounceLike ? .pink : .gray)
-                .scaleEffect(scale)
                 .onTapGesture {
-                    BounceLike.toggle()
-
-                    scale = 1.4
-                    withAnimation(.spring(response: 0.3, dampingFraction: 0.45)) {
-                        scale = 1
+                    BurstLike.toggle()
+                    showBurst = true
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+                        showBurst = false
                     }
                 }
-            
-            // MARK: - Burst
-            ZStack {
-                if showBurst {
-                    LikeBurst(color: .pink)
-                }
-
-                Image(systemName: BurstLike ? "heart.fill" : "heart")
-                    .font(.system(size: 50))
-                    .foregroundColor(BurstLike ? .pink : .gray)
             }
-            .onTapGesture {
-                BurstLike.toggle()
-                showBurst = true
-
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
-                    showBurst = false
-                }
-            }
-        }
     }
 }
 

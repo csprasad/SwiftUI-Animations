@@ -10,50 +10,67 @@
 
 import SwiftUI
 
+#Preview {
+    LayerMaskUIView()
+}
+
 struct LayerMaskUIView: View {
+    // MARK: - Constants
     let shapeHeight: CGFloat = 400
     let shapeWidth: CGFloat = 80
-    
-    @State private var shapeOffsets: [CGFloat] = [600, 600, 600, 600]
-    @State private var imageName: String = "gigi"
-
     let delays: [Double] = [0.0, 0.5, 1.0, 1.5]
     let finalOffsets: [CGFloat] = [80, 30, -20, -70]
 
+    // MARK: - State
+    @State private var shapeOffsets: [CGFloat] = [600, 600, 600, 600]
+    @State private var imageName: String = "gigi"
+
     var body: some View {
         ZStack {
-            Image(imageName)
-                .ignoresSafeArea()
-                .mask(
-                    HStack(spacing: 10) {
-                        ForEach(0..<4, id: \.self) { index in
-                            Rectangle()
-                                .frame(width: shapeWidth, height: shapeHeight)
-                                .clipShape(CustomCorner(radius: 50, corners: [.topRight, .bottomLeft]))
-                                .offset(y: shapeOffsets[index])
-                                .animation(.linear(duration: 1), value: shapeOffsets[index])
-                                .onAppear {
-                                    animateShape(index)
-                                }
-                        }
-                    }
-                )
+            // The Masked Image
+            GeometryReader { geo in
+                Image(imageName)
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    .clipped()
+                    .mask(
+                        maskingShapes(in: geo.size)
+                    )
+                    .shadow(color: .black.opacity(0.4), radius: 20)
+            }
+            .ignoresSafeArea()
         }
     }
-    
+
+    // MARK: - Mask Component
+    private func maskingShapes(in size: CGSize) -> some View {
+        HStack(spacing: 12) {
+            ForEach(0..<4, id: \.self) { index in
+                Rectangle()
+                    .frame(width: shapeWidth, height: shapeHeight)
+                    .clipShape(CustomCorner(radius: 50, corners: [.topRight, .bottomLeft]))
+                    .offset(y: shapeOffsets[index])
+                    .animation(.spring(response: 0.7, dampingFraction: 0.8), value: shapeOffsets[index])
+                    .onAppear {
+                        animateShape(index)
+                    }
+            }
+        }
+        // Center the mask relative to the screen
+        .frame(width: size.width, height: size.height)
+    }
+
     private func animateShape(_ index: Int) {
         DispatchQueue.main.asyncAfter(deadline: .now() + delays[index]) {
             shapeOffsets[index] = finalOffsets[index]
         }
         
         if index == 3 {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
                 imageName = "tiger_02"
             }
         }
     }
 }
-
 struct CustomCorner: Shape {
     var radius: CGFloat
     var corners: UIRectCorner

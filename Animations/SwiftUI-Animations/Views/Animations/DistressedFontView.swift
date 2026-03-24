@@ -11,8 +11,6 @@
 import SwiftUI
 
 struct DistressedFontView: View {
-    @Environment(\.dismiss) var dismiss
-    
     // MARK: - State
     @State private var userInput: String = "TIGER"
     @State private var fontSize: CGFloat = 80
@@ -26,12 +24,8 @@ struct DistressedFontView: View {
 
     var body: some View {
         ZStack {
-            // LAYER 1: Background (Locked)
-            MeshGradientBackground()
-                .ignoresSafeArea()
-                .ignoresSafeArea(.keyboard) // Stop background "squeezing"
 
-            // LAYER 2: Main Content (Scrolls/Moves with Keyboard)
+            //Main Content (Scrolls/Moves with Keyboard)
             VStack {
                 Spacer()
                 
@@ -117,50 +111,7 @@ struct DistressedFontView: View {
                 .padding(.horizontal, 20)
                 .padding(.bottom, 10)
             }
-
-            // LAYER 3: Navigation Header (Locked)
-            VStack {
-                HStack {
-                    // Back Button Pill
-                    Button(action: { dismiss() }) {
-                        Image(systemName: "chevron.left")
-                            .font(.system(size: 16, weight: .bold))
-                            .foregroundColor(.primary)
-                            .frame(width: 44, height: 44)
-                            .background(.ultraThinMaterial)
-                            .clipShape(Circle())
-                            .overlay(Circle().stroke(Color.primary.opacity(0.1), lineWidth: 1))
-                    }
-                    
-                    // Title Capsule
-                    Text("Distressed Font")
-                        .font(.system(size: 17, weight: .bold, design: .rounded))
-                        .padding(.horizontal, 20)
-                        .frame(height: 44)
-                        .background(.ultraThinMaterial)
-                        .clipShape(Capsule())
-                        .overlay(Capsule().stroke(Color.primary.opacity(0.1), lineWidth: 1))
-                    
-                    Spacer()
-                    
-                    // Refresh Pill
-                    Button(action: { refreshID = UUID() }) {
-                        Image(systemName: "arrow.clockwise")
-                            .font(.system(size: 16, weight: .bold))
-                            .foregroundColor(.primary)
-                            .frame(width: 44, height: 44)
-                            .background(.ultraThinMaterial)
-                            .clipShape(Circle())
-                            .overlay(Circle().stroke(Color.primary.opacity(0.1), lineWidth: 1))
-                    }
-                }
-                .padding(.horizontal, 20)
-                .padding(.top, 10)
-                Spacer()
-            }
-            .ignoresSafeArea(.keyboard) // Keeps the Header from flying up
         }
-//        .navigationBarHidden(true)
     }
 
     // MARK: - Logic
