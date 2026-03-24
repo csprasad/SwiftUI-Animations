@@ -40,8 +40,17 @@ struct HomeView: View {
                         let enumeratedItems = Array(viewModel.filteredAnimations.enumerated())
                         
                         LazyVGrid(columns: columns, spacing: 16) {
+                            
                             ForEach(enumeratedItems, id: \.element.id) { index, item in
-                                NavigationLink(destination: item.destination) {
+                                NavigationLink(destination:
+                                    ZStack(alignment: .top) {
+                                        MeshGradientBackground().ignoresSafeArea()
+                                        item.destination
+                                            .navigationBarHidden(true)
+                                        ModernNavHeader(title: item.title)
+                                    }
+                                    .navigationBarHidden(true)
+                                ) {
                                     ModernCardView(item: item)
                                 }
                                 .buttonStyle(ScaleButtonStyle())
@@ -50,7 +59,7 @@ struct HomeView: View {
                         .padding(.horizontal)
                         .animation(.spring(response: 0.4, dampingFraction: 0.8), value: viewModel.selectedCategory)
                     }
-                    .padding(.top, 40)
+                    .padding(.top, 20)
                 }
             }
             .navigationBarHidden(true)
@@ -113,7 +122,6 @@ struct FilterChip: View {
 #Preview {
     HomeView()
 }
-
 
 // MARK: - The Modern Card
 struct ModernCardView: View {
@@ -192,10 +200,12 @@ struct MeshGradientBackground: View {
                 .blur(radius: 100)
                 .offset(x: appear ? 150 : -150, y: appear ? 100 : -100)
         }
+        .animation(
+            .linear(duration: 10).repeatForever(autoreverses: true),
+            value: appear
+        )
         .onAppear {
-            withAnimation(.linear(duration: 10).repeatForever(autoreverses: true)) {
-                appear.toggle()
-            }
+            appear = true
         }
     }
 }

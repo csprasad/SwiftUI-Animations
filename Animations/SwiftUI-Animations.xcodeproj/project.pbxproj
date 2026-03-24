@@ -19,6 +19,8 @@
 		05A969B62F0E7EB7005869AE /* AnimationCredit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969B52F0E7EAE005869AE /* AnimationCredit.swift */; };
 		05AA93132F3A4F0400C21406 /* MatrixRain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AA93122F3A4F0300C21406 /* MatrixRain.swift */; };
 		05B94F112F27EB84002AFED1 /* FlowerBloom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B94F102F27EB84002AFED1 /* FlowerBloom.swift */; };
+		05D983072F730805002380F8 /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D983062F730805002380F8 /* CustomBackButton.swift */; };
+		05D983092F730E0A002380F8 /* View+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D983082F730E06002380F8 /* View+Ex.swift */; };
 		05F2E3272F165518001BF483 /* MorphBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F2E3262F165517001BF483 /* MorphBlob.swift */; };
 		C803FBF82D8CAC9200AB306C /* PlanetaryAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C803FBF72D8CAC9200AB306C /* PlanetaryAtom.swift */; };
 		C86613972A66E117000D58E4 /* GlassyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86613962A66E117000D58E4 /* GlassyButtonView.swift */; };
@@ -30,7 +32,7 @@
 		C8BE89B02A611C2A003E2C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8BE89AF2A611C2A003E2C61 /* Assets.xcassets */; };
 		C8BE89B32A611C2A003E2C61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8BE89B22A611C2A003E2C61 /* Preview Assets.xcassets */; };
 		C8BE89C32A616A37003E2C61 /* Lightening.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BE89C22A616A37003E2C61 /* Lightening.swift */; };
-		C8D06B722D9405F300BD96AE /* distressedFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D06B712D9405F300BD96AE /* distressedFont.swift */; };
+		C8D06B722D9405F300BD96AE /* DistressedFontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D06B712D9405F300BD96AE /* DistressedFontView.swift */; };
 		C8F85B542A6307EC00ECC7D0 /* KakashiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F85B532A6307EC00ECC7D0 /* KakashiView.swift */; };
 		C8F85B562A63080D00ECC7D0 /* Kakashi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F85B552A63080D00ECC7D0 /* Kakashi.swift */; };
 		C8FB855F2A64595C0009CF41 /* SunRiseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB855B2A64595C0009CF41 /* SunRiseUIView.swift */; };
@@ -52,6 +54,8 @@
 		05A969B52F0E7EAE005869AE /* AnimationCredit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCredit.swift; sourceTree = "<group>"; };
 		05AA93122F3A4F0300C21406 /* MatrixRain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixRain.swift; sourceTree = "<group>"; };
 		05B94F102F27EB84002AFED1 /* FlowerBloom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerBloom.swift; sourceTree = "<group>"; };
+		05D983062F730805002380F8 /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
+		05D983082F730E06002380F8 /* View+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ex.swift"; sourceTree = "<group>"; };
 		05F2E3262F165517001BF483 /* MorphBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorphBlob.swift; sourceTree = "<group>"; };
 		C803FBF72D8CAC9200AB306C /* PlanetaryAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetaryAtom.swift; sourceTree = "<group>"; };
 		C86613962A66E117000D58E4 /* GlassyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassyButtonView.swift; sourceTree = "<group>"; };
@@ -64,7 +68,7 @@
 		C8BE89AF2A611C2A003E2C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8BE89B22A611C2A003E2C61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C8BE89C22A616A37003E2C61 /* Lightening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lightening.swift; sourceTree = "<group>"; };
-		C8D06B712D9405F300BD96AE /* distressedFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = distressedFont.swift; sourceTree = "<group>"; };
+		C8D06B712D9405F300BD96AE /* DistressedFontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistressedFontView.swift; sourceTree = "<group>"; };
 		C8F85B532A6307EC00ECC7D0 /* KakashiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakashiView.swift; sourceTree = "<group>"; };
 		C8F85B552A63080D00ECC7D0 /* Kakashi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kakashi.swift; sourceTree = "<group>"; };
 		C8FB855B2A64595C0009CF41 /* SunRiseUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunRiseUIView.swift; sourceTree = "<group>"; };
@@ -95,6 +99,23 @@
 			path = CrowdWalk;
 			sourceTree = "<group>";
 		};
+		05D983042F7306F6002380F8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C8BE89AB2A611C28003E2C61 /* SwiftUI_Animations.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		05D983052F730700002380F8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				05D983062F730805002380F8 /* CustomBackButton.swift */,
+				051EE2612F72B390003F2D70 /* AnimationsViewModel.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		C88FDCDF2A61721000A5B62B /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +128,7 @@
 				05A969A82F0E23DB005869AE /* CrowdWalk */,
 				059466252ED61D5800E2D30D /* CarbonAtom.swift */,
 				C803FBF72D8CAC9200AB306C /* PlanetaryAtom.swift */,
-				C8D06B712D9405F300BD96AE /* distressedFont.swift */,
+				C8D06B712D9405F300BD96AE /* DistressedFontView.swift */,
 				C8FB855E2A64595C0009CF41 /* LayerMaskUIView.swift */,
 				C8FB855D2A64595C0009CF41 /* LoaderUIView.swift */,
 				C8FB855C2A64595C0009CF41 /* RandomAnimationView.swift */,
@@ -139,9 +160,10 @@
 		C8BE89AA2A611C28003E2C61 /* SwiftUI-Animations */ = {
 			isa = PBXGroup;
 			children = (
-				C8BE89AB2A611C28003E2C61 /* SwiftUI_Animations.swift */,
+				05D983042F7306F6002380F8 /* App */,
+				05D983052F730700002380F8 /* Core */,
 				C8BE89B92A611C4F003E2C61 /* Views */,
-				C8BE89BB2A611C97003E2C61 /* Utils */,
+				C8BE89BC2A611CC1003E2C61 /* Extensions */,
 				C8BE89C02A611D3C003E2C61 /* Resources */,
 				C8BE89B12A611C2A003E2C61 /* Preview Content */,
 			);
@@ -159,7 +181,6 @@
 		C8BE89B92A611C4F003E2C61 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				051EE2612F72B390003F2D70 /* AnimationsViewModel.swift */,
 				C8BE89AD2A611C28003E2C61 /* HomeView.swift */,
 				C88FDCDF2A61721000A5B62B /* Animations */,
 				C8BE89C12A616A13003E2C61 /* Shapes */,
@@ -167,17 +188,10 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C8BE89BB2A611C97003E2C61 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				C8BE89BC2A611CC1003E2C61 /* Extensions */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		C8BE89BC2A611CC1003E2C61 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				05D983082F730E06002380F8 /* View+Ex.swift */,
 				C8A563E02A63BBE700410C1F /* Color+Extension.swift */,
 			);
 			path = Extensions;
@@ -291,13 +305,15 @@
 				C8F85B562A63080D00ECC7D0 /* Kakashi.swift in Sources */,
 				05A969B62F0E7EB7005869AE /* AnimationCredit.swift in Sources */,
 				05428B3A2F2A8074006F7A90 /* FluidDreamView.swift in Sources */,
+				05D983092F730E0A002380F8 /* View+Ex.swift in Sources */,
 				051C8CD42F21FC0300B0DA6A /* CrowdView.swift in Sources */,
 				C8BE89AC2A611C28003E2C61 /* SwiftUI_Animations.swift in Sources */,
 				C8F85B542A6307EC00ECC7D0 /* KakashiView.swift in Sources */,
 				05A969B22F0E2E57005869AE /* CrowdContainerView.swift in Sources */,
 				055320A22F1EAD3800E34301 /* GravityGridView.swift in Sources */,
 				05A969B02F0E2E26005869AE /* PeepModel.swift in Sources */,
-				C8D06B722D9405F300BD96AE /* distressedFont.swift in Sources */,
+				05D983072F730805002380F8 /* CustomBackButton.swift in Sources */,
+				C8D06B722D9405F300BD96AE /* DistressedFontView.swift in Sources */,
 				C8FB85622A64595C0009CF41 /* LayerMaskUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

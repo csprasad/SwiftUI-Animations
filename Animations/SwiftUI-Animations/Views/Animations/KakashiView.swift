@@ -11,41 +11,39 @@
 import SwiftUI
 
 struct KakashiView: View {
-    // MARK:- variables
-    @State var resetStrokes: Bool = true
-    @State var strokeStart: CGFloat = 0
-    @State var strokeEnd: CGFloat = 0
-        
+    @State private var strokeStart: CGFloat = 0
+    @State private var strokeEnd: CGFloat = 0
+    @State private var isAnimating: Bool = false
+    
     var body: some View {
         ZStack {
-            Color.black
-                .edgesIgnoringSafeArea(.all)
+            MeshGradientBackground()
+                .ignoresSafeArea()
+            
             KakashiShape()
-                .stroke(style: StrokeStyle(lineWidth: 2.5, lineCap: .round, lineJoin: .round, miterLimit: 5))
-                .foregroundColor(Color.white)
-                .opacity(0.35)
+                .stroke(style: StrokeStyle(lineWidth: 1, lineCap: .round, lineJoin: .round))
+                .foregroundColor(.primary)
+                .opacity(0.3)
+            
+            // Animated Drawing Path
             KakashiShape()
                 .trim(from: strokeStart, to: strokeEnd)
-                .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round, miterLimit: 10))
-                .foregroundColor(.white)
-                .onAppear() {
-                    Timer.scheduledTimer(withTimeInterval: 0.35, repeats: true) { timer in
-                        if (self.strokeEnd >= 1) {
-                            if (self.resetStrokes) {
-                                Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
-                                    self.strokeEnd = 0
-                                    self.strokeStart = 0
-                                    self.resetStrokes.toggle()
-                                }
-                                self.resetStrokes = false
-                            }
-                        }
-                        withAnimation(Animation.easeOut(duration: 0.5)) {
-                            self.strokeEnd += 0.1
-                            self.strokeStart = self.strokeEnd - 0.3
-                        }
-                    }
-                }
+                .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
+                .foregroundColor(.primary)
+                .animation(
+                    .easeInOut(duration: 2.5)
+                    .repeatForever(autoreverses: true),
+                    value: isAnimating
+                )
         }
+        .onAppear {
+            isAnimating = true
+            strokeEnd = 1.0
+        }
+        .padding(.top, 80)
     }
+}
+
+#Preview {
+    KakashiView()
 }

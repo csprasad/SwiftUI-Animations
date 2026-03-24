@@ -11,42 +11,54 @@
 import SwiftUI
 
 struct SplashView: View {
-    @State private var isActive = false
     @State private var lightScale: CGFloat = 0.45
-    @State private var CircleBG: Color = .white // Currently unused
-
+    
     var body: some View {
-        ZStack {
-            // Background Circles with Animation
-            AnimatedCircles(lightScale: $lightScale)
-
-            // Profile Image in the Center
-            Circle()
-                .frame(width: 150, height: 150)
-                .foregroundColor(.black.opacity(0.4))
-                .shadow(color: .white, radius: 5)
-                .overlay {
-                    Image("Profile")
-                        .resizable()
-                        .scaledToFill()
-                        .clipShape(Circle())
-                }
-
-            // Username Text
+        VStack {
+            Spacer()
+            
+            ZStack {
+                // --- LAYER 1: The Animated Background ---
+                // We isolate the animation inside this component
+                AnimatedCircles(lightScale: $lightScale)
+                
+                // --- LAYER 2: The Static Overlay (Profile) ---
+                Circle()
+                    .frame(width: 150, height: 150)
+                    .foregroundColor(.black.opacity(0.4))
+                    .shadow(color: .white.opacity(0.5), radius: 10)
+                    .overlay {
+                        Image("Profile")
+                            .resizable()
+                            .scaledToFill()
+                            .clipShape(Circle())
+                    }
+            }
+            .frame(height: 350)
+            .drawingGroup()
+            
+            
+            
+            // --- LAYER 3: The Username ---
             Text("@CSPrasad_iOS")
+                .font(.system(size: 20, weight: .bold, design: .monospaced))
+                .foregroundColor(.primary)
                 .padding(.horizontal, 20)
                 .padding(.vertical, 10)
-                .background(Color.black.opacity(0.2))
-                .cornerRadius(10)
-                .offset(y: 250)
-                .foregroundColor(.black)
-                .font(.system(size: 25, weight: .bold, design: .monospaced))
-                .opacity(0.5)
+                .background(.ultraThinMaterial)
+                .cornerRadius(15)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 15)
+                        .stroke(Color.primary.opacity(0.1), lineWidth: 1)
+                )
+                .padding(.bottom, 50)
+            Spacer()
         }
+        .ignoresSafeArea(.all, edges: .bottom)
     }
 }
 
-// MARK: - Extracted Animated Circles Component
+// MARK: - Isolated Component
 struct AnimatedCircles: View {
     @Binding var lightScale: CGFloat
 
@@ -62,10 +74,13 @@ struct AnimatedCircles: View {
                     .scaleEffect(lightScale)
             }
         }
+        .animation(
+            .spring(response: 0.9, dampingFraction: 1, blendDuration: 1)
+            .repeatForever(autoreverses: true),
+            value: lightScale
+        )
         .onAppear {
-            withAnimation(.spring(response: 0.9, dampingFraction: 1, blendDuration: 1).repeatForever(autoreverses: true)) {
-                lightScale = 1
-            }
+            lightScale = 1
         }
     }
 }
