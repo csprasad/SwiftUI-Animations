@@ -149,9 +149,3 @@ struct KakashiShape: Shape {
         return path
     }
 }
-
-struct KakashiShape_Previews: PreviewProvider {
-    static var previews: some View {
-        KakashiShape()
-    }
-}

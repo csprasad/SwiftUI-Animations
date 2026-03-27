@@ -59,7 +59,7 @@ struct FluidDreamView: View {
                     while isActive {
                         time += 1/30.0
                         updateBlobs(size: geo.size)
-                        try? await Task.sleep(nanoseconds: 33_333_333) // 30fps for CPU efficiency
+                        try? await Task.sleep(nanoseconds: 33_333_333) // 30fps
                     }
                 }
                 .gesture(
