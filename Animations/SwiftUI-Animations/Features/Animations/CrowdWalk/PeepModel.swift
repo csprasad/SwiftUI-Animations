@@ -21,9 +21,3 @@ struct PeepModel: Identifiable {
     let duration: TimeInterval
     let scaleX: CGFloat
 }
-
-
-
-
-
-

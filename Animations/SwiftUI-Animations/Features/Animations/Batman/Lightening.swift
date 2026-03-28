@@ -38,13 +38,3 @@ struct Bat: Shape {
         return path
     }
 }
-
-struct Lightening_Previews: PreviewProvider {
-    static var previews: some View {
-        ZStack {
-            Bat()
-        }
-        .frame(width: 200,height: 100)
-        .ignoresSafeArea()
-    }
-}

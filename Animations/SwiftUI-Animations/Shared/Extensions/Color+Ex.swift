@@ -12,7 +12,7 @@ import SwiftUI
 
 extension Color {
     init(hex: String) {
-        var hex = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+        let hex = hex.trimmingCharacters(in: .whitespacesAndNewlines)
             .replacingOccurrences(of: "#", with: "")
         var rgb: UInt64 = 0
         Scanner(string: hex).scanHexInt64(&rgb)

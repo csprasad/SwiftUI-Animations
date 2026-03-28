@@ -7,13 +7,14 @@
 
 ## Overview
 
-This repository contains a collection of experimental SwiftUI animations created to explore and enhance user experience in iOS apps.
+ 
+A collection of high-performance SwiftUI animations designed to push the boundaries of iOS motion and user interaction.
 
 ## Animations
 
 <table>
   <tr>
-    <td width="25%"><img src="images/collection.png"/></td>
+    <td width="25%"><img src="gifs/collections.gif"/></td>
     <td><img src="gifs/batman.gif"/></td>
     <td><img src="gifs/matrixRain.gif"/></td>
     <td><img src="gifs/sunrise.gif"/></td>
@@ -25,7 +26,7 @@ This repository contains a collection of experimental SwiftUI animations created
     <td><img src="gifs/petal.gif"/></td>
   </tr>
   <tr>
-    <td><img src="gifs/carbonAtom.gif"/></td>
+    <td><img src="gifs/carbon.gif"/></td>
     <td><img src="gifs/fluidDream.gif"/></td>
     <td><img src="gifs/splash.gif"/></td>
     <td><img src="gifs/morphBlob.gif"/></td>
