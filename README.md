@@ -3,12 +3,23 @@
 ![Repository size](https://img.shields.io/github/repo-size/csprasad/SwiftUI-Animations)
 [![GitHub license](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 
-<img src="images/header_logo.png"/>
-
 ## Overview
+A collection of creative SwiftUI experiments exploring motion, procedural visuals, and interactive UI effects.
 
- 
-A collection of high-performance SwiftUI animations designed to push the boundaries of iOS motion and user interaction.
+Built for experimentation, visual storytelling, and creative UI engineering.
+
+### Experiments Explore
+
+- Canvas-based rendering
+- Timeline-driven animations
+- Procedural motion systems
+- Interactive gesture effects
+- Layer masking and blending
+- Shape morphing
+- Reusable animation composition
+
+For implementation details and technical breakdowns of each experiment, see [ANIMATIONS.md](docs/ANIMATIONS.md).
+
 
 ## Animations
 
@@ -38,7 +49,6 @@ A collection of high-performance SwiftUI animations designed to push the boundar
     <td><img src="gifs/kakashi.gif"/></td>
   </tr>
 </table>
-
 
 ## License
 This project is licensed under the **MIT License**.
