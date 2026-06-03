@@ -13,7 +13,7 @@ import SwiftUI
 
 struct RootView: View {
     @State private var appState: AppLaunchState = .splashing
-    
+
     enum AppLaunchState {
         case splashing, transitioning, ready
     }
@@ -21,7 +21,7 @@ struct RootView: View {
     var body: some View {
         ZStack {
             MeshGradientBackground().ignoresSafeArea()
-            
+
             if appState == .splashing || appState == .transitioning {
                 // Splash Screen
                 launchView()
@@ -46,17 +46,17 @@ struct RootView: View {
     private func runLaunchSequence() {
         Task {
             try? await Task.sleep(nanoseconds: 1_500_000_000) // 1.5 seconds wait for Logo
-            
+
             await MainActor.run { // Trigger Transition
                 UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                 withAnimation(.spring(response: 0.8, dampingFraction: 0.85)) {
                     appState = .transitioning
                 }
             }
-            
+
             try? await Task.sleep(nanoseconds: 500_000_000) // 0.5 seconds wait for Morph
-            
-            await MainActor.run { //Home Arrival
+
+            await MainActor.run { // Home Arrival
                 withAnimation(.easeInOut(duration: 0.5)) {
                     appState = .ready
                 }

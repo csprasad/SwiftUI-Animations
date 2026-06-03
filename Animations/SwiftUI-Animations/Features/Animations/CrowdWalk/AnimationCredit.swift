@@ -42,4 +42,3 @@ struct AnimationCreditView: View {
         .padding(.vertical, 8)
     }
 }
-

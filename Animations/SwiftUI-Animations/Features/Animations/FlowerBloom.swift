@@ -24,6 +24,8 @@ struct FlowerBloom: View {
     }
 }
 
+private struct HSBColor { let hue: CGFloat, saturation: CGFloat, brightness: CGFloat }
+
 struct FlowerCanvas: View {
     let date: Date
     let startDate: Date
@@ -32,9 +34,9 @@ struct FlowerCanvas: View {
     static let bloomDuration: Double = 6.0
 
     // HSB space for smooth interpolation
-    static let darkHSB: (CGFloat, CGFloat, CGFloat) = (0.07, 0.95, 0.55)
-    static let lightOrangeHSB: (CGFloat, CGFloat, CGFloat) = (0.10, 0.85, 0.90)
-    static let yellowHSB: (CGFloat, CGFloat, CGFloat) = (0.13, 0.90, 0.97)
+    private static let darkHSB = HSBColor(hue: 0.07, saturation: 0.95, brightness: 0.55)
+    private static let lightOrangeHSB = HSBColor(hue: 0.10, saturation: 0.85, brightness: 0.90)
+    private static let yellowHSB = HSBColor(hue: 0.13, saturation: 0.90, brightness: 0.97)
 
     var body: some View {
         Canvas { ctx, size in
@@ -127,6 +129,6 @@ func clamp(_ x: Double, _ minVal: Double, _ maxVal: Double) -> Double {
     min(max(x, minVal), maxVal)
 }
 
-func interpolateHSB(from: (CGFloat, CGFloat, CGFloat), to: (CGFloat, CGFloat, CGFloat), t: CGFloat) -> Color {
-    Color(hue: lerp(from.0, to.0, t), saturation: lerp(from.1, to.1, t), brightness: lerp(from.2, to.2, t))
+private func interpolateHSB(from: HSBColor, to: HSBColor, t: CGFloat) -> Color {
+    Color(hue: lerp(from.hue, to.hue, t), saturation: lerp(from.saturation, to.saturation, t), brightness: lerp(from.brightness, to.brightness, t))
 }

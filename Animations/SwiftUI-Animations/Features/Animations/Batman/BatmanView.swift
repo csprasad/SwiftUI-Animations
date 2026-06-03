@@ -11,20 +11,19 @@
 import SwiftUI
 
 struct BatmanView: View {
-    @State var CloudOffset: CGFloat = 300
-    @State var CloudOffset1: CGFloat = 300
-    @State var CityOffset: CGFloat = 980
-    @State var CircleScale: CGFloat = 0
+    @State var cloudOffset: CGFloat = 300
+    @State var cloudOffset1: CGFloat = 300
+    @State var cityOffset: CGFloat = 980
+    @State var circleScale: CGFloat = 0
     @State var isAnimating = false
     @State var isFlashing = false
     @State var isFlashing1 = false
     @State var bgColor = Color.black
     @State var textOffset: CGFloat = 0
-    
-    
+
     @State var endPath: CGFloat = 0
     @State var isFilled = false
-    
+
     var body: some View {
         ZStack {
             bgColor
@@ -49,7 +48,7 @@ struct BatmanView: View {
                     self.isFilled = true
                 }
             }
-            
+
             VStack {
                 HStack {
                     Image("Bats")
@@ -64,26 +63,25 @@ struct BatmanView: View {
                     .frame(height: 980)
                     .ignoresSafeArea()
             }
-            .offset(y: CityOffset)
+            .offset(y: cityOffset)
             .onAppear {
                 withAnimation(.easeIn(duration: 5).delay(8)) {
-                    self.CityOffset = -120
+                    self.cityOffset = -120
                 }
             }
-            
+
                             Image("Batman")
                 .resizable()
                 .frame(width: 400, height: 250)
                 .offset(x: 0, y: -100)
-                .scaleEffect(CircleScale)
+                .scaleEffect(circleScale)
                 .onAppear {
                     withAnimation(.easeOut(duration: 7).delay(13)) {
-                        CircleScale = 1.0
+                        circleScale = 1.0
                     }
                 }.ignoresSafeArea()
-            
-            
-            Text("\"I'm not going to kill you. I want you to do me a favor. I want you to tell all your friends about me.\"")
+
+            Text("\"I'm not going to kill you. I want you to do me a favor. Tell your friends about me. Every last one.\"")
                 .padding(EdgeInsets(top: 10, leading: 50, bottom: 10, trailing: 40))
                 .background(Color.white.opacity(0.6))
                 .offset(x: 0, y: 120)
@@ -99,16 +97,16 @@ struct BatmanView: View {
                 }
         }.ignoresSafeArea()
     }
-    
+
     func thunderOne() -> some View {
-        HStack(alignment: .top){
+        HStack(alignment: .top) {
             Image("thunder")
                 Image("thunder")
                     .padding(.top, 50)
                 Image("thunder")
                 Image("thunder")
                     .padding(.top, 50)
-            
+
         }
         .frame(maxWidth: .infinity, maxHeight: 100)
         .offset(x: 0, y: -300)
@@ -121,9 +119,9 @@ struct BatmanView: View {
             }
         }
     }
-    
+
     func thunderTwo() -> some View {
-        HStack(alignment: .top){
+        HStack(alignment: .top) {
             Image("thunder-bw")
                 .resizable()
             Image("thunder-bw")
@@ -147,4 +145,3 @@ struct BatmanView: View {
         }
     }
 }
-

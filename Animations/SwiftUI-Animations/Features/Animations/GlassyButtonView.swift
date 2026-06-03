@@ -12,7 +12,7 @@ import SwiftUI
 
 struct GlassyButtonView: View {
     @State private var isEnabled = false
-    
+
     var body: some View {
         ZStack {
             // Background
@@ -38,12 +38,11 @@ struct GlassyButtonView: View {
     }
 }
 
-
 struct GlassyButton: ToggleStyle {
     func makeBody(configuration: Configuration) -> some View {
-        VStack(spacing: 40){
+        VStack(spacing: 40) {
             configuration.label
-            
+
             Rectangle()
                 .fill(configuration.isOn ? Color(hex: "#9FA4C4") : Color(hex: "#2D3436").opacity(0.4))
                 .border(configuration.isOn ? Color.white.opacity(0.3) : Color.clear, width: 2)

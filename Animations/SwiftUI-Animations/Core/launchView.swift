@@ -15,10 +15,10 @@ struct launchView: View {
     @State private var isAnimating = false
     @State private var textOpacity = 0.0
     @State private var textOffset: CGFloat = 20
-    
+
     let verticalOffsets: [CGFloat] = [20, 0, -20]
     let wingColors: [Color] = [.cyan, .blue, .purple]
-    
+
     var body: some View {
         ZStack {
             VStack(spacing: 30) {
@@ -45,7 +45,7 @@ struct launchView: View {
                                 value: isAnimating
                             )
                     }
-                    
+
                     HStack(alignment: .firstTextBaseline, spacing: -30) {
                         // Wings
                         ForEach(0..<3) { i in
@@ -61,7 +61,7 @@ struct launchView: View {
                                                     lineWidth: 1.5)
                                     )
                                     .rotationEffect(.degrees(45))
-                                
+
                                 Image(systemName: "chevron.right")
                                     .font(.system(size: 24, weight: .black))
                                     .foregroundStyle(
@@ -85,7 +85,7 @@ struct launchView: View {
                     }
                 }
                 .padding(.bottom, 20)
-                
+
                 // Title
                 VStack(spacing: 12) {
                     Text("ANIMATE")
@@ -95,7 +95,7 @@ struct launchView: View {
                             LinearGradient(colors: [.secondary, .primary],
                                            startPoint: .top, endPoint: .bottom)
                         )
-                    
+
                     Text("with SWIFTUI")
                         .font(.system(size: 18, weight: .bold, design: .rounded))
                         .kerning(5)
@@ -106,15 +106,15 @@ struct launchView: View {
                 }
                 .opacity(textOpacity)
                 .offset(y: textOffset)
-                
+
                 Spacer()
-                
+
                 // Credit's
                 HStack(spacing: 10) {
                     Text("@")
                         .font(.system(size: 15, weight: .black, design: .rounded))
                         .foregroundStyle(.gray)
-                    
+
                     Text("csprasad")
                         .font(.system(size: 18, weight: .black, design: .monospaced))
                         .kerning(5)
@@ -126,7 +126,7 @@ struct launchView: View {
         }
         .onAppear {
             isAnimating = true
-            
+
             withAnimation(.easeOut(duration: 1.0).delay(0.6)) {
                 textOpacity = 1.0
                 textOffset = 0

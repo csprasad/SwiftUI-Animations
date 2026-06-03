@@ -16,7 +16,7 @@ enum AnimationType {
     case spacetimeGrid, matrixRain, crowdWalking, fluidDream
     case sunrise, batman, morphBlob, flowerBloom
     case carbonAtom, layerMasking, kakashi
-    case likeButton, splash, loader, glassyButton
+    case splash, loader, glassyButton
     case distressedFont, randomAnimation
 }
 
@@ -45,7 +45,6 @@ struct AnimationItem: Identifiable {
         case .carbonAtom: CarbonAtom()
         case .layerMasking: LayerMaskUIView()
         case .kakashi: KakashiView()
-        case .likeButton: LikeButton()
         case .splash: SplashView()
         case .loader: LoaderUIView()
         case .glassyButton: GlassyButtonView()

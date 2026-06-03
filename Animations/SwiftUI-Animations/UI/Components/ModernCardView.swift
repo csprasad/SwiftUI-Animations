@@ -14,7 +14,7 @@ import SwiftUI
 // MARK: - The Modern Card
 struct ModernCardView: View {
     let item: AnimationItem
-    
+
     var body: some View {
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
@@ -22,19 +22,18 @@ struct ModernCardView: View {
                         .font(.system(size: 24, weight: .bold))
                         .foregroundStyle(item.color)
                     Spacer()
-                    
+
                     TagBadge(text: item.category.rawValue, color: item.color)
                 }
-                
-                
+
                 Spacer()
-                
+
                 VStack(alignment: .leading, spacing: 2) {
                     Text(item.title)
                         .font(.system(.headline, design: .rounded))
                         .bold()
                         .foregroundColor(.primary)
-                    
+
                     if let note = item.note {
                         Text(note)
                             .font(.system(size: 11))

@@ -72,12 +72,12 @@ struct CarbonAtom: View {
 struct Nucleus: View {
     private let nucleonCount = 12
     private let baseOffsets: [CGPoint] = [
-        CGPoint(x: 0,   y: -20), CGPoint(x: 0,   y: 0),
-        CGPoint(x: 17,  y: -10), CGPoint(x: 20,  y: 0),
-        CGPoint(x: 17,  y: 10),  CGPoint(x: 10,  y: 17),
-        CGPoint(x: 0,   y: 20),  CGPoint(x: -10, y: 17),
-        CGPoint(x: -17, y: 10),  CGPoint(x: -20, y: 0),
-        CGPoint(x: -17, y: -10), CGPoint(x: -10, y: -17),
+        CGPoint(x: 0, y: -20), CGPoint(x: 0, y: 0),
+        CGPoint(x: 17, y: -10), CGPoint(x: 20, y: 0),
+        CGPoint(x: 17, y: 10), CGPoint(x: 10, y: 17),
+        CGPoint(x: 0, y: 20), CGPoint(x: -10, y: 17),
+        CGPoint(x: -17, y: 10), CGPoint(x: -20, y: 0),
+        CGPoint(x: -17, y: -10), CGPoint(x: -10, y: -17)
     ]
     @State private var startDate = Date()
 

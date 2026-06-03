@@ -16,7 +16,7 @@ struct DistressedFontView: View {
     @State private var fontSize: CGFloat = 80
     @State private var maxReached: Bool = false
     @State private var refreshID = UUID()
-    
+
     // MARK: - Constants
     let minFontSize: CGFloat = 40
     let maxFontSize: CGFloat = 80
@@ -26,7 +26,7 @@ struct DistressedFontView: View {
         ZStack {
             VStack {
                 Spacer()
-                
+
                 // The Floating Text Canvas
                 VStack {
                     Text(userInput)
@@ -58,9 +58,9 @@ struct DistressedFontView: View {
                         )
                 }
                 .padding(.horizontal, 20)
-                
+
                 Spacer()
-                
+
                 // The Control Panel
                 VStack(spacing: 16) {
                     HStack {

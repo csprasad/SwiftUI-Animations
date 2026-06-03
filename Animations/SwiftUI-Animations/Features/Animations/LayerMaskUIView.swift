@@ -51,14 +51,14 @@ struct LayerMaskUIView: View {
                     }
             }
         }
-        .frame(width: size.width, height: size.height) //center
+        .frame(width: size.width, height: size.height) // center
     }
 
     private func animateShape(_ index: Int) {
         DispatchQueue.main.asyncAfter(deadline: .now() + delays[index]) {
             shapeOffsets[index] = finalOffsets[index]
         }
-        
+
         if index == 3 {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
                 imageName = "tiger_02"
@@ -70,7 +70,7 @@ struct LayerMaskUIView: View {
 struct CustomCorner: Shape {
     var radius: CGFloat
     var corners: UIRectCorner
-    
+
     func path(in rect: CGRect) -> Path {
         let path = UIBezierPath(
             roundedRect: rect,

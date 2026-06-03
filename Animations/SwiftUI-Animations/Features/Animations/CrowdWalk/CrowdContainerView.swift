@@ -35,7 +35,7 @@ struct CrowdContainerView: View {
             }
         }
     }
-    
+
     // MARK: Helper Function to crop Peeps
     private func slicePeeps(image: CGImage, rows: Int, cols: Int) -> [CGImage] {
         let w = CGFloat(image.width) / CGFloat(rows)
