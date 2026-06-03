@@ -11,10 +11,10 @@
 import SwiftUI
 
 struct BatmanView: View {
-    @State var cloudOffset: CGFloat = 300
-    @State var cloudOffset1: CGFloat = 300
-    @State var cityOffset: CGFloat = 980
-    @State var circleScale: CGFloat = 0
+    `@State` private var cloudOffset: CGFloat = 300
+    `@State` private var cloudOffset1: CGFloat = 300
+    `@State` private var cityOffset: CGFloat = 980
+    `@State` private var circleScale: CGFloat = 0
     @State var isAnimating = false
     @State var isFlashing = false
     @State var isFlashing1 = false
