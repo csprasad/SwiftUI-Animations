@@ -93,7 +93,12 @@ struct HomeView: View {
         }
     }
 
-    // MARK: - DetailView
+    /// Builds the detail screen for the given animation item.
+    /// 
+    /// The view places the item's `destination` over a full-screen mesh gradient background and overlays a navigation header showing the item's title; navigation bars are hidden for the resulting view.
+    /// - Parameters:
+    ///   - item: The `AnimationItem` whose `destination` view and `title` are used to build the detail screen.
+    /// - Returns: A view presenting the item's destination with a header and a mesh gradient background, with navigation bars hidden.
     @ViewBuilder
     private func detailView(for item: AnimationItem) -> some View {
         ZStack {

@@ -90,6 +90,12 @@ struct MatrixRain: View {
         .background(Color.black)
     }
 
+    /// Initializes the array of rain drops so columns cover the available horizontal space.
+    /// 
+    /// Each drop is placed at a fixed horizontal column and initialized with randomized vertical offset, falling speed, trail length, and a 50-character stream.
+    /// - Parameters:
+    ///   - screenWidth: The width of the drawing area in points; used to compute how many drop columns to create.
+    ///   - screenHeight: The height of the drawing area in points; used to randomize initial vertical positions so drops start spread over the top/offscreen.
     private func initializeDrops(screenWidth: CGFloat, screenHeight: CGFloat) {
         // More drops to fill gaps, one every 15 pixels
         let columnSpacing: CGFloat = 15
@@ -106,6 +112,10 @@ struct MatrixRain: View {
         }
     }
 
+    /// Advances and mutates all rain drops for the next animation frame.
+    /// 
+    /// Updates each drop's vertical position, occasionally cycles its character stream, randomly mutates characters within a trail, and resets drops that have moved past the bottom of the visible area with a new starting position, speed, and length.
+    /// - Parameter screenHeight: The visible vertical extent used to detect when a drop is offscreen and should be reset.
     private func updateDrops(screenHeight: CGFloat) {
         for i in 0..<drops.count {
             // Moving down speed
@@ -134,6 +144,8 @@ struct MatrixRain: View {
 
 // Helper to rotate array
 extension Array {
+    /// Moves the first element of the array to the end, leaving the relative order of the remaining elements unchanged.
+    /// - Note: Does nothing for an empty array.
     mutating func rotate() {
         guard !isEmpty else { return }
         let first = removeFirst()

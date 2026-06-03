@@ -98,6 +98,9 @@ struct BatmanView: View {
         }.ignoresSafeArea()
     }
 
+    /// Renders a horizontal row of thunder images positioned near the top of the view and animated to flash.
+    /// - Returns: A view containing four thunder images arranged horizontally; the view's opacity becomes `0` when `isFlashing` is `true`.
+    /// - Note: When the view appears it starts a repeating animation that updates `bgColor` and `isFlashing` to produce the flashing effect.
     func thunderOne() -> some View {
         HStack(alignment: .top) {
             Image("thunder")
@@ -120,6 +123,11 @@ struct BatmanView: View {
         }
     }
 
+    /// Renders a horizontal group of black-and-white thunder images with a timed flash animation.
+    /// 
+    /// The view positions four resizable `thunder-bw` images in an `HStack` near the top of the screen and animates their visibility via `isFlashing1`.
+    /// On appear, it starts a repeating ease-out animation (0.1s, 1s delay) that sets `bgColor = .white` and `isFlashing1 = true`, which drives the view's opacity.
+    /// - Returns: A view containing four resizable `thunder-bw` images arranged horizontally, constrained to the top area and whose opacity is controlled by `isFlashing1`.
     func thunderTwo() -> some View {
         HStack(alignment: .top) {
             Image("thunder-bw")

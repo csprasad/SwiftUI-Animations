@@ -36,7 +36,12 @@ struct CrowdContainerView: View {
         }
     }
 
-    // MARK: Helper Function to crop Peeps
+    /// Slice a sprite-sheet `CGImage` into a grid of tiles.
+    /// - Parameters:
+    ///   - image: The source image to be divided into tiles.
+    ///   - rows: The number of slices across the image width (tiles per row).
+    ///   - cols: The number of slices along the image height (tiles per column).
+    /// - Returns: An array of cropped `CGImage` tiles ordered left-to-right, top-to-bottom.
     private func slicePeeps(image: CGImage, rows: Int, cols: Int) -> [CGImage] {
         let w = CGFloat(image.width) / CGFloat(rows)
         let h = CGFloat(image.height) / CGFloat(cols)

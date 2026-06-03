@@ -37,7 +37,10 @@ struct LayerMaskUIView: View {
         }
     }
 
-    // MARK: - Mask Component
+    /// Builds the mask view containing four animated rounded rectangles centered within the provided size.
+    /// - Parameters:
+    ///   - size: The available container size used to frame and center the mask shapes.
+    /// - Returns: A view with an HStack of four rounded rectangles (width `shapeWidth`, height `shapeHeight`) that are clipped on the top-right and bottom-left corners, positioned vertically using `shapeOffsets`, animated when those offsets change, and trigger their individual entrance animations on appear.
     private func maskingShapes(in size: CGSize) -> some View {
         HStack(spacing: 12) {
             ForEach(0..<4, id: \.self) { index in
@@ -54,6 +57,9 @@ struct LayerMaskUIView: View {
         .frame(width: size.width, height: size.height) // center
     }
 
+    /// Animates the mask rectangle for the given index into its target vertical offset and, after the final rectangle, updates the displayed image.
+    /// - Parameters:
+    ///   - index: The index of the mask rectangle (0...3). The function schedules the rectangle's vertical offset to move to its configured final value after the staggered delay for that index. If `index` is 3, it additionally schedules the view's `imageName` to change to `"tiger_02"` after 3.5 seconds.
     private func animateShape(_ index: Int) {
         DispatchQueue.main.asyncAfter(deadline: .now() + delays[index]) {
             shapeOffsets[index] = finalOffsets[index]
@@ -71,6 +77,9 @@ struct CustomCorner: Shape {
     var radius: CGFloat
     var corners: UIRectCorner
 
+    /// Creates a drawing path for the given rectangle with the specified corners rounded by `radius`.
+    /// - Parameter rect: The rectangle in which the path is constructed.
+    /// - Returns: A `Path` representing `rect` with the corners listed in `corners` rounded using `radius`.
     func path(in rect: CGRect) -> Path {
         let path = UIBezierPath(
             roundedRect: rect,

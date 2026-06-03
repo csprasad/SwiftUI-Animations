@@ -125,10 +125,22 @@ func lerp(_ a: CGFloat, _ b: CGFloat, _ t: CGFloat) -> CGFloat {
     a + (b - a) * t
 }
 
+/// Restricts a value to the closed interval defined by `minVal` and `maxVal`.
+/// - Parameters:
+///   - x: The value to clamp.
+///   - minVal: The lower bound of the interval.
+///   - maxVal: The upper bound of the interval.
+/// - Returns: The value clamped to the range `[minVal, maxVal]`.
 func clamp(_ x: Double, _ minVal: Double, _ maxVal: Double) -> Double {
     min(max(x, minVal), maxVal)
 }
 
+/// Interpolates between two HSB colors by linearly blending each component.
+/// - Parameters:
+///   - from: The start HSB color.
+///   - to: The end HSB color.
+///   - t: Interpolation fraction where 0 yields `from` and 1 yields `to`; values outside 0–1 produce extrapolated colors.
+/// - Returns: A `Color` whose hue, saturation, and brightness are the component-wise linear interpolation of `from` and `to` at `t`.
 private func interpolateHSB(from: HSBColor, to: HSBColor, t: CGFloat) -> Color {
     Color(hue: lerp(from.hue, to.hue, t), saturation: lerp(from.saturation, to.saturation, t), brightness: lerp(from.brightness, to.brightness, t))
 }

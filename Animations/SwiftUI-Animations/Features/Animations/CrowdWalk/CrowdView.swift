@@ -74,7 +74,15 @@ struct CrowdView: View {
         }
     }
 
-    // MARK: - Spawn (runs ONCE)
+    /// Builds and assigns the initial array of `PeepModel` instances for the given stage size.
+    /// 
+    /// Each source image produces a `PeepModel` with randomized horizontal direction, vertical offset,
+    /// start time (spread across a recent window), and duration. `startX` and `endX` are set so peeps
+    /// travel across the provided stage in their chosen direction, and `scaleX` mirrors the image to
+    /// match that direction. The resulting models are sorted once by their `y` value (top to bottom)
+    /// and stored in `peepModel`.
+    /// - Parameter stage: The available drawing area size (typically the screen or canvas size) used
+    ///   to compute peep positions and travel endpoints.
     func spawn(stage: CGSize) {
         let now = Date().timeIntervalSinceReferenceDate
 

@@ -92,6 +92,10 @@ struct FluidDreamView: View {
         .ignoresSafeArea()
     }
 
+    /// Advances the simulation state of all blobs for the current frame.
+    /// 
+    /// Updates each blob's velocity and position by applying gentle floating motion, attraction or slight repulsion toward the next blob, velocity damping, edge bounce with dampening, and a slow sinusoidal change to the blob's radius.
+    /// - Parameter size: The available drawing area used to clamp blob positions and detect edge bounces.
     func updateBlobs(size: CGSize) {
         guard !size.equalTo(.zero) else { return }
 

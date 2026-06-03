@@ -39,6 +39,9 @@ struct GlassyButtonView: View {
 }
 
 struct GlassyButton: ToggleStyle {
+    /// Builds the toggle's view: the provided label plus a vertical, glassy track with a movable thumb that reflects the toggle state.
+    /// - Parameter configuration: The `ToggleStyle.Configuration` containing the current `isOn` state and the label view to display.
+    /// - Returns: A view that combines the label and a stylized vertical toggle track whose fill, border, and thumb position reflect `configuration.isOn`; tapping the track toggles `configuration.isOn` using a spring animation.
     func makeBody(configuration: Configuration) -> some View {
         VStack(spacing: 40) {
             configuration.label
