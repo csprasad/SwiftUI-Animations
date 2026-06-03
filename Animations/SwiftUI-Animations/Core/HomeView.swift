@@ -36,11 +36,8 @@ struct HomeView: View {
                         // Filter Bar
                         filterBar
 
-                        // Use filteredAnimations instead of the raw list
-                        let enumeratedItems = Array(viewModel.filteredAnimations.enumerated())
-
                         LazyVGrid(columns: columns, spacing: 16) {
-                            ForEach(enumeratedItems, id: \.element.id) { _, item in
+                            ForEach(viewModel.filteredAnimations, id: \.id) { item in
                                 NavigationLink(destination:
                                     detailView(for: item)
                                 ) {
