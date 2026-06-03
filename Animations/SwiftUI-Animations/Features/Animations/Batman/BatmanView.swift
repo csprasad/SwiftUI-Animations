@@ -11,18 +11,19 @@
 import SwiftUI
 
 struct BatmanView: View {
+    
     @State private var cloudOffset: CGFloat = 300
     @State private var cloudOffset1: CGFloat = 300
     @State private var cityOffset: CGFloat = 980
     @State private var circleScale: CGFloat = 0
-    @State var isAnimating = false
-    @State var isFlashing = false
-    @State var isFlashing1 = false
-    @State var bgColor = Color.black
-    @State var textOffset: CGFloat = 0
-
-    @State var endPath: CGFloat = 0
-    @State var isFilled = false
+    
+    @State private var isAnimating = false
+    @State private var isFlashing = false
+    @State private var isFlashing1 = false
+    @State private var bgColor = Color.black
+    @State private var textOffset: CGFloat = 0
+    @State private var endPath: CGFloat = 0
+    @State private var isFilled = false
 
     var body: some View {
         ZStack {
@@ -113,7 +114,6 @@ struct BatmanView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: 100)
         .offset(x: 0, y: -300)
-        .offset(x: 0, y: 0)
         .opacity(isFlashing ? 0 : 1)
         .onAppear {
             withAnimation(.easeOut(duration: 0.5).delay(0.1).repeatForever()) {
@@ -143,7 +143,6 @@ struct BatmanView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: 100)
         .offset(x: 0, y: -300)
-        .offset(x: 0, y: 0)
         .opacity(isFlashing1 ? 0 : 1)
         .onAppear {
             withAnimation(.easeOut(duration: 0.1).delay(1).repeatForever()) {
