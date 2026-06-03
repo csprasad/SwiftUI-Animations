@@ -25,19 +25,19 @@ struct FluidDreamView: View {
     @State private var blobs: [Blob] = []
     @State private var time: Double = 0
     @State private var isActive: Bool = true
-    
+
     var body: some View {
         GeometryReader { geo in
             TimelineView(.animation(minimumInterval: 1/30)) { _ in
-                Canvas { context, size in
+                Canvas { context, _ in
                     // Draw blobs with soft glow
                     context.blendMode = .plusLighter
-                    
+
                     for blob in blobs {
                         // Color shifts over time
                         let dynamicHue = (blob.hue + time * 0.05).truncatingRemainder(dividingBy: 1.0)
                         let color = Color(hue: dynamicHue, saturation: 0.8, brightness: 0.9)
-                        
+
                         // Outer glow layers
                         for scale in stride(from: 2.5, to: 1.0, by: -0.3) {
                             let r = blob.radius * scale
@@ -46,7 +46,7 @@ struct FluidDreamView: View {
                                 with: .color(color.opacity(0.05 / scale))
                             )
                         }
-                        
+
                         // Core blob
                         context.fill(
                             Path(ellipseIn: CGRect(x: blob.x - blob.radius, y: blob.y - blob.radius, width: blob.radius * 2, height: blob.radius * 2)),
@@ -91,24 +91,28 @@ struct FluidDreamView: View {
         }
         .ignoresSafeArea()
     }
-    
+
+    /// Advances the simulation state of all blobs for the current frame.
+    /// 
+    /// Updates each blob's velocity and position by applying gentle floating motion, attraction or slight repulsion toward the next blob, velocity damping, edge bounce with dampening, and a slow sinusoidal change to the blob's radius.
+    /// - Parameter size: The available drawing area used to clamp blob positions and detect edge bounces.
     func updateBlobs(size: CGSize) {
         guard !size.equalTo(.zero) else { return }
-        
+
         for i in blobs.indices {
             var blob = blobs[i]
-            
+
             // Gentle floating motion
             blob.vx += sin(time * 0.5 + Double(i)) * 0.1
             blob.vy += cos(time * 0.3 + Double(i)) * 0.1
-            
+
             // Blob attraction/repulsion
             if i < blobs.count - 1 {
                 let other = blobs[i + 1]
                 let dx = other.x - blob.x
                 let dy = other.y - blob.y
                 let dist = max(1, sqrt(dx * dx + dy * dy))
-                
+
                 if dist < 200 {
                     // Attract
                     blob.vx += dx / dist * 0.05
@@ -119,15 +123,15 @@ struct FluidDreamView: View {
                     blob.vy -= dy / dist * 0.02
                 }
             }
-            
+
             // Damping
             blob.vx *= 0.95
             blob.vy *= 0.95
-            
+
             // Move
             blob.x += blob.vx
             blob.y += blob.vy
-            
+
             // Bounce off edges with dampening
             if blob.x < 0 || blob.x > size.width {
                 blob.vx *= -0.7
@@ -137,11 +141,11 @@ struct FluidDreamView: View {
                 blob.vy *= -0.7
                 blob.y = max(0, min(size.height, blob.y))
             }
-            
+
             // Slowly shrink/grow
             blob.radius += sin(time * 0.8 + Double(i) * 1.3) * 0.3
             blob.radius = max(30, min(100, blob.radius))
-            
+
             blobs[i] = blob
         }
     }

@@ -10,14 +10,13 @@
 
 import SwiftUI
 import Combine
-    
+
 // MARK: - Matrix Rain
 struct MatrixRain: View {
     let characters = Array("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝअआइईउऊएऐओऔकखगघचछजझटठडढणतथदधनपफबभमयरलवशषसहㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ가나다라마바사아자차카타파하")
-    
+
     @State private var drops: [Drop] = []
-    @State private var timer: Timer?
-    
+
     struct Drop {
         var x: CGFloat
         var y: CGFloat
@@ -25,49 +24,49 @@ struct MatrixRain: View {
         var length: Int
         var chars: [Character]
     }
-    
+
     var body: some View {
         GeometryReader { geo in
             ZStack {
                 // Background "MATRIX" text
-                VStack(alignment: .center,spacing: 0) {
+                VStack(alignment: .center, spacing: 0) {
                     Text("M A T R I X")
                         .font(.system(size: 55, weight: .black, design: .monospaced))
-                        
+
                     Text("D I G I T A L   R A I N")
                         .font(.system(size: 20, weight: .black, design: .monospaced))
                         .lineSpacing(40)
                 }
                 .foregroundColor(.green.opacity(0.2))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                
+
                 // Matrix rain effect
                 TimelineView(.animation(minimumInterval: 1/30)) { timeline in
                     Canvas { context, size in
                         let charSize: CGFloat = 18
-                        
+
                         for drop in drops {
                             // Draw each character in the drop
                             for i in 0..<drop.length {
                                 let y = drop.y - CGFloat(i) * charSize
-                                
+
                                 // Skip if offscreen
                                 guard y > -charSize && y < size.height + charSize else { continue }
-                                
+
                                 let char = drop.chars[i % drop.chars.count]
-                                
+
                                 // Brightness: 1.0 at tip (i=0), fades to 0.1
                                 let brightness = max(0.1, 1.0 - (Double(i) / Double(drop.length)))
-                                
+
                                 // Color: white at tip, green for rest
                                 let color: Color = i == 0 ? .white : .green.opacity(brightness)
-                                
+
                                 let text = Text(String(char))
                                     .font(.system(size: 16, weight: .bold, design: .monospaced))
                                     .foregroundColor(color)
-                                
+
                                 context.draw(text, at: CGPoint(x: drop.x, y: y))
-                                
+
                                 // Extra glow on tip
                                 if i == 0 {
                                     let glowText = Text(String(char))
@@ -90,12 +89,18 @@ struct MatrixRain: View {
         }
         .background(Color.black)
     }
-    
+
+    /// Initializes the array of rain drops so columns cover the available horizontal space.
+    /// 
+    /// Each drop is placed at a fixed horizontal column and initialized with randomized vertical offset, falling speed, trail length, and a 50-character stream.
+    /// - Parameters:
+    ///   - screenWidth: The width of the drawing area in points; used to compute how many drop columns to create.
+    ///   - screenHeight: The height of the drawing area in points; used to randomize initial vertical positions so drops start spread over the top/offscreen.
     private func initializeDrops(screenWidth: CGFloat, screenHeight: CGFloat) {
         // More drops to fill gaps, one every 15 pixels
         let columnSpacing: CGFloat = 15
         let dropCount = Int(screenWidth / columnSpacing)
-        
+
         drops = (0..<dropCount).map { i in
             Drop(
                 x: CGFloat(i) * columnSpacing + 8,
@@ -106,23 +111,27 @@ struct MatrixRain: View {
             )
         }
     }
-    
+
+    /// Advances and mutates all rain drops for the next animation frame.
+    /// 
+    /// Updates each drop's vertical position, occasionally cycles its character stream, randomly mutates characters within a trail, and resets drops that have moved past the bottom of the visible area with a new starting position, speed, and length.
+    /// - Parameter screenHeight: The visible vertical extent used to detect when a drop is offscreen and should be reset.
     private func updateDrops(screenHeight: CGFloat) {
         for i in 0..<drops.count {
             // Moving down speed
             drops[i].y += drops[i].speed * (1.0/30.0)
-            
+
             // Cycle characters for animation effect
             if Int.random(in: 0...2) == 0 {
                 drops[i].chars.rotate()
             }
-            
+
             // Random character mutations
             if Double.random(in: 0...1) < 0.15 {
                 let idx = Int.random(in: 0..<drops[i].chars.count)
                 drops[i].chars[idx] = characters.randomElement()!
             }
-            
+
             // Reset when offscreen
             if drops[i].y > screenHeight + CGFloat(drops[i].length) * 18 {
                 drops[i].y = -CGFloat(drops[i].length) * 18
@@ -135,10 +144,11 @@ struct MatrixRain: View {
 
 // Helper to rotate array
 extension Array {
+    /// Moves the first element of the array to the end, leaving the relative order of the remaining elements unchanged.
+    /// - Note: Does nothing for an empty array.
     mutating func rotate() {
         guard !isEmpty else { return }
         let first = removeFirst()
         append(first)
     }
 }
-

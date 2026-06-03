@@ -14,24 +14,22 @@ struct RandomAnimationView: View {
     @State private var bubbleFloating = false
     @State private var stoveMoving = false
     @State private var middleVaporizes = false
-    
+
     var body: some View {
         ZStack {
             // Vapor Animations
             VaporView(imageName: "vapor_left", delay: 0.2, isAnimating: $middleVaporizes)
                 .offset(x: 0, y: 25)
                 .blendMode(.plusDarker)
-            
+
             VaporView(imageName: "vapor_middle", delay: 0.2, isAnimating: $middleVaporizes)
                 .offset(x: 30, y: 0)
                 .blendMode(.plusDarker)
 
-            
             VaporView(imageName: "vapor_right", delay: 0.2, isAnimating: $middleVaporizes)
                 .offset(x: 70, y: -25)
                 .blendMode(.plusDarker)
 
-            
             // Pot & Stove
             VStack {
                 PotView(isMoving: $stoveMoving)
@@ -41,7 +39,7 @@ struct RandomAnimationView: View {
                     .frame(width: 100, height: 100)
             }
             .position(x: 200, y: 450)
-            
+
             // Floating Bubbles
             if bubbleFloating {
                 ForEach(0..<6, id: \.self) { _ in

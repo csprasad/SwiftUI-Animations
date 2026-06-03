@@ -14,7 +14,7 @@ import SwiftUI
 struct NavHeader: View {
     let title: String
     @Environment(\.dismiss) var dismiss
-    
+
     var body: some View {
         HStack(spacing: 15) {
             // Back Button
@@ -27,7 +27,7 @@ struct NavHeader: View {
                     .clipShape(Circle())
                     .shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 5)
             }
-            
+
             // Title Capsule
             Text(title)
                 .font(.system(size: 17, weight: .bold, design: .rounded))
@@ -36,7 +36,7 @@ struct NavHeader: View {
                 .background(.ultraThinMaterial)
                 .clipShape(Capsule())
                 .shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 5)
-            
+
             Spacer()
         }
         .padding(.horizontal, 20)

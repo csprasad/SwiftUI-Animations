@@ -21,8 +21,6 @@ import SwiftUI
 /// - Peeps images are cropped once during spawn and stored in `Peep`
 ///   to avoid allocating CGImages during per-frame drawing
 //
-// Do NOT move sorting or image creation back into the draw loop.
-
 
 struct CrowdView: View {
     let slicedImages: [CGImage]
@@ -31,7 +29,7 @@ struct CrowdView: View {
 
     var body: some View {
         TimelineView(.periodic(from: .now, by: 1.0 / 60.0)) { timeline in
-            Canvas { ctx, size in
+            Canvas { ctx, _ in
                 let time = timeline.date.timeIntervalSinceReferenceDate
 
                 for peep in peepModel {
@@ -76,7 +74,15 @@ struct CrowdView: View {
         }
     }
 
-    // MARK: - Spawn (runs ONCE)
+    /// Builds and assigns the initial array of `PeepModel` instances for the given stage size.
+    /// 
+    /// Each source image produces a `PeepModel` with randomized horizontal direction, vertical offset,
+    /// start time (spread across a recent window), and duration. `startX` and `endX` are set so peeps
+    /// travel across the provided stage in their chosen direction, and `scaleX` mirrors the image to
+    /// match that direction. The resulting models are sorted once by their `y` value (top to bottom)
+    /// and stored in `peepModel`.
+    /// - Parameter stage: The available drawing area size (typically the screen or canvas size) used
+    ///   to compute peep positions and travel endpoints.
     func spawn(stage: CGSize) {
         let now = Date().timeIntervalSinceReferenceDate
 
@@ -101,4 +107,3 @@ struct CrowdView: View {
         .sorted { $0.y < $1.y }   // sort ONCE
     }
 }
-

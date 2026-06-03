@@ -11,7 +11,7 @@
 import SwiftUI
 
 @main
-struct SwiftUI_Animations: App {
+struct SwiftUIAnimationsApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()

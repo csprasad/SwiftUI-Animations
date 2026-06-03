@@ -11,7 +11,6 @@
 		051EE2622F72B392003F2D70 /* AnimationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051EE2612F72B390003F2D70 /* AnimationsViewModel.swift */; };
 		05428B3A2F2A8074006F7A90 /* FluidDreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05428B392F2A8068006F7A90 /* FluidDreamView.swift */; };
 		055320A22F1EAD3800E34301 /* GravityGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055320A12F1EAD3800E34301 /* GravityGridView.swift */; };
-		055E18CB2F1CE43B001125B1 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055E18CA2F1CE438001125B1 /* LikeButton.swift */; };
 		056C64A82F23ED2400FBF4C1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056C64A72F23ED2400FBF4C1 /* Colors.xcassets */; };
 		059466262ED61D7200E2D30D /* CarbonAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059466252ED61D5800E2D30D /* CarbonAtom.swift */; };
 		05A969B02F0E2E26005869AE /* PeepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A969AF2F0E2E22005869AE /* PeepModel.swift */; };
@@ -34,7 +33,7 @@
 		C88FDCE12A61722A00A5B62B /* BatmanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88FDCE02A61722A00A5B62B /* BatmanView.swift */; };
 		C8A563DF2A63A4D000410C1F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A563DE2A63A4D000410C1F /* SplashView.swift */; };
 		C8A563E12A63BBE700410C1F /* Color+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A563E02A63BBE700410C1F /* Color+Ex.swift */; };
-		C8BE89AC2A611C28003E2C61 /* SwiftUI_Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BE89AB2A611C28003E2C61 /* SwiftUI_Animations.swift */; };
+		C8BE89AC2A611C28003E2C61 /* SwiftUIAnimationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BE89AB2A611C28003E2C61 /* SwiftUIAnimationsApp.swift */; };
 		C8BE89AE2A611C28003E2C61 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BE89AD2A611C28003E2C61 /* HomeView.swift */; };
 		C8BE89B02A611C2A003E2C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8BE89AF2A611C2A003E2C61 /* Assets.xcassets */; };
 		C8BE89B32A611C2A003E2C61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8BE89B22A611C2A003E2C61 /* Preview Assets.xcassets */; };
@@ -53,7 +52,6 @@
 		051EE2612F72B390003F2D70 /* AnimationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsViewModel.swift; sourceTree = "<group>"; };
 		05428B392F2A8068006F7A90 /* FluidDreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluidDreamView.swift; sourceTree = "<group>"; };
 		055320A12F1EAD3800E34301 /* GravityGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityGridView.swift; sourceTree = "<group>"; };
-		055E18CA2F1CE438001125B1 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		056C64A72F23ED2400FBF4C1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		059466252ED61D5800E2D30D /* CarbonAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonAtom.swift; sourceTree = "<group>"; };
 		05A969AF2F0E2E22005869AE /* PeepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeepModel.swift; sourceTree = "<group>"; };
@@ -77,7 +75,7 @@
 		C8A563DE2A63A4D000410C1F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		C8A563E02A63BBE700410C1F /* Color+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ex.swift"; sourceTree = "<group>"; };
 		C8BE89A82A611C28003E2C61 /* SwiftUI-Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Animations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8BE89AB2A611C28003E2C61 /* SwiftUI_Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Animations.swift; sourceTree = "<group>"; };
+		C8BE89AB2A611C28003E2C61 /* SwiftUIAnimationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAnimationsApp.swift; sourceTree = "<group>"; };
 		C8BE89AD2A611C28003E2C61 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C8BE89AF2A611C2A003E2C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8BE89B22A611C2A003E2C61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -180,7 +178,7 @@
 		05D983042F7306F6002380F8 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				C8BE89AB2A611C28003E2C61 /* SwiftUI_Animations.swift */,
+				C8BE89AB2A611C28003E2C61 /* SwiftUIAnimationsApp.swift */,
 				05D0694C2F75C46F0036DA67 /* RootView.swift */,
 			);
 			path = App;
@@ -207,7 +205,6 @@
 				05428B392F2A8068006F7A90 /* FluidDreamView.swift */,
 				05B94F102F27EB84002AFED1 /* FlowerBloom.swift */,
 				055320A12F1EAD3800E34301 /* GravityGridView.swift */,
-				055E18CA2F1CE438001125B1 /* LikeButton.swift */,
 				05F2E3262F165517001BF483 /* MorphBlob.swift */,
 				059466252ED61D5800E2D30D /* CarbonAtom.swift */,
 				C8D06B712D9405F300BD96AE /* DistressedFontView.swift */,
@@ -367,7 +364,6 @@
 				C8FB85602A64595C0009CF41 /* RandomAnimationView.swift in Sources */,
 				05D069502F75DB7E0036DA67 /* ModernCardView.swift in Sources */,
 				C8A563DF2A63A4D000410C1F /* SplashView.swift in Sources */,
-				055E18CB2F1CE43B001125B1 /* LikeButton.swift in Sources */,
 				05D069542F75DBB80036DA67 /* MeshGradientBackground.swift in Sources */,
 				C8FB85612A64595C0009CF41 /* LoaderUIView.swift in Sources */,
 				C88FDCE12A61722A00A5B62B /* BatmanView.swift in Sources */,
@@ -378,7 +374,7 @@
 				05A969B62F0E7EB7005869AE /* AnimationCredit.swift in Sources */,
 				05428B3A2F2A8074006F7A90 /* FluidDreamView.swift in Sources */,
 				051C8CD42F21FC0300B0DA6A /* CrowdView.swift in Sources */,
-				C8BE89AC2A611C28003E2C61 /* SwiftUI_Animations.swift in Sources */,
+				C8BE89AC2A611C28003E2C61 /* SwiftUIAnimationsApp.swift in Sources */,
 				C8F85B542A6307EC00ECC7D0 /* KakashiView.swift in Sources */,
 				05D069582F75DC260036DA67 /* FilterChip.swift in Sources */,
 				05A969B22F0E2E57005869AE /* CrowdContainerView.swift in Sources */,

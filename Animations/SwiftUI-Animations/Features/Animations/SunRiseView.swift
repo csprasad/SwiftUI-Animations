@@ -48,7 +48,6 @@ struct SunRiseView: View {
     }
 }
 
-
 // MARK: - Sun
 struct SunView: View {
     var body: some View {
@@ -96,7 +95,7 @@ struct SceneView: View {
                 Text("☁").font(.system(size: 30)).offset(x: -80, y: -270)
                 Text("☁").font(.system(size: 20)).offset(x: 100, y: -130)
             }
-            
+
             Rectangle()
                 .frame(height: 300)
                 .foregroundStyle(Color(hex: "#41980a").opacity(0.9))
@@ -116,42 +115,42 @@ struct SceneView: View {
                 .frame(width: 380, height: 420)
                 .offset(x: -190, y: 210)
                 .rotationEffect(.degrees(-55))
-            
+
             Text("🌲")
                 .font(.system(size: 80))
                 .offset(x: -120, y: 0)
                 .padding()
-            
+
             Text("🌲")
                 .font(.system(size: 80))
                 .offset(x: -100, y: 0)
                 .padding()
-            
+
             Text("🌲")
                 .font(.system(size: 80))
                 .offset(x: -90, y: 0)
                 .padding()
-            
+
             Text("🌲")
                 .font(.system(size: 90))
                 .offset(x: -50, y: 0)
                 .padding()
-            
+
             Text("🌲")
                 .font(.system(size: 80))
                 .offset(x: 120, y: 0)
                 .padding()
-            
+
             Text("🌲")
                 .font(.system(size: 80))
                 .offset(x: 100, y: 0)
                 .padding()
-            
+
             Text("🌲")
                 .font(.system(size: 80))
                 .offset(x: 90, y: 0)
                 .padding()
-            
+
             Text("🌲")
                 .font(.system(size: 130))
                 .offset(x: 50, y: 0)
@@ -160,7 +159,7 @@ struct SceneView: View {
             // Volcano
             Text("🌋")
                 .font(.system(size: 150))
-                .offset(x:-10,y: 10)
+                .offset(x: -10, y: 10)
 
             // Mountains
             HStack(spacing: 20) {
@@ -168,7 +167,7 @@ struct SceneView: View {
                 Text("🏔").font(.system(size: 300))
             }
             .padding(-120)
-            
+
             Text("🌲")
                 .font(.system(size: 180))
                 .offset(x: -120, y: 130)
@@ -178,7 +177,7 @@ struct SceneView: View {
                 .font(.system(size: 180))
                 .offset(x: 190, y: 150)
                 .padding()
-            
+
             // Camp
             HStack(spacing: 0) {
                 Text("⛺")
@@ -192,4 +191,3 @@ struct SceneView: View {
         }
     }
 }
-

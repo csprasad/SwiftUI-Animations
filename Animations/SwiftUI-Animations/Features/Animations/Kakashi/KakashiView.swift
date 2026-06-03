@@ -14,13 +14,13 @@ struct KakashiView: View {
     @State private var strokeStart: CGFloat = 0
     @State private var strokeEnd: CGFloat = 0
     @State private var isAnimating: Bool = false
-    
+
     var body: some View {
         ZStack {
             KakashiShape()
                 .stroke(style: StrokeStyle(lineWidth: 1.5, lineCap: .round, lineJoin: .round))
                 .foregroundColor(.primary.opacity(0.3))
-            
+
             // Animated Drawing Shape
             KakashiShape()
                 .trim(from: strokeStart, to: strokeEnd)

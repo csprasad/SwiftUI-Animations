@@ -12,15 +12,15 @@ import SwiftUI
 
 struct SplashView: View {
     @State private var lightScale: CGFloat = 0.45
-    
+
     var body: some View {
         VStack {
             Spacer()
-            
+
             ZStack {
                 // Animated Background
                 AnimatedCircles(lightScale: $lightScale)
-                
+
                 // Static Overlay (Profile)
                 Circle()
                     .frame(width: 150, height: 150)
@@ -35,9 +35,7 @@ struct SplashView: View {
             }
             .frame(height: 350)
             .drawingGroup()
-            
-            
-            
+
             // Username
             Text("@CSPrasad_iOS")
                 .font(.system(size: 20, weight: .bold, design: .monospaced))
@@ -62,7 +60,7 @@ struct AnimatedCircles: View {
     @Binding var lightScale: CGFloat
 
     let colors: [String] = ["#D2CED2", "#A4A0A4", "#797579", "#504C50"]
-    
+
     var body: some View {
         ZStack {
             ForEach(0..<colors.count, id: \.self) { index in

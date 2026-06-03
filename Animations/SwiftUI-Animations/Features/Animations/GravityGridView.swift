@@ -33,11 +33,11 @@ struct GravityGridView: View {
     private let waveSpeed: CGFloat = 3
 
     // MARK: - Interaction State
-    @State private var touchLocation: CGPoint? = nil
-    @State private var waveOrigin: CGPoint? = nil
+    @State private var touchLocation: CGPoint?
+    @State private var waveOrigin: CGPoint?
     @State private var waveTime: CGFloat = 0
     @State private var isWaveActive = false
-    
+
     // MARK: - Animation
     @State private var spin: CGFloat = 0
 
@@ -52,7 +52,7 @@ struct GravityGridView: View {
             // ---- Spacetime grid points ----
             for row in 0..<rows {
                 for col in 0..<cols {
-                    
+
                     let original = CGPoint(
                         x: CGFloat(col) * spacing - overscan,
                         y: CGFloat(row) * spacing - overscan
@@ -70,7 +70,7 @@ struct GravityGridView: View {
                     context.fill(Path(ellipseIn: rect), with: .color(.primary.opacity(0.9)))
                 }
             }
-            
+
             // ---- Touch Earth Image & Grvaity ----
             if let center = touchLocation {
 
@@ -95,7 +95,7 @@ struct GravityGridView: View {
                         endRadius: imageSize
                     )
                 )
-                
+
                 // ---- Event Horizon Ring ----
                 let horizon = Path(ellipseIn: CGRect(
                     x: center.x - eventHorizonRadius,
@@ -121,7 +121,7 @@ struct GravityGridView: View {
         }
         .gesture(gravityGesture)
         .onReceive(timer) { _ in
-            spin += 0.02 
+            spin += 0.02
 
             guard isWaveActive else { return }
             waveTime += 1 / 60
